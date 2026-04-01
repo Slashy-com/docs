@@ -255,8 +255,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Try Slashy Free",
-      "href": "https://slashy.com"
+      "label": "Try Slashy",
+      "href": "https://waitlist.slashy.com"
     }
   },
   "footer": {
