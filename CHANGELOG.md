@@ -1,5 +1,81 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 6b -- Polish & Consistency)
+
+### Consistency audit: seoDescription added to 27 more articles (52/80 total)
+
+Added `seoDescription` frontmatter with unique, keyword-rich meta descriptions to:
+
+- `features/ai-agent/composing.mdx`
+- `features/ai-drafts/autocomplete.mdx`
+- `features/ai-drafts/editing.mdx`
+- `features/automations/auto-reminders.mdx`
+- `features/automations/overview.mdx`
+- `features/automations/scheduled-reminders.mdx`
+- `features/automations/email-triggers.mdx`
+- `features/email/labels.mdx`
+- `getting-started/ai-memories.mdx`
+- `getting-started/importance-labels.mdx`
+- `getting-started/desktop-app.mdx`
+- `getting-started/mobile.mdx`
+- `getting-started/calendar-setup.mdx`
+- `getting-started/multi-account.mdx`
+- `how-to-guides/ai-drafts.mdx`
+- `how-to-guides/inbox-zero.mdx`
+- `how-to-guides/email-tracking.mdx`
+- `how-to-guides/customize-agent.mdx`
+- `how-to-guides/meeting-prep.mdx`
+- `how-to-guides/never-miss-followup.mdx`
+- `how-to-guides/batch-processing.mdx`
+- `personas/founders.mdx`
+- `personas/sales.mdx`
+- `personas/vcs.mdx`
+- `personas/recruiters.mdx`
+- `personas/executives.mdx`
+- `whats-new/changelog.mdx`
+
+### Consistency audit: Related Articles headings on 12 articles
+
+Added or standardized "## Related Articles" heading above CardGroup sections and expanded to 4 cards on:
+
+- `features/ai-agent/composing.mdx` -- added heading + Keyboard Shortcuts card
+- `features/ai-drafts/autocomplete.mdx` -- added heading + AI Memories card
+- `features/ai-drafts/editing.mdx` -- added heading + Composing Emails card
+- `features/automations/auto-reminders.mdx` -- added heading + Automations Overview card
+- `features/automations/calendar-triggers.mdx` -- added heading + Meeting Prep card
+- `features/automations/scheduled-reminders.mdx` -- added heading + Automation Recipes card
+- `features/email/labels.mdx` -- added heading + Inbox Zero and Importance Labels cards
+- `getting-started/ai-memories.mdx` -- added heading + Autocomplete and AI Privacy cards
+- `getting-started/importance-labels.mdx` -- added heading + Inbox Zero and Inbox Views cards
+- `getting-started/desktop-app.mdx` -- added heading + Keyboard Shortcuts and Mobile cards
+- `getting-started/mobile.mdx` -- added heading + Desktop App and Mobile Fixes cards
+- `whats-new/changelog.mdx` -- added heading + Roadmap and 10 Automations cards
+
+### Image audit: screenshots added to 2 articles
+
+- `getting-started/security-privacy.mdx` -- added security overview screenshot
+- `getting-started/desktop-app.mdx` -- added second screenshot (desktop app with dock badge)
+
+### Desktop app & mobile: enhanced with Tips
+
+- `getting-started/desktop-app.mdx` -- added Tip about automatic sync from web
+- `getting-started/mobile.mdx` -- added Tip about account sync
+
+### Changelog: restructured with version numbers and dates
+
+Rewrote `whats-new/changelog.mdx` with:
+- Version numbers (v2.5 through v2.14) for each update
+- Specific dates per release (weekly cadence)
+- Horizontal rule separators between months
+- Added seoDescription for search
+- Expanded Related Articles from 2 to 4 cards
+
+### docs.json verification
+
+Verified all 80 page paths in docs.json resolve to existing .mdx files. Verified all .mdx content pages appear in the navigation. No missing pages or orphaned files found.
+
+---
+
 ## 2026-03-31 (Iteration 6)
 
 ### iMessage articles: enhanced with Steps, Tips, Accordions
