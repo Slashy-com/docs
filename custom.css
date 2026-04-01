@@ -118,9 +118,21 @@ h2 + div {
   gap: 0.25rem !important;
 }
 
-/* Remove CardGroup outer border */
+/* Remove CardGroup outer border — target all possible wrappers */
 [class*="CardGroup"],
-[class*="card-group"] {
+[class*="card-group"],
+[class*="Cards"],
+[class*="cards"],
+div:has(> [class*="Card"]),
+div:has(> a[class*="card"]) {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Also kill any rounded wrapper that Mintlify adds */
+[class*="CardGroup"] > div,
+[class*="card-group"] > div {
   border: none !important;
   box-shadow: none !important;
 }
