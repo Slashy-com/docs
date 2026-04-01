@@ -1,5 +1,62 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 11 -- Best Practices Research & UX Improvements)
+
+Researched top SaaS help centers (Notion, Linear, Stripe, Vercel, Zendesk best-of lists) and Mintlify's latest features to identify gaps. Applied concrete improvements inspired by patterns from the best documentation sites.
+
+### Homepage redesign with custom hero layout (index.mdx)
+
+Converted homepage from standard layout to `mode: "custom"` with a Tailwind-styled hero section:
+
+- Large centered "How can we help?" heading -- the dominant pattern across top help centers (Notion, Stripe, Zendesk best-of examples). Users see a clear, inviting entry point instead of jumping straight into cards.
+- Subtitle with concise value prop beneath the heading
+- All card sections wrapped in a max-width container for better readability
+- Added "Contact Support" as a third card in the "Need help?" section -- top help centers (Notion, Linear) always surface direct support access prominently, not just buried in global anchors
+- Added descriptive subtitle to "Slashy for your role" section ("Pick your role for tailored workflows, agent commands, and tips") -- helps users self-select, a key UX pattern from role-based help center design
+
+### Site-wide announcement banner (docs.json)
+
+Added dismissible banner at top of every page highlighting recent features with link to changelog. This is a Mintlify feature that was not previously used. Top help centers (Stripe, Vercel) use banners to surface new content and reduce "what's new" discovery friction.
+
+### Custom CSS for visual polish (custom.css -- new file)
+
+Created `custom.css` with:
+
+- Smooth card hover transitions (translateY + subtle indigo shadow) -- inspired by Linear/Vercel card interactions
+- Better focus-visible states for keyboard navigation (indigo outline ring) -- accessibility best practice from WCAG 2.1 guidelines
+- Dark mode focus ring variant
+- Improved code block border radius
+
+### Quick Actions snippet for troubleshooting (snippets/quick-actions.mdx -- new file)
+
+Created reusable "Quick fixes to try first" Tip callout with common self-service actions (reload, reconnect, known issues, contact). Inspired by the UX pattern where top help centers surface the most common fixes before users read the full article. Added to 4 troubleshooting pages:
+
+- `troubleshooting/unexpected-behavior.mdx`
+- `troubleshooting/sync-issues.mdx`
+- `troubleshooting/desktop-fixes.mdx`
+- `troubleshooting/mobile-fixes.mdx`
+
+### Improved search prompt (docs.json)
+
+Changed search placeholder from "Search help articles..." to "Search for guides, features, or troubleshooting..." -- more descriptive prompt that tells users what kinds of content exist, following the UX research finding that specific search prompts increase search usage.
+
+### URL redirects for common entry points (docs.json)
+
+Added 6 redirects for intuitive URLs that users might type directly:
+
+- `/help` -> `/`
+- `/support` -> `/troubleshooting/faq`
+- `/automations` -> `/features/automations/overview`
+- `/ai-drafts` -> `/how-to-guides/ai-drafts`
+- `/privacy` -> `/getting-started/security-privacy`
+- `/imessage` -> `/how-to-guides/imessage-setup`
+
+### FAQ page: search discovery callout (troubleshooting/faq.mdx)
+
+Added Tip at top of FAQ encouraging users to use Cmd+K search or contact support directly. Top help centers treat FAQ as a second entry point and always surface the search feature prominently.
+
+---
+
 ## 2026-03-31 (Iteration 10 -- Growth Persona)
 
 ### New page: Growth & Sales Development persona
