@@ -72,15 +72,24 @@ h2 + div {
    CARD STYLING - Slashy border color
    ============================================ */
 
-/* Individual card borders — NOT the wrapper */
+/* Remove CardGroup outer wrapper border */
+[class*="CardGroup"],
+[class*="card-group"] {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Individual card borders — Notion style rounded */
 [class*="Card"] > a,
 [class*="Card"]:not([class*="CardGroup"]) > a,
 a[class*="card"],
 .card {
   border: 1px solid #E5E5E5 !important;
   box-shadow: none !important;
-  transition: border-color 0.15s ease;
-  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.5rem !important;
 }
 
 .dark [class*="Card"] a,
@@ -92,7 +101,7 @@ a[class*="card"],
   border-color: rgba(255, 255, 255, 0.055) !important;
 }
 
-/* Card hover: darker border only, no background fill (Notion-style) */
+/* Card hover: darker border only (Notion) */
 [class*="Card"] a:hover,
 .card:hover,
 [class*="card"]:hover {
@@ -112,38 +121,22 @@ a[class*="card"],
   background-color: transparent !important;
 }
 
-/* Card internal layout: tighter spacing */
-[class*="Card"] a,
-.card,
-[class*="card"] {
-  padding: 1rem 1.25rem !important;
-  gap: 0.25rem !important;
-}
-
-/* Remove ONLY the CardGroup outer wrapper border, not individual cards */
-[class*="CardGroup"],
-[class*="card-group"] {
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Card icons: small and subtle */
+/* Card icons: Notion blue */
 [class*="Card"] svg,
 .card svg {
-  width: 1rem !important;
-  height: 1rem !important;
-  margin-bottom: 0.25rem !important;
-  opacity: 0.6;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  margin-bottom: 0.625rem !important;
+  color: #3392DD !important;
 }
 
-/* Card title: tight to icon */
+/* Card title */
 [class*="Card"] h3,
 .card h3 {
   font-weight: 600 !important;
   font-size: 0.9375rem !important;
   color: rgb(44, 44, 43);
-  margin: 0 !important;
+  margin: 0 0 0.25rem 0 !important;
   padding: 0 !important;
 }
 
@@ -154,13 +147,13 @@ a[class*="card"],
   color: rgb(211, 211, 211);
 }
 
-/* Card description: tight to title */
+/* Card description */
 [class*="Card"] p,
 .card p {
   color: #7D7A75;
   font-size: 0.8125rem !important;
   line-height: 1.5;
-  margin: 0.125rem 0 0 0 !important;
+  margin: 0 !important;
 }
 
 /* ============================================
