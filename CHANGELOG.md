@@ -1,5 +1,25 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 10 -- Growth Persona)
+
+### New page: Growth & Sales Development persona
+
+Created `personas/growth.mdx` targeting growth marketers, SDRs, BDRs, and demand gen teams:
+
+- 6-step Setup Checklist: multi-account connection, snippet library, open tracking, follow-up automations, pipeline labels, booking links
+- 5 Automations: sequence follow-up drip, engagement alerts (3+ opens), timezone-optimized sends, stale lead scanner, auto-label by engagement
+- Concrete workflow: "Run a 50-Person Outreach Campaign in 30 Minutes" (5 steps)
+- 6 pro tips for high-volume outreach (account separation, snippet variables, open tracking patterns, breakup emails, batching, agent reports)
+- 9 sample agent commands in 3 tabs (Campaign Management, Outreach & Sequences, Engagement & Reporting)
+- 4 Related Articles cards (Email Tracking, Snippets, Follow-ups, Multiple Accounts)
+- Full frontmatter with seoDescription and chart-line icon
+
+### docs.json: added growth persona to navigation
+
+Added `personas/growth` to the Personas group in the "Slashy for Your Role" tab, positioned between Sales and VCs.
+
+---
+
 ## 2026-03-31 (Iteration 9 -- QA Pass)
 
 Final quality assurance pass across all 80 articles, docs.json, and 3 snippets.
