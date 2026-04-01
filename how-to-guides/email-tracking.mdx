@@ -5,6 +5,8 @@ description: "How Slashy's tracking pixel works, how to enable or disable it, vi
 
 Slashy embeds an invisible tracking pixel in outgoing emails so you know when a recipient opens your message.
 
+<Warning>Email tracking is not 100% reliable. Privacy features in Apple Mail, corporate firewalls, and image-blocking settings can prevent tracking pixels from firing. Treat open data as a signal, not a certainty.</Warning>
+
 ## How It Works
 
 When tracking is enabled, each outgoing email gets a tiny invisible image per recipient. When the recipient's email client loads images, Slashy records:
@@ -55,15 +57,27 @@ Slashy filters automated opens from Gmail Image Proxy, Apple MPP, Microsoft Safe
 
 ## Open Trigger Automations
 
-Create automations that fire when a tracked email is opened — e.g., get notified when a prospect opens your proposal.
+Create automations that fire when a tracked email is opened -- for example, get notified when a prospect opens your proposal.
 
-1. Open the agent sidebar (`Cmd+Shift+L`)
-2. Ask the agent to create an email open trigger
-3. Define your condition and action
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L` or `p a`.
+  </Step>
+  <Step title="Ask the agent to create an open trigger">
+    Example: *"Create an email open trigger: when anyone at @bigclient.com opens my email for the first time, message me on iMessage."*
+  </Step>
+  <Step title="Define your condition and action">
+    The agent shows a preview of the trigger for your confirmation. Adjust the scope or action as needed.
+  </Step>
+</Steps>
 
 Open triggers include the same auto-open filtering and can fire on first open only or every open.
 
+<Tip>Combine email tracking with the [Follow-Up Nudge automation](/how-to-guides/10-automations) for a powerful outreach workflow: track opens, then auto-draft a follow-up if the recipient opens but doesn't reply within 3 days.</Tip>
+
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
@@ -71,5 +85,11 @@ Open triggers include the same auto-open filtering and can fire on first open on
   </Card>
   <Card title="Never Miss a Follow-up" icon="bell" href="/how-to-guides/never-miss-followup">
     Four layers of follow-up protection
+  </Card>
+  <Card title="Slashy for Sales" icon="chart-line" href="/personas/sales">
+    Sales workflows using tracking and follow-ups
+  </Card>
+  <Card title="Customer Follow-ups" icon="users" href="/how-to-guides/customer-followups">
+    Automated follow-up tracking for key accounts
   </Card>
 </CardGroup>

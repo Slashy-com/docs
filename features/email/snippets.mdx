@@ -30,13 +30,25 @@ You can also type the shortcut keyword directly in the composer -- Slashy offers
 
 AI variables embed a prompt inside a snippet. When inserted, the AI generates personalized content based on the recipient, thread history, and your memories.
 
-Click the AI icon in the snippet editor to add one. Example prompts:
+<Steps>
+  <Step title="Open the snippet editor">
+    Press `n s` or edit an existing snippet in **Settings > Snippets**.
+  </Step>
+  <Step title="Add an AI variable">
+    Click the **AI icon** in the snippet body editor. A prompt field appears.
+  </Step>
+  <Step title="Write your prompt">
+    Describe what the AI should generate. Examples:
+    - "Personalize a greeting based on our previous conversations"
+    - "Write a one-sentence summary of why I'm reaching out"
+    - "Generate a relevant icebreaker based on the recipient's company"
+  </Step>
+  <Step title="Use the snippet">
+    Insert with `Cmd+Shift+S`. The AI variable generates automatically based on the recipient context. Edit the output before sending.
+  </Step>
+</Steps>
 
-- "Personalize a greeting based on our previous conversations"
-- "Write a one-sentence summary of why I'm reaching out"
-- "Generate a relevant icebreaker based on the recipient's company"
-
-<Tip>AI variables generate automatically on insertion. You can edit the output before sending.</Tip>
+<Tip>AI variables are perfect for outreach at scale -- your snippet provides the structure, and the AI personalizes each email based on what it knows about the recipient.</Tip>
 
 ## Pre-Set Recipients & Attachments
 
@@ -64,11 +76,19 @@ All management lives in **Settings > Snippets** (`Cmd+,` then Snippets). Search,
 
 ---
 
+## Related Articles
+
 <CardGroup cols={2}>
   <Card title="Composing Emails" icon="pen" href="/features/email/composing">
     Rich text editor and multi-account sending
   </Card>
   <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
     Auto-suggestions and AI-generated replies
+  </Card>
+  <Card title="Slashy for Sales" icon="chart-line" href="/personas/sales">
+    Using snippets for outreach at scale
+  </Card>
+  <Card title="Slashy for Recruiters" icon="user-plus" href="/personas/recruiters">
+    Recruiting-specific snippet workflows
   </Card>
 </CardGroup>

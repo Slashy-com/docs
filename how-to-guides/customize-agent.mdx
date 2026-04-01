@@ -5,6 +5,8 @@ description: "Set memories for writing style, tone, and formality. Train the age
 
 Slashy's AI writes emails that sound like you by learning from your email history, explicit preferences, and draft feedback. You can accelerate this by telling the agent exactly how you want it to write.
 
+<Tip>The fastest way to train the agent: set 3-5 writing memories on day one, then actively edit AI drafts for the first week. Most users see accurate drafts by day 7.</Tip>
+
 ## Setting Writing Memories
 
 Open the agent sidebar (`p a`) and tell it your preferences:
@@ -70,23 +72,33 @@ Switch models using the selector in the compose window or agent sidebar.
 
 Use Opus without limits by providing your own Anthropic API key:
 
-1. Go to **Settings > Account** (`Cmd+,`)
-2. Paste your key in the **API Key** field
-3. The key is encrypted and stored in Vault
+<Steps>
+  <Step title="Open Account settings">
+    Go to **Settings > Account** (`Cmd+,`)
+  </Step>
+  <Step title="Paste your API key">
+    Enter your Anthropic API key in the **API Key** field.
+  </Step>
+  <Step title="Confirm encryption">
+    The key is encrypted and stored in Vault. You can remove it anytime.
+  </Step>
+</Steps>
 
-Opus usage bills to your Anthropic account. Haiku and Sonnet remain included with Slashy.
+<Warning>Opus usage with your own API key bills to your Anthropic account. Haiku and Sonnet remain included with your Slashy subscription.</Warning>
 
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
     Auto-suggestions and learning
   </Card>
+  <Card title="AI Memories" icon="brain" href="/getting-started/ai-memories">
+    How memories power personalization
+  </Card>
   <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
     Set up impactful automations
-  </Card>
-  <Card title="iMessage Capabilities" icon="message" href="/how-to-guides/imessage-capabilities">
-    Everything you can do via text
   </Card>
   <Card title="Signatures" icon="signature" href="/how-to-guides/signatures">
     Configure signatures and remove branding

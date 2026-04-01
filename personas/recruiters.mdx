@@ -52,6 +52,26 @@ Open the AI agent sidebar (`Cmd+Shift+L`) and set up these automations:
   <img src="/images/screenshots/recruiter-follow-up.png" alt="Follow-up automation drafting a nudge email for a candidate who hasn't replied" />
 </Frame>
 
+## Workflow: Send 20 Personalized Outreach Emails in 15 Minutes
+
+<Steps>
+  <Step title="Open the snippet picker">
+    Press `Cmd+Shift+S` in a new compose window to browse your outreach snippets. Pick the template that matches the role you are hiring for.
+  </Step>
+  <Step title="Insert the snippet and personalize">
+    The snippet fills in the body, subject, and any AI variables. Edit the first sentence with something specific to the candidate -- their recent project, company, or LinkedIn headline.
+  </Step>
+  <Step title="Drop in your booking link">
+    Include your scheduling page URL so candidates can self-book a phone screen. No back-and-forth needed.
+  </Step>
+  <Step title="Enable tracking and send">
+    Toggle email tracking on in the compose window, then send. Repeat for each candidate -- the snippet does the heavy lifting.
+  </Step>
+  <Step title="Review opens the next morning">
+    Press `p o` to check who opened. Candidates who opened 2-3 times without replying are warm -- reach out on LinkedIn or phone.
+  </Step>
+</Steps>
+
 ## Pro Tips
 
 - **Personalize at scale:** Start every outreach from a snippet, then swap the first sentence for something specific to the candidate. You send 50 emails a day that each feel handwritten.
@@ -59,13 +79,43 @@ Open the AI agent sidebar (`Cmd+Shift+L`) and set up these automations:
 - **Batch scheduling:** Include your booking link in every outreach snippet. Candidates self-schedule and you skip 10 back-and-forth emails per screen.
 - **Pipeline review:** Ask the agent *"List all candidates who haven't replied in the last 5 days"* for an instant pipeline health check.
 
+## Sample Agent Commands
+
+Try these in the agent sidebar (`Cmd+Shift+L`):
+
+<Tabs>
+  <Tab title="Pipeline">
+    - *"List all candidates who haven't replied in the last 5 days"*
+    - *"Which candidates opened my outreach but didn't reply?"*
+    - *"How many outreach emails did I send this week?"*
+  </Tab>
+  <Tab title="Outreach">
+    - *"Draft an outreach email for a senior engineer at [company]"*
+    - *"Create a follow-up for [candidate] -- warm and brief"*
+    - *"Write a rejection email for [candidate] that keeps the door open"*
+  </Tab>
+  <Tab title="Coordination">
+    - *"Summarize all candidate activity for the [role] position this week"*
+    - *"Forward [candidate]'s thread to [hiring manager] with a summary"*
+    - *"What interviews do I have scheduled this week?"*
+  </Tab>
+</Tabs>
+
 ---
 
+## Related Articles
+
 <CardGroup cols={2}>
-  <Card title="Snippets" icon="scissors" href="/features/snippets">
-    Create and manage reusable email templates.
+  <Card title="Snippets & Templates" icon="scissors" href="/features/email/snippets">
+    Create and manage reusable email templates
   </Card>
-  <Card title="Email Tracking" icon="eye" href="/features/email-tracking">
-    Open and click tracking for outreach.
+  <Card title="Email Tracking" icon="eye" href="/how-to-guides/email-tracking">
+    Open and click tracking for outreach
+  </Card>
+  <Card title="Booking Pages" icon="calendar" href="/how-to-guides/booking-page">
+    Let candidates self-schedule interviews
+  </Card>
+  <Card title="Never Miss a Follow-up" icon="bell" href="/how-to-guides/never-miss-followup">
+    Automated follow-up tracking for every candidate
   </Card>
 </CardGroup>

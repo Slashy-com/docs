@@ -1,5 +1,57 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 3)
+
+### Cross-linking: Related Articles CardGroup sections
+
+Added or expanded "Related Articles" `<CardGroup>` sections at the bottom of 12 articles, creating a bidirectional link network across the docs:
+
+- `getting-started/first-week.mdx` -- expanded from 2 to 6 cards (added 10 Automations, AI Drafts, Keyboard Shortcuts, iMessage Setup)
+- `getting-started/connecting-gmail.mdx` -- expanded from 2 to 4 cards (added Calendar Setup, Multiple Accounts)
+- `getting-started/calendar-setup.mdx` -- expanded from 2 to 4 cards (added Booking Pages, Meeting Prep)
+- `how-to-guides/10-automations.mdx` -- expanded from 4 to 6 cards (added Automations Overview, Email Triggers, Calendar Triggers, Never Miss a Follow-up; removed duplicates)
+- `how-to-guides/meeting-prep.mdx` -- expanded from 2 to 4 cards (added Calendar Triggers, Booking Pages)
+- `how-to-guides/automate-receipts.mdx` -- expanded from 2 to 4 cards (added Email Triggers, Automations Overview)
+- `features/automations/email-triggers.mdx` -- expanded from 3 to 4 cards (added 10 Automations)
+- `features/automations/overview.mdx` -- expanded from 2 to 4 cards (added Customize Your Agent, iMessage Setup)
+- `how-to-guides/email-tracking.mdx` -- added Related Articles heading; linter expanded to 4 cards
+- `personas/founders.mdx` -- unchanged (already had good links)
+- `personas/sales.mdx` -- expanded to 4 cards with corrected paths
+- `personas/recruiters.mdx` -- expanded to 4 cards with corrected paths
+- `personas/vcs.mdx` -- expanded to 4 cards with corrected paths
+- `personas/executives.mdx` -- expanded to 4 cards with corrected paths
+
+### Steps components: converted numbered lists to `<Steps>`
+
+Converted step-by-step instructions in 3 articles from numbered lists to Mintlify `<Steps>` components for visual clarity:
+
+- `getting-started/connecting-gmail.mdx` -- "Verify Your Sync" section (4 steps)
+- `getting-started/calendar-setup.mdx` -- "Choose Which Calendars to Show" (3 steps), "Booking Links" (3 steps), "Meet With" (3 steps)
+- `how-to-guides/email-tracking.mdx` -- "Open Trigger Automations" (3 steps)
+
+### Persona pages: concrete workflow examples with Steps
+
+Added full `<Steps>` workflow walkthroughs to 2 persona pages:
+
+- `personas/sales.mdx` -- "Workflow: Process Your Morning Pipeline in 10 Minutes" (5 steps covering triage, AI drafts, opens panel, dropped ball scanner, scheduled sends)
+- `personas/recruiters.mdx` -- "Workflow: Send 20 Personalized Outreach Emails in 15 Minutes" (5 steps covering snippets, personalization, booking links, tracking, opens review)
+
+Linter also auto-added "Sample Agent Commands" `<Tabs>` sections to sales, recruiters, VCs, and executives persona pages.
+
+### Broken internal link fixes
+
+Fixed 7 broken links in persona page CardGroup sections:
+
+- `personas/sales.mdx`: `/features/email-tracking` -> `/how-to-guides/email-tracking`
+- `personas/sales.mdx`: `/features/snippets` -> `/features/email/snippets`
+- `personas/recruiters.mdx`: `/features/snippets` -> `/features/email/snippets`
+- `personas/recruiters.mdx`: `/features/email-tracking` -> `/how-to-guides/email-tracking`
+- `personas/vcs.mdx`: `/features/ai-drafts` -> `/how-to-guides/ai-drafts`
+- `personas/executives.mdx`: `/features/ai-drafts` -> `/how-to-guides/ai-drafts`
+- `personas/executives.mdx`: `/features/automations` -> `/features/automations/overview`
+
+---
+
 ## 2026-03-31
 
 ### Navigation restructure (docs.json)
