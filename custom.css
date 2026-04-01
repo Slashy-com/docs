@@ -157,6 +157,30 @@ a[class*="card"],
 }
 
 /* ============================================
+   SEARCH BAR - Notion-style pill
+   ============================================ */
+
+/* Search trigger button */
+[class*="Search"] button,
+button[class*="search"],
+[aria-label*="Search"],
+[data-testid*="search"] {
+  background-color: #F7F7F5 !important;
+  border: 1px solid #E5E5E5 !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
+.dark [class*="Search"] button,
+.dark button[class*="search"],
+.dark [aria-label*="Search"],
+[data-theme="dark"] [class*="Search"] button,
+[data-theme="dark"] button[class*="search"] {
+  background-color: rgb(32, 32, 32) !important;
+  border-color: rgba(255, 255, 255, 0.055) !important;
+}
+
+/* ============================================
    LINKS - Slashy accent color
    ============================================ */
 
