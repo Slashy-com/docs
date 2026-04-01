@@ -5,16 +5,30 @@ seoDescription: "Slashy Help Center -- guides, tutorials, and troubleshooting fo
 mode: "custom"
 ---
 
-<div className="px-4 pt-12 pb-8 lg:pt-20 lg:pb-10 max-w-4xl mx-auto">
-  <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 dark:text-zinc-50 tracking-tight text-left">
-    Slashy Help Center
-  </h1>
-  <p className="mt-3 text-base lg:text-lg text-gray-500 dark:text-zinc-400 max-w-xl text-left">
-    Guides, tutorials, and answers for the AI-powered email client for Gmail.
-  </p>
+<div className="px-6 pt-16 pb-12 lg:pt-24 lg:pb-16 max-w-5xl mx-auto">
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
+    <div className="flex-1">
+      <h1 className="text-4xl lg:text-5xl font-bold tracking-tight" style={{color: "rgb(44,44,43)", lineHeight: "1.15"}}>
+        Your AI email client, explained.
+      </h1>
+      <p className="mt-4 text-base lg:text-lg max-w-md" style={{color: "#7D7A75", lineHeight: "1.6"}}>
+        Guides, tutorials, and answers for Slashy — the AI-powered email client for Gmail.
+      </p>
+      <div className="mt-6">
+        <a href="/getting-started/first-week" className="inline-flex items-center px-5 py-2.5 rounded-md text-white text-sm font-medium no-underline hover:opacity-90 transition-opacity" style={{backgroundColor: "#3392DD"}}>
+          Get Started
+        </a>
+      </div>
+    </div>
+    <div className="flex-1 hidden lg:flex justify-center">
+      <img src="/images/screenshots/slashy-hero.png" alt="" className="max-w-sm" style={{opacity: 0.9}} />
+    </div>
+  </div>
 </div>
 
-<div className="max-w-4xl mx-auto px-6 pb-12">
+<div className="max-w-5xl mx-auto px-6 pb-12">
+
+<div style={{borderTop: "1px solid #E5E5E5", margin: "0 0 2.5rem 0"}} />
 
 ## Get started
 
@@ -33,7 +47,7 @@ mode: "custom"
   </Card>
 </CardGroup>
 
----
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
 
 ## Features
 
@@ -58,46 +72,26 @@ mode: "custom"
   </Card>
 </CardGroup>
 
----
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
 
 ## Automations
 
-<Card title="10 Automations Every User Should Enable" icon="bolt" href="/how-to-guides/10-automations" horizontal>
-  Meeting prep, receipt forwarding, dropped ball scanner, VIP alerts, and more.
-</Card>
-
 <CardGroup cols={2}>
-  <Card title="Receipt Forwarding" icon="receipt" href="/how-to-guides/automate-receipts">
-    Auto-forward to Expensify or Ramp.
-  </Card>
-  <Card title="Meeting Prep" icon="calendar-check" href="/how-to-guides/meeting-prep">
-    Briefings before every external call.
-  </Card>
-  <Card title="Follow-Up Tracker" icon="bell" href="/how-to-guides/never-miss-followup">
-    Never drop a ball again.
+  <Card title="10 Automations to Enable" icon="bolt" href="/how-to-guides/10-automations">
+    Meeting prep, receipt forwarding, VIP alerts, and more.
   </Card>
   <Card title="Automation Recipes" icon="flask" href="/how-to-guides/automation-recipes">
     Copy-paste setups for common workflows.
   </Card>
-</CardGroup>
-
----
-
-## Troubleshooting
-
-<CardGroup cols={3}>
-  <Card title="FAQ" icon="circle-question" href="/troubleshooting/faq">
-    Quick answers to common questions.
+  <Card title="Follow-Up Tracker" icon="bell" href="/how-to-guides/never-miss-followup">
+    Never drop a ball again.
   </Card>
-  <Card title="Fix Issues" icon="wrench" href="/troubleshooting/unexpected-behavior">
-    Sync, behavior, and common fixes.
-  </Card>
-  <Card title="Contact Support" icon="envelope" href="mailto:founders@slashy.com">
-    Reach the team directly.
+  <Card title="Meeting Prep" icon="calendar-check" href="/how-to-guides/meeting-prep">
+    Briefings before every external call.
   </Card>
 </CardGroup>
 
----
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
 
 ## Slashy for your role
 
@@ -122,7 +116,7 @@ mode: "custom"
   </Card>
 </CardGroup>
 
----
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
 
 ## Switching to Slashy
 
@@ -138,7 +132,23 @@ mode: "custom"
   </Card>
 </CardGroup>
 
----
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
+
+## Need help?
+
+<CardGroup cols={3}>
+  <Card title="FAQ" icon="circle-question" href="/troubleshooting/faq">
+    Quick answers to common questions.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/troubleshooting/unexpected-behavior">
+    Sync, behavior, and common fixes.
+  </Card>
+  <Card title="Contact Support" icon="envelope" href="mailto:founders@slashy.com">
+    Reach the team directly.
+  </Card>
+</CardGroup>
+
+<div style={{borderTop: "1px solid #E5E5E5", margin: "2.5rem 0"}} />
 
 ## Security & Trust
 
