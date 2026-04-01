@@ -1,0 +1,92 @@
+---
+title: "Security & Privacy"
+description: "How Slashy protects your data -- certifications, encryption, AI provider contracts, and data deletion."
+---
+
+Slashy handles your email, calendar, and contacts. Security is the foundation, not a feature.
+
+## Certifications
+
+| Certification | Status |
+|---|---|
+| **SOC 2 Type II** | Audited annually |
+| **CASA Tier 2** | Google Cloud Application Security Assessment -- passed |
+| **Penetration Testing** | Quarterly, independent third-party firm |
+| **Encryption** | AES-256 at rest, TLS 1.2+ in transit |
+
+Full compliance docs: [trust.delve.co/slashy](https://trust.delve.co/slashy)
+
+## AI and Your Data
+
+**Does the AI train on my emails?** No.
+
+Every AI provider is contractually bound to a zero-training agreement. Your data is processed to generate a response and then discarded.
+
+| AI Provider | Used For | Trains on Your Data? |
+|---|---|---|
+| Anthropic (Claude) | Drafts, agent, automations | No -- contractually prohibited |
+| OpenAI | Drafts, editing, autocomplete | No -- contractually prohibited |
+| Google (Gemini) | Categorization, search | No -- contractually prohibited |
+| Groq | Fast inference tasks | No -- contractually prohibited |
+
+Only the minimum necessary context (email thread, memories, calendar if relevant) is sent to providers.
+
+## Prompt Injection Protection
+
+Malicious emails can contain hidden instructions to trick AI assistants. Slashy sanitizes and isolates incoming email content from system instructions before it reaches any model. The agent cannot take unauthorized actions and flags suspicious content.
+
+## What Data Slashy Stores
+
+- **Email metadata and content** -- cached for fast access
+- **Calendar events** -- synced from Google Calendar
+- **Agent conversations** -- your AI sidebar chat history
+- **Memories** -- preferences, contacts, writing style
+- **Automation logs** -- what ran and when
+- **Usage analytics** -- anonymous, via PostHog
+
+All stored data: AES-256 at rest, TLS 1.2+ in transit.
+
+## OAuth Access Model
+
+- Slashy never sees or stores your Google password
+- You grant specific permissions you can revoke anytime at [myaccount.google.com/permissions](https://myaccount.google.com/permissions)
+- OAuth tokens stored encrypted, refreshed automatically
+- Same model applies to optional integrations (Zoom, Granola)
+
+## Data Deletion Timeline
+
+| Step | Timing | What Happens |
+|---|---|---|
+| Revoke access | Immediate | OAuth tokens invalidated. No more email/calendar access. |
+| Hard delete | Within 24 hours | All data permanently deleted from production. |
+| Backup purge | Within 7 days | Data removed from encrypted backups. |
+
+Delete your account from **Settings > Account** or email founders@slashy.com.
+
+## Enterprise Security FAQ
+
+<AccordionGroup>
+  <Accordion title="Where is my data stored?">
+    Encrypted servers in the United States, hosted on AWS with SOC 2 compliance.
+  </Accordion>
+  <Accordion title="Do Slashy employees read my emails?">
+    No. Employee access to production data is restricted, logged, and auditable. No one reads your email unless you explicitly share it for debugging.
+  </Accordion>
+  <Accordion title="Can I get your SOC 2 report?">
+    Yes. Visit [trust.delve.co/slashy](https://trust.delve.co/slashy) to request the full report, pen test summary, and compliance documents.
+  </Accordion>
+  <Accordion title="Do you have a bug bounty program?">
+    Yes. Email founders@slashy.com with details. We respond within 24 hours.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Connecting Gmail" icon="envelope" href="/getting-started/connecting-gmail">
+    OAuth permissions and what Slashy accesses.
+  </Card>
+  <Card title="Your First Week" icon="rocket" href="/getting-started/first-week">
+    Day-by-day onboarding guide.
+  </Card>
+</CardGroup>

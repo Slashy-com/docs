@@ -1,0 +1,89 @@
+---
+title: "What Data Slashy Stores & How to Control It"
+description: "Detailed breakdown of stored data, the OAuth access model, your GDPR rights, deletion timelines, and data controls."
+---
+
+Slashy needs access to your email and calendar to work. This page explains what's stored, why, how long, and what controls you have.
+
+## Data Slashy Stores
+
+<AccordionGroup>
+  <Accordion title="Email & Calendar">
+    - **Metadata:** Sender, recipients, subject, date, thread IDs, labels, read/unread status
+    - **Content:** Message bodies indexed (encrypted) for AI features and search
+    - **Attachments:** Metadata only -- content fetched from Gmail on demand
+    - **Calendar:** Event titles, times, attendees, locations, descriptions, recurrence
+  </Accordion>
+  <Accordion title="AI Data">
+    - **Memories:** Facts about you and contacts (Settings > Memories)
+    - **Agent conversations:** Chat history for context continuity
+    - **Automation logs:** Trigger records and actions taken
+  </Accordion>
+  <Accordion title="Settings & Preferences">
+    - Labels, snippets, automations, tasks, blocked/unsubscribed senders
+    - Theme, compose mode, notification preferences
+    - Email tracking data (open timestamps, device info)
+  </Accordion>
+  <Accordion title="Usage Logs">
+    - **Analytics (PostHog):** Anonymized usage events -- no email content
+    - **Error logs (Sentry):** Crash reports with technical context -- no email content
+  </Accordion>
+</AccordionGroup>
+
+## OAuth Access Model
+
+Slashy connects via Google OAuth 2.0 with scoped permissions:
+
+| Permission | Purpose |
+|---|---|
+| Read and send email | Inbox display, AI features, sending |
+| Manage labels | Importance labels and Gmail label sync |
+| Read and write calendar | Calendar view, booking pages, events |
+| Read contacts | Autocomplete and enrichment |
+
+Slashy has **no access** to Google Drive, Docs, or other services. Review and revoke access anytime at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
+
+## Your Controls
+
+<Tabs>
+  <Tab title="View Data">
+    - **Memories:** Settings > Memories
+    - **Automations:** Settings > Automations
+    - **Snippets:** Settings > Snippets
+    - **Agent history:** Agent sidebar
+    - **Full export:** Email [privacy@slashy.com](mailto:privacy@slashy.com) for a machine-readable export (within 30 days per GDPR)
+  </Tab>
+  <Tab title="Delete Data">
+    - Individual memories, automations, snippets, agent history, and tasks can be deleted in-app
+    - Full account deletion: email [privacy@slashy.com](mailto:privacy@slashy.com)
+  </Tab>
+  <Tab title="Revoke Access">
+    Go to [Google permissions](https://myaccount.google.com/permissions), find Slashy, click **Remove Access**. Immediately stops all reading/writing.
+  </Tab>
+</Tabs>
+
+## Deletion Timeline
+
+| Timeline | What Happens |
+|---|---|
+| **Immediate** | Account deactivated, sync stops |
+| **Within 24 hours** | All primary data permanently deleted |
+| **Within 7 days** | Cached email content and search indexes purged |
+| **Within 30 days** | All backup copies destroyed. No recoverable data remains. |
+
+## GDPR Rights
+
+If you're in the EEA: right of access, rectification, erasure, data portability, restrict processing, and right to object. Email [privacy@slashy.com](mailto:privacy@slashy.com) -- all requests handled within 30 days.
+
+See the [Privacy Policy](https://slashy.com/privacy) and [DPA](https://slashy.com/dpa) for full legal details.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="AI Privacy" icon="shield-halved" href="/getting-started/ai-privacy">
+    How AI providers handle your data.
+  </Card>
+  <Card title="Subprocessors" icon="server" href="/getting-started/subprocessors">
+    Full infrastructure provider list.
+  </Card>
+</CardGroup>

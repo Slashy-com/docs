@@ -1,0 +1,115 @@
+---
+title: "Moving from Gmail to Slashy"
+description: "What syncs automatically, what doesn't, keyboard shortcut mapping, and your first week plan."
+---
+
+Slashy is a full replacement for the Gmail web interface. You keep the same Gmail backend -- Slashy reads and writes to it directly. Nothing is lost.
+
+## What Syncs Automatically
+
+When you connect your Gmail account, all of these sync with no action required:
+
+- **All email** -- inbox, sent, archives, trash, spam. Full history.
+- **Labels** -- system and custom, bidirectional.
+- **Read/unread status** and **stars** -- bidirectional.
+- **Drafts** -- existing Gmail drafts appear in Slashy and vice versa.
+- **Contacts** -- names, emails, profile photos from Google Contacts.
+- **Calendar** -- Google Calendar events sync bidirectionally in real time.
+- **Signatures** -- Slashy detects and uses your Gmail signature.
+
+## What Does NOT Sync
+
+| Gmail Feature | Slashy Equivalent |
+|---|---|
+| Filters | AI importance labels (more flexible, no manual rules) |
+| Categories (Primary, Social, Promotions) | AI importance labels (customizable, more accurate) |
+| Gmail Chat / Spaces | Not available -- Slashy focuses on email + calendar + AI |
+| Gmail Tasks | Slashy tasks (`p t`). Gmail Tasks do not migrate. |
+| Canned Responses | Snippets (`Cmd+Shift+S` to insert, `n s` to create). Support AI variable substitution. |
+
+## Keyboard Shortcut Mapping
+
+Most Gmail shortcuts work identically. Key differences:
+
+| Action | Gmail | Slashy |
+|---|---|---|
+| Compose | `c` | `c` |
+| Reply / Reply All / Forward | `r` / `a` / `f` | `r` / `a` / `f` |
+| Send | `Cmd+Enter` | `Cmd+Enter` |
+| Search | `/` | `/` |
+| Archive | `e` | `e` |
+| Star | `s` | `s` |
+| Mark read/unread | `Shift+I` / `Shift+U` | `u` (toggle) |
+| Trash / Spam | `#` / `!` | `#` / `!` |
+| Navigate | `j` / `k` | `j` / `k` |
+| Go to Inbox / Sent / Drafts | `g i` / `g t` / `g d` | `g i` / `g t` / `g d` |
+| Label | `l` | `l` or `v` |
+| Select all | `*+a` | `Cmd+A` |
+| Settings | -- | `Cmd+,` |
+| Command Palette | -- | `Cmd+K` |
+| AI Draft Reply | -- | `Cmd+Enter` (on a thread) |
+| AI Agent | -- | `Cmd+Shift+L` |
+| Snooze / Reminder | -- | `h` |
+| Shortcut reference | `?` | `Shift+?` |
+
+<Frame>
+  <img src="/images/screenshots/moving-from-gmail-to-slashy.png" alt="" />
+</Frame>
+
+## Setting Slashy as Your Primary Client
+
+<Steps>
+  <Step title="Install">
+    Bookmark the web app or install the desktop app. Download the [iOS app](https://apps.apple.com) for mobile.
+  </Step>
+  <Step title="Notifications">
+    Enable native OS notifications (desktop app) or browser notifications (web app).
+  </Step>
+  <Step title="Configure Labels">
+    **Settings > Labels** -- enable and customize importance labels to replace Gmail's category tabs.
+  </Step>
+  <Step title="Add Memories">
+    **Settings > Memories** -- add your role, preferences, and communication style so AI drafts are accurate from day one.
+  </Step>
+</Steps>
+
+## Your First 7 Days
+
+<Accordion title="Day 1: Connect and configure">
+  - Connect Gmail and wait for initial sync (2-15 minutes)
+  - Set up importance labels and add 3-5 memories
+  - Explore shortcuts with `Shift+?`
+</Accordion>
+
+<Accordion title="Days 2-3: Use it for all email">
+  - Reply using Slashy instead of Gmail
+  - Try AI Draft Reply (`Cmd+Enter`) and edit the result
+  - Use the AI Agent (`Cmd+Shift+L`) to ask questions about your inbox
+</Accordion>
+
+<Accordion title="Days 4-5: Set up automations">
+  - Ask the agent for a Daily Dropped Ball Scanner
+  - Enable auto-reminders for unanswered contacts
+  - Create a meeting prep automation
+</Accordion>
+
+<Accordion title="Days 6-7: Optimize">
+  - Create Snippets for frequent emails (`n s`)
+  - Set up Booking Links (Settings > Calendars)
+  - Use Bulk Unsubscribe in Settings to clean up newsletters
+</Accordion>
+
+## Can I Still Use Gmail?
+
+Yes. Slashy and Gmail share the same backend -- switch freely. But using Slashy as your primary client makes the AI smarter. It learns your writing style, patterns, and preferences over time.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Your First Week" icon="calendar-check" href="/getting-started/first-week">
+    Day-by-day guide from onboarding to trained AI.
+  </Card>
+  <Card title="Sync Issues" icon="rotate" href="/troubleshooting/sync-issues">
+    Troubleshoot email and calendar sync problems.
+  </Card>
+</CardGroup>

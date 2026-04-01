@@ -1,0 +1,79 @@
+---
+title: "AI Inline Autocomplete"
+description: "Ghost text predictions while you type, Tab to accept, manual trigger with Cmd+\\, context-aware suggestions, and character tracking for AI vs. manual input."
+---
+
+Slashy predicts what you're about to type and shows it as ghost text ahead of your cursor. Press `Tab` to accept and keep writing. Suggestions draw on thread context, your memories, and recipient information to sound like you.
+
+## How It Works
+
+As you type in compose, reply, or forward, Slashy runs a lightweight AI model that reads:
+
+- **Thread context** -- the emails above your reply, what was asked and discussed
+- **Your memories** -- facts, writing style, preferences
+- **Recipient information** -- enriched contact data, past interactions, per-contact memories
+- **Current draft** -- what you've typed so far up to your cursor
+
+Ghost text appears inline and disappears the moment your input diverges from it.
+
+## Accepting and Dismissing
+
+| Action | How |
+|--------|-----|
+| Accept suggestion | `Tab` |
+| Trigger manually | `Cmd+\` |
+| Dismiss | `Escape` or keep typing |
+| Full AI draft | `Cmd+Enter` |
+
+## Manual Trigger
+
+Press `Cmd+\` to request a suggestion at your cursor position. Useful when:
+
+- You've paused and want a suggestion without waiting
+- You dismissed a suggestion and want a new one
+- You're starting a blank compose and want a jumping-off point
+
+## What Makes Suggestions Context-Aware
+
+| Context Source | What It Contributes |
+|---------------|-------------------|
+| **Thread history** | Understands what was asked, what the natural next response is |
+| **Your memories** | Knows your preferences and rules (e.g., "always suggest a call for investor emails") |
+| **Recipient memories** | Per-contact facts (e.g., "John prefers morning meetings") |
+| **Writing style** | Matches your tone, greeting style, sign-off, and formality level |
+
+## Character Tracking: AI vs. Manual
+
+Slashy tracks how much of each email was written by you versus accepted from autocomplete:
+
+- `Tab` acceptance counts as **AI-generated**
+- Normal typing counts as **manual**
+- Deletions are subtracted proportionally from both categories
+
+Stats are recorded on draft save and email send, so you can see how much time AI is saving.
+
+## Disabling Autocomplete
+
+Turn off ghost text from the compose editor toolbar. When disabled:
+
+- No ghost text appears
+- `Cmd+\` does nothing
+- All other AI features (draft reply, editing, rating) continue independently
+
+<Tip>
+**Get better suggestions:** Add memories in **Settings > Memories** about your role, preferences, and common phrases. Write the first few words of a sentence to give the AI a clear direction.
+</Tip>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="AI Email Editing & Rating" icon="wand-magic-sparkles" href="/features/ai-drafts/editing">
+    Edit and rate emails with AI
+  </Card>
+  <Card title="How AI Drafts Work" icon="file-pen" href="/how-to-guides/ai-drafts">
+    Automatic draft suggestions on incoming email
+  </Card>
+  <Card title="Customize Your Agent" icon="sliders" href="/how-to-guides/customize-agent">
+    Set writing style and preferences
+  </Card>
+</CardGroup>

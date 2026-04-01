@@ -1,0 +1,74 @@
+---
+title: "RSVP from Email"
+description: "Respond to calendar invites directly from your inbox — accept, decline, maybe, or propose a new time without opening a separate calendar app."
+---
+
+When you receive a calendar invite, respond directly from the email thread. Accept, decline, mark as tentative, or propose a new time — all without leaving your inbox. Press `Tab` to accept and archive in one step.
+
+<Frame>
+  <img src="/images/screenshots/rsvp-from-email.png" alt="Email thread with RSVP buttons for a calendar invite" />
+</Frame>
+
+## Response Options
+
+| Response | What Happens |
+|----------|-------------|
+| **Accept** | Confirms attendance. Event added to your calendar. Organizer notified. |
+| **Decline** | Declines the invite. Event removed or marked declined. Organizer notified. |
+| **Maybe** | Marks attendance as tentative. Event stays on calendar. Organizer notified. |
+| **Propose New Time** | Suggests an alternative. Original invite stays pending until organizer responds. |
+
+## Quick Accept with Tab
+
+Press `Tab` while viewing an invite to accept and archive in a single action. Your calendar updates, the organizer is notified, and the email moves out of your inbox. Ideal for routine meeting invites that do not need a reply.
+
+## Supported Invite Types
+
+<Tabs>
+  <Tab title="Google Calendar">
+    Slashy communicates directly with the Google Calendar API. Your response syncs immediately. Change your mind anytime — the latest RSVP takes effect.
+  </Tab>
+  <Tab title="Outlook / Teams">
+    Slashy parses Outlook-style invites (ICS attachments or embedded calendar data) and shows the same RSVP controls. Your response follows standard calendar protocols, so it works regardless of the organizer's calendar provider.
+  </Tab>
+</Tabs>
+
+## Propose a New Time
+
+If the proposed time does not work, click **Propose New Time** to suggest an alternative. The organizer can accept (rescheduling for all attendees) or keep the original time. Your status remains pending until they respond.
+
+## How It Works
+
+Everything happens inside the email thread. You do not need to:
+
+- Switch to a calendar app
+- Click through to a Google Calendar or Outlook event page
+- Search for the invite in your calendar
+
+The invite arrives as an email, you respond from that email, and your calendar updates in the background.
+
+<Tip>After responding, the RSVP controls update to show your current status. Open the event in calendar view to see all attendees' RSVP statuses.</Tip>
+
+## Calendar Label
+
+Slashy's AI classification includes a **Calendar** label that catches meeting invites and calendar notifications. Notifications are enabled by default. Customize in **Settings > Labels**.
+
+## Quick Reference
+
+| Action | How |
+|--------|-----|
+| Accept and archive | `Tab` while viewing invite |
+| Accept | Click **Accept** in RSVP controls |
+| Decline | Click **Decline** |
+| Tentative | Click **Maybe** |
+| Propose new time | Click **Propose New Time** |
+| Switch to calendar | `2` or `p c` |
+
+<CardGroup cols={2}>
+  <Card title="Creating Events" icon="calendar-plus" href="/features/calendar/creating-events">
+    Create and manage calendar events in Slashy.
+  </Card>
+  <Card title="Labels & Classification" icon="tags" href="/features/email/labels">
+    How AI classifies your email into importance labels.
+  </Card>
+</CardGroup>

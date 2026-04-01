@@ -1,0 +1,108 @@
+---
+title: "Understanding Agent Autonomy"
+description: "What Slashy's AI agent can do automatically, when it asks permission, how Read Mode works, and how cancellation, reminders, and memory extraction keep you in control."
+---
+
+Slashy's agent drafts emails, searches your inbox, and manages your calendar freely -- but it always asks before sending. Here's exactly what it can and cannot do on its own.
+
+## What the Agent Does Automatically
+
+No permission required for these actions:
+
+- **Search emails** -- query your inbox, read threads, download attachments
+- **Search calendar** -- look up events, check availability
+- **Draft emails** -- create, update, and delete drafts (never sent without approval)
+- **Manage calendar events** -- create, update, reschedule, delete
+- **Search the web** -- look up information, scrape URLs
+- **Research contacts** -- pull LinkedIn profiles and professional background
+- **Manage memories** -- create, update, and delete stored facts
+- **Create automations** -- set up triggers and reminders
+- **Organize emails** -- archive, star, label, mark read/unread
+
+## When the Agent Asks Permission
+
+The agent stops and waits for explicit approval before:
+
+- **Sending any email** -- always drafts first with full preview of recipients and body
+- **Sending via iMessage** -- same approval required in interactive mode
+
+<Frame>
+  <img src="/images/screenshots/understanding-agent-autonomy-1.png" alt="Agent sidebar showing a draft email with send confirmation" />
+</Frame>
+
+## Read Mode
+
+Read Mode restricts the agent to read-only operations. Toggle it from the agent sidebar controls.
+
+<Tabs>
+  <Tab title="Can Do">
+    - Search and read emails
+    - Search and view calendar
+    - Search the web
+    - Research contacts
+    - Answer questions about your inbox
+  </Tab>
+  <Tab title="Cannot Do">
+    - Draft or send emails
+    - Create, update, or delete calendar events
+    - Archive, label, or modify emails
+    - Create or modify automations or memories
+  </Tab>
+</Tabs>
+
+<Frame>
+  <img src="/images/screenshots/understanding-agent-autonomy-2.png" alt="Agent sidebar with Read Mode toggle enabled" />
+</Frame>
+
+## Cancelling the Agent
+
+Click the **Stop** button in the sidebar while the agent is working. Cancellation is instant -- partial drafts and in-progress searches are discarded. The stop signal works across multiple server containers.
+
+## Scheduled Invocations
+
+The agent can schedule itself to run later. When a reminder fires:
+
+<Steps>
+  <Step title="Agent invoked">
+    Runs automatically with the reminder context (task description you set).
+  </Step>
+  <Step title="Full tool access">
+    Can search emails, draft messages, check calendar -- all normal tools available.
+  </Step>
+  <Step title="Safety preserved">
+    Email drafts require your review. iMessage notifications to you send directly.
+  </Step>
+</Steps>
+
+## Automatic Memory Extraction
+
+After every conversation, a background process extracts useful memories. A hidden system trigger also runs on incoming emails to capture contact changes, commitments, and schedule updates.
+
+| Type | Examples |
+|------|----------|
+| **About Me** | Your preferences, rules, commitments |
+| **About Entity** | Contact job changes, company news |
+| **Todo** | Commitments with due dates from email conversations |
+
+Stale todos (14+ days overdue) are automatically dismissed. Review all memories in **Settings > Memories**.
+
+## Automation-Triggered Actions
+
+When automations invoke the agent, the same rules apply: emails to others are drafted for review, notifications to you (via iMessage) send directly.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Sidebar Agent & Command Palette" icon="message-bot" href="/features/ai-agent/composing">
+    Chat with the agent and run commands
+  </Card>
+  <Card title="Email Triggers" icon="bolt" href="/features/automations/email-triggers">
+    Automate actions on incoming email
+  </Card>
+  <Card title="Calendar Triggers" icon="calendar" href="/features/automations/calendar-triggers">
+    Automate meeting prep and follow-ups
+  </Card>
+  <Card title="Scheduled Reminders" icon="clock" href="/features/automations/scheduled-reminders">
+    Schedule the agent for future tasks
+  </Card>
+</CardGroup>

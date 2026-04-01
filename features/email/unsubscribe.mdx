@@ -1,0 +1,76 @@
+---
+title: "Bulk Unsubscribe & Block Senders"
+description: "Block senders inline, unsubscribe from mailing lists, and bulk-clean your inbox with configurable default actions."
+---
+
+Slashy gives you three levels of control over unwanted email: block a sender inline, unsubscribe from a mailing list inline, or bulk unsubscribe from dozens of senders at once in Settings.
+
+<Frame><img src="/images/screenshots/bulk-unsubscribe-block-senders-1.png" alt="Settings Unsubscribe page showing sender list with Block and Unsubscribe buttons" /></Frame>
+
+## Inline Block: `Cmd+U`
+
+While viewing a thread, press `Cmd+U` to block the sender. Future emails from that address are handled automatically. A confirmation toast appears with **Undo** (`z` or `Cmd+Z`).
+
+<Note>Blocking is per-email-address. If a sender uses multiple addresses, block each separately.</Note>
+
+## Inline Unsubscribe: `Cmd+Shift+U`
+
+Press `Cmd+Shift+U` to unsubscribe from the mailing list. Slashy detects the unsubscribe mechanism and executes it automatically:
+
+| Method | How It Works |
+|--------|-------------|
+| **HTTP POST** | One-click RFC 8058 standard (fastest, most reliable) |
+| **HTTP GET** | Opens the unsubscribe URL for older platforms |
+| **Mailto** | Sends an unsubscribe email as fallback |
+
+If no unsubscribe headers exist, Slashy falls back to blocking the sender.
+
+## Bulk Unsubscribe
+
+For comprehensive cleanup, go to **Settings > Unsubscribe**:
+
+<Steps>
+  <Step title="Browse senders">See all senders ranked by volume with message counts and unsubscribe method</Step>
+  <Step title="Block or unsubscribe">Click the button on each sender you want to stop</Step>
+  <Step title="Background processing">Slashy handles each sender individually using the best method</Step>
+</Steps>
+
+<Tip>This is the same tool from onboarding. If you skipped it during setup, return any time via Settings.</Tip>
+
+## Default Actions for Blocked Senders
+
+Configure what happens to future emails from blocked senders in **Settings > Unsubscribe**:
+
+| Action | Result |
+|--------|--------|
+| **Filter** | Hidden from inbox views, still accessible in All Mail |
+| **Archive** | Immediately archived (moved to Done) |
+| **Trash** | Moved to Trash, permanently deleted after 30 days |
+
+## Managing Blocked Senders
+
+Your complete blocked list lives in **Settings > Unsubscribe**. Each entry shows the sender, unsubscribe method used, and date blocked. Click **Unblock** to restore normal delivery.
+
+<Warning>Unblocking does not re-subscribe you to a mailing list. You need to re-subscribe at the sender's website.</Warning>
+
+## Bulk Actions from Inbox
+
+Select threads with `Shift+J`/`Shift+K` or `Cmd+A`, then `Cmd+U` to block or `Cmd+Shift+U` to unsubscribe from all selected senders. A progress indicator shows processing status.
+
+| Action | Shortcut |
+|--------|----------|
+| Block sender | `Cmd+U` |
+| Unsubscribe | `Cmd+Shift+U` |
+| Undo | `z` or `Cmd+Z` |
+| Bulk unsubscribe | **Settings > Unsubscribe** |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Composing Emails" icon="pen" href="/features/email/composing">
+    Write and send with rich formatting
+  </Card>
+  <Card title="Reach Inbox Zero" icon="inbox" href="/how-to-guides/10-automations">
+    Automate your inbox cleanup
+  </Card>
+</CardGroup>

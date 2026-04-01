@@ -1,0 +1,94 @@
+---
+title: "Customizing Your Agent's Writing Style"
+description: "Set memories for writing style, tone, and formality. Train the agent by deleting bad drafts. Bring your own API key for Opus."
+---
+
+Slashy's AI writes emails that sound like you by learning from your email history, explicit preferences, and draft feedback. You can accelerate this by telling the agent exactly how you want it to write.
+
+## Setting Writing Memories
+
+Open the agent sidebar (`p a`) and tell it your preferences:
+
+- *"Remember: I write short, direct emails. Never use 'I hope this finds you well.' Keep it under 3 sentences."*
+- *"Remember: I sign off with just my first name, no 'Best' or 'Regards.'"*
+- *"Remember: formal tone for investors, casual for my team."*
+- *"Remember: never use exclamation marks."*
+
+Manage all memories in **Settings > Memories** (`Cmd+,`).
+
+<Frame>
+  <img src="/images/screenshots/understanding-agent-autonomy-1.png" alt="" />
+</Frame>
+
+## Memory Types
+
+| Type | What It Does | Example |
+|------|-------------|---------|
+| **About Me** | Rules for all emails | "I prefer bullet points over paragraphs" |
+| **About Entity** | Per-contact/company rules | "When emailing Sequoia, always CC sarah@mycompany.com" |
+| **Activity-anchored** | Rules for specific activities | "When scheduling, offer 3 time slots and include my Zoom link" |
+
+The agent retrieves the right memories based on context automatically.
+
+## Persona Detection
+
+During setup, Slashy analyzes your sent emails to detect your persona, greeting style, and signature. Edit these anytime in **Settings > Account**.
+
+<Frame>
+  <img src="/images/screenshots/understanding-agent-autonomy-2.png" alt="" />
+</Frame>
+
+## Training by Deleting Bad Drafts
+
+Every dismissed draft teaches the agent what not to do. Every edit before sending teaches it what you prefer. The learning is context-specific — editing a sales reply improves sales drafts, not meeting confirmations.
+
+**First week advice:** Actively dismiss bad drafts and edit acceptable ones. Most users see significant improvement within 10-15 interactions.
+
+## Direct Feedback
+
+Beyond deleting drafts, give feedback through the sidebar:
+
+- *"That last draft was too formal. I talk to Mike like a friend."*
+- *"When I reply to support tickets, use bullet points and be concise."*
+
+## Per-Contact Preferences
+
+- *"Remember: when emailing anyone @bigclient.com, use a formal tone with my full signature."*
+- *"Remember: Mike prefers short emails. Keep replies under 2 sentences."*
+
+## Choosing Your AI Model
+
+| Model | Best For | Speed |
+|-------|---------|-------|
+| **Haiku** | Quick replies, simple emails | Fastest |
+| **Sonnet** | Most emails (default) | Fast |
+| **Opus** | Complex, nuanced writing | Slower, highest quality |
+
+Switch models using the selector in the compose window or agent sidebar.
+
+## Bring Your Own API Key
+
+Use Opus without limits by providing your own Anthropic API key:
+
+1. Go to **Settings > Account** (`Cmd+,`)
+2. Paste your key in the **API Key** field
+3. The key is encrypted and stored in Vault
+
+Opus usage bills to your Anthropic account. Haiku and Sonnet remain included with Slashy.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
+    Auto-suggestions and learning
+  </Card>
+  <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
+    Set up impactful automations
+  </Card>
+  <Card title="iMessage Capabilities" icon="message" href="/how-to-guides/imessage-capabilities">
+    Everything you can do via text
+  </Card>
+  <Card title="Signatures" icon="signature" href="/how-to-guides/signatures">
+    Configure signatures and remove branding
+  </Card>
+</CardGroup>

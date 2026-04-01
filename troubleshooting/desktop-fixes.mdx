@@ -1,0 +1,62 @@
+---
+title: "Quick Fixes for Desktop"
+description: "Solutions for common Slashy desktop app issues: search, dark mode, shortcuts, notifications, and more."
+---
+
+Most desktop issues resolve with a quick action. Find your problem below and apply the fix.
+
+## Common Issues
+
+| Problem | Fix |
+|---|---|
+| **Search not working** | `Cmd+R` to reload. If still broken, quit and reopen. Persistent? Sign out and sign back in (Settings > Account). |
+| **Dark mode not persisting** | Settings > Account > Theme -- set to **Dark** explicitly instead of System (which follows macOS). |
+| **Refresh goes to wrong view** | Set your preferred **Default View** in Settings > Account. |
+| **Agent sidebar won't focus input** | Press `Cmd+Shift+L`, then click the text field. If stuck, `Cmd+R` to reload. Known intermittent issue. |
+| **App feels slow or laggy** | Quit and reopen. Check for pending updates (toast in bottom-left corner). |
+| **Notifications not appearing** | Check **System Settings > Notifications > Slashy** (macOS). Also verify in Slashy Settings > Account. |
+| **Global shortcut (`Cmd+/`) not working** | **System Settings > Privacy & Security > Accessibility** -- ensure Slashy is listed. Check no other app uses the same shortcut. |
+| **Dock badge stuck** | `Cmd+R` to reload. Badge corrects on next sync (usually within 30 seconds). |
+| **Stuck on loading screen** | Wait 10 seconds, then `Cmd+R`. If still stuck, fully quit (dock + system tray) and reopen. Requires network connection. |
+| **Calendar events missing** | Check Settings > Calendars -- toggle specific calendars on. `Cmd+R` to force sync. |
+
+## Standard Reset Steps
+
+<Steps>
+  <Step title="Reload">
+    Press `Cmd+R`.
+  </Step>
+  <Step title="Restart">
+    Quit completely (including system tray) and reopen.
+  </Step>
+  <Step title="Sign out and sign in">
+    Settings > Account > Sign Out. Sign in again with Google for a fresh session and re-sync.
+  </Step>
+  <Step title="Reinstall">
+    Download the latest version from [slashy.com/download](https://slashy.com/download) and install over the existing app.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/quick-fixes-for-desktop.png" alt="System tray menu and Settings sign out option" />
+</Frame>
+
+## Report a Bug
+
+If the issue persists, contact [founders@slashy.com](mailto:founders@slashy.com) or tell the agent sidebar. Include:
+
+- What happened and what you expected
+- Approximate time it occurred
+- App version (visible in About section or system tray menu)
+- A screenshot if possible
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Mobile Troubleshooting" icon="mobile" href="/troubleshooting/mobile-fixes">
+    Fixes for iOS app issues.
+  </Card>
+  <Card title="Sync Issues" icon="rotate" href="/troubleshooting/sync-issues">
+    Email and calendar sync troubleshooting.
+  </Card>
+</CardGroup>

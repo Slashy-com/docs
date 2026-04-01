@@ -1,0 +1,79 @@
+---
+title: "Contact Enrichment & the Contact Sidebar"
+description: "Automatic contact profiles with name, company, LinkedIn, investor data, meetings, and memories -- powered by a 9-provider enrichment waterfall."
+---
+
+The contact sidebar shows a complete profile for whoever you're emailing -- name, title, company, LinkedIn, upcoming meetings, email history, investor data, and your stored memories. All assembled automatically.
+
+## Opening the Sidebar
+
+Press `p i` (panel: info) while viewing a thread. The sidebar stays open as you navigate, updating for each thread's contact.
+
+<Frame><img src="/images/screenshots/contact-enrichment-the-contact-sidebar.png" alt="Contact sidebar showing profile photo, name, title, company, and enrichment sections" /></Frame>
+
+## What You See
+
+<AccordionGroup>
+  <Accordion title="Identity & Company">
+    - **Profile photo** -- from LinkedIn, Google, or other sources (auto-refreshes if broken)
+    - **Name, title, one-line bio**
+    - **Company name, logo, industry, size, description**
+    - **Website and LinkedIn links**
+    - **Location** with map pin
+  </Accordion>
+  <Accordion title="Investor Information">
+    For contacts matched as investors: fund name and type, stage focus, total investments, median check size, portfolio companies, founder ratings, AI-generated feedback summary, and characteristic tags like "Fast Process" or "Writes First Checks."
+  </Accordion>
+  <Accordion title="Activity">
+    - **Upcoming meetings** -- calendar events with this contact
+    - **Recent threads** -- your latest email conversations (click to jump)
+    - **Memories** -- facts Slashy stored about this contact; view, edit, create, or delete directly
+  </Accordion>
+</AccordionGroup>
+
+## 9-Provider Enrichment Waterfall
+
+Slashy queries up to nine data providers in a prioritized waterfall. When a new contact enters your inbox, enrichment triggers automatically in the background.
+
+| Status | Meaning |
+|--------|---------|
+| **Enriched** | Profile populated with data |
+| **Pending** | Enrichment in progress |
+| **Failed** | No data found across all providers |
+| **Not attempted** | Not yet enriched |
+
+Results from multiple providers are merged to build the most complete profile possible.
+
+## Bookface Investor Matching
+
+For YC ecosystem users, Slashy matches contacts against Bookface investor data using four strategies (in confidence order):
+
+<Steps>
+  <Step title="Email domain match">Contact's domain matches a known fund domain</Step>
+  <Step title="Exact name match">Name exactly matches a known investor at the same domain</Step>
+  <Step title="Fuzzy name (same domain)">Fuzzy name match within the same domain</Step>
+  <Step title="Fuzzy name (global)">Fuzzy name match across all known investors</Step>
+</Steps>
+
+<Info>Investor profiles appear automatically for whitelisted users when viewing email from a matched investor.</Info>
+
+## Contact Autocomplete
+
+Enrichment data powers compose autocomplete. Suggestions in To/CC/BCC fields are ranked by **interaction frequency**, **recency**, and show the contact's name, email, title, and company.
+
+| Action | Shortcut |
+|--------|----------|
+| Open contact sidebar | `p i` |
+| Toggle right sidebar | `Cmd+.` |
+| Open AI chat panel | `p a` |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Search Operators" icon="magnifying-glass" href="/features/search/overview">
+    Find any email with precise queries
+  </Card>
+  <Card title="Composing Emails" icon="pen" href="/features/email/composing">
+    Write and send with rich formatting
+  </Card>
+</CardGroup>

@@ -1,0 +1,75 @@
+---
+title: "Replying & Forwarding"
+description: "Reply, reply all, and forward emails with proper threading, quoted content controls, inline reply, and AI draft support."
+---
+
+Slashy handles replies and forwards with proper email threading, correct headers, and smart quoting. Reply from keyboard shortcuts or inline from the thread detail view.
+
+<Frame>
+  <img src="/images/screenshots/replying-forwarding.png" alt="Thread detail view with inline reply editor open" />
+</Frame>
+
+## Reply, Reply All, and Forward
+
+| Action | Shortcut | Behavior |
+|--------|----------|----------|
+| Reply | `r` | Reply to sender of the last message |
+| Reply All | `a` | Reply to all recipients (sender + To + CC) |
+| Forward | `f` | Forward thread to new recipients with original content |
+
+These shortcuts work from both the inbox list and thread detail view. The compose editor opens with correct recipients, subject line, and quoted content pre-filled.
+
+## Inline Reply
+
+When viewing a thread, press `r` to open the inline reply editor at the bottom. It includes:
+
+- Pre-filled recipients based on the last message
+- Subject carried over with "Re:" prefix
+- Your signature auto-appended
+- Full compose features (formatting, attachments, AI tools)
+
+<Tip>To reply to a specific message in a multi-message thread, hover over that message and click the reply icon.</Tip>
+
+## Quoted Content
+
+Original email content is included as quoted text below your reply. Quoted content is **collapsed by default** behind a "..." indicator — click to expand. You can edit or delete quoted text before sending.
+
+In received messages, quoted content is also collapsed to keep long threads readable.
+
+## Forwarding
+
+Press `f` to forward. The editor opens with:
+
+- Empty To field (you choose recipients)
+- Subject prefixed with "Fwd:"
+- Original message content included
+- All original attachments carried over
+
+Add your message above the forwarded content.
+
+## AI Draft Reply
+
+Press `Cmd+Enter` while in a reply to generate an AI-drafted response. The agent reads the full thread context, your memories, and sender profile to match your writing style.
+
+## Threading
+
+Slashy sets `References` and `In-Reply-To` headers automatically. Your replies appear in the correct thread in Gmail, Outlook, Apple Mail, and every other client.
+
+## Reply Compose Features
+
+The reply editor has everything the new-email composer has:
+
+- Rich text formatting with keyboard shortcuts
+- To/CC/BCC with autocomplete and drag-and-drop
+- File attachments (shortcut, drag-and-drop, or paste)
+- AI autocomplete, AI edit, and AI rating
+- Snippets, scheduled send, undo send, forgotten attachment detection
+
+<CardGroup cols={2}>
+  <Card title="Scheduled Send & Undo Send" icon="clock" href="/features/email/scheduled-send">
+    Schedule emails for later or undo after sending.
+  </Card>
+  <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
+    Automatic draft suggestions and tone matching.
+  </Card>
+</CardGroup>

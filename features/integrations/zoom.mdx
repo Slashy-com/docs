@@ -1,0 +1,72 @@
+---
+title: "Zoom Integration"
+description: "Connect Zoom to Slashy for one-click meeting creation, default conferencing, and AI-powered event scheduling."
+---
+
+Connect your Zoom account to create meetings directly from calendar events. Set Zoom as your default conferencing provider so every new event automatically includes a Zoom link.
+
+<Frame><img src="/images/screenshots/zoom-integration.png" alt="Settings Calendars page showing Zoom connected with conferencing options" /></Frame>
+
+## Connecting Zoom
+
+<Steps>
+  <Step title="Open Settings">Press `Cmd+,` and select **Calendars**</Step>
+  <Step title="Connect">Click **Connect Zoom** in the Zoom section</Step>
+  <Step title="Authorize">Sign in to Zoom and grant Slashy permission to create meetings</Step>
+  <Step title="Done">You're redirected back to Slashy with Zoom connected</Step>
+</Steps>
+
+## Creating Zoom Meetings
+
+Once connected, add Zoom to any calendar event:
+
+1. Create or edit a calendar event
+2. In the **Conferencing** field, select **Zoom**
+3. Slashy creates the meeting and attaches the link automatically
+
+The Zoom link is visible to all attendees in the event details.
+
+## Set Zoom as Default
+
+Go to **Settings > Calendars > Default conferencing** and select **Zoom**. Every new event automatically includes a Zoom meeting link. Override per-event by choosing a different provider in the event editor.
+
+## Zoom with the AI Agent
+
+When you ask Slashy's AI to create an event (e.g., "Schedule a call with Sarah tomorrow at 2pm"), it uses your default conferencing setting. If Zoom is the default, the agent automatically creates and attaches a Zoom meeting.
+
+## Disconnecting Zoom
+
+Go to **Settings > Calendars > Zoom** and click **Disconnect**.
+
+After disconnecting:
+- New Zoom meetings can no longer be created from Slashy
+- Existing Zoom links on events continue to work
+- Default conferencing reverts to Google Meet
+- Reconnect any time by repeating the setup steps
+
+## Other Conferencing Options
+
+<CardGroup cols={2}>
+  <Card title="Google Meet">Available by default for all Google Calendar users. No setup needed.</Card>
+  <Card title="Microsoft Teams">Add a Teams meeting link to events.</Card>
+  <Card title="Webex">Add a Webex meeting link to events.</Card>
+  <Card title="Custom Link">Paste any meeting URL.</Card>
+</CardGroup>
+
+| Action | Where |
+|--------|-------|
+| Connect Zoom | **Settings > Calendars > Zoom** |
+| Disconnect Zoom | **Settings > Calendars > Zoom > Disconnect** |
+| Set default conferencing | **Settings > Calendars > Default conferencing** |
+| Add Zoom to event | **Conferencing** field in event editor |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Calendar Setup" icon="calendar" href="/getting-started/calendar-setup">
+    Connect and configure your calendars
+  </Card>
+  <Card title="Tasks & Reminders" icon="list-check" href="/features/tasks/overview">
+    Track to-dos and email reminders
+  </Card>
+</CardGroup>

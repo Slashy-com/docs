@@ -1,0 +1,67 @@
+---
+title: "Installing the Desktop App"
+description: "Download the macOS app for global shortcuts, dock badges, native notifications, and system tray background running."
+---
+
+The desktop app gives you a native macOS experience: a global shortcut to summon Slashy from any app, dock badge counts, system tray background running, and native notifications. Everything else works identically to the web app.
+
+## Download and Install
+
+<Steps>
+  <Step title="Download">
+    Go to [slashy.com/download](https://slashy.com/download) or open the command palette (`Cmd+K`) and type "Download desktop app."
+  </Step>
+  <Step title="Install">
+    Open the `.dmg` and drag Slashy into Applications.
+  </Step>
+  <Step title="Launch and Sign In">
+    Open Slashy from Applications. Sign in with the same Google account you use on the web. Your inbox, labels, memories, and settings sync immediately.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/installing-the-desktop-app-1.png" alt="macOS dmg installer window" />
+</Frame>
+
+## Key Features
+
+<AccordionGroup>
+  <Accordion title="Global Shortcut">
+    Press `Cmd+/` from any application to bring Slashy to the front. Press again to hide it. Works system-wide, even when minimized. Change it in **Settings > Account > Global Shortcut**.
+  </Accordion>
+  <Accordion title="Silent Auto-Updates">
+    Slashy downloads updates in the background. A toast notification appears when an update is ready -- it applies on next restart. No prompts, no progress bars.
+  </Accordion>
+  <Accordion title="System Tray">
+    Slashy runs in the menu bar background, keeping email synced, notifications firing, and the global shortcut active. Closing the window with `Cmd+W` hides to tray (use `Cmd+Q` to fully quit).
+  </Accordion>
+  <Accordion title="Dock Badge Count">
+    Real-time unread count on the dock icon. Disable in **Settings > Account > Show Unread Counts**.
+  </Accordion>
+  <Accordion title="Native Notifications">
+    Uses macOS Notification Center. Respects Do Not Disturb. Control which labels trigger notifications in **Settings > Labels**.
+  </Accordion>
+  <Accordion title="Find in Page">
+    `Cmd+F` searches text on the current screen -- email threads, compose window, and settings.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+| Issue | Fix |
+|---|---|
+| Global shortcut not working | **System Settings > Privacy & Security > Accessibility** -- ensure Slashy is listed and enabled. |
+| App won't open after download | Right-click in Finder and select **Open** (Gatekeeper first-launch block). |
+| No dock badge | **System Settings > Notifications > Slashy** -- enable badge notifications. |
+| Update seems stuck | Quit with `Cmd+Q` and relaunch. Update applies on restart. |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Importance Labels" icon="tags" href="/getting-started/importance-labels">
+    Set up AI-powered inbox sorting.
+  </Card>
+  <Card title="Connect a Second Account" icon="at" href="/getting-started/multi-account">
+    Add work and personal inboxes.
+  </Card>
+</CardGroup>

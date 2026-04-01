@@ -1,0 +1,85 @@
+---
+title: "Tasks & Reminders"
+description: "Track to-dos with due dates, drag emails onto tasks, set email reminders with presets, and enable AI auto-reminders for follow-up detection."
+---
+
+Tasks are standalone to-do items with due dates in a sidebar panel. Reminders bring email threads back to your inbox at a time you choose. Together, they ensure nothing falls through the cracks.
+
+<Frame><img src="/images/screenshots/tasks-reminders-1.png" alt="Tasks panel showing Today, Tomorrow, and Later groups with linked email chips" /></Frame>
+
+## Tasks
+
+### Creating a Task
+
+Open the tasks panel with `p t`, then click **New Task**. Each task has a **title** and optional **due date** -- lightweight by design. Link an email for context.
+
+### Task Groups
+
+Tasks auto-sort into five groups by due date:
+
+| Group | Contains |
+|-------|----------|
+| **Overdue** | Past-due, incomplete tasks (always at top) |
+| **Today** | Due today |
+| **Tomorrow** | Due tomorrow |
+| **Later** | Due more than one day out |
+| **No Date** | Tasks without a due date |
+
+### Linking Emails
+
+Drag an email thread from the inbox onto the tasks panel to link it. A chip showing the email subject appears on the task -- click it to jump to the thread.
+
+Drag a thread without an existing task and Slashy creates one automatically, using the email subject as the title.
+
+<Tip>Complete a task by clicking its checkbox. Completed tasks disappear permanently -- there is no archive.</Tip>
+
+## Email Reminders
+
+Press `h` while viewing a thread to set a reminder. The thread archives and reappears at the top of your inbox at the scheduled time.
+
+| Preset | Returns |
+|--------|---------|
+| **Later today** | 3 hours from now |
+| **Tonight** | This evening |
+| **Tomorrow** | Tomorrow morning |
+| **This weekend** | Saturday morning |
+| **Next week** | Monday morning |
+| **Custom** | You pick date and time |
+
+View all active reminders with `g h`. From there, open threads, cancel, or reschedule.
+
+### Bulk Reminders
+
+Select threads with `Shift+J`/`Shift+K` or `Cmd+A`, then press `h` to set reminders on all selected threads at once.
+
+## Auto-Reminders
+
+Label-based reminders that fire when you haven't replied or archived within a configured window.
+
+<Steps>
+  <Step title="Enable">Go to **Settings > Labels**, select a label (e.g., Important)</Step>
+  <Step title="Configure">Enable **Reminder** and set timing (e.g., "2 days")</Step>
+  <Step title="Auto-dismiss">If you reply or archive before the reminder fires, it cancels automatically</Step>
+</Steps>
+
+Set a global baseline in **Settings > Account > Default reminder days**.
+
+<Info>Slashy's AI can detect follow-up needs in email content and suggest smarter reminder timing beyond fixed windows.</Info>
+
+| Action | Shortcut |
+|--------|----------|
+| Open tasks panel | `p t` |
+| Set reminder | `h` |
+| Go to Reminders view | `g h` |
+| Undo | `z` or `Cmd+Z` |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Never Miss a Follow-Up" icon="bell" href="/how-to-guides/never-miss-followup">
+    Complete follow-up workflow
+  </Card>
+  <Card title="Keyboard Shortcuts" icon="keyboard" href="/how-to-guides/keyboard-shortcuts">
+    Navigate Slashy at full speed
+  </Card>
+</CardGroup>

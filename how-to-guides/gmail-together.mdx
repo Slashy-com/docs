@@ -1,0 +1,77 @@
+---
+title: "Using Slashy and Gmail Together"
+description: "Bidirectional sync explained: what stays in sync, what's Slashy-only, race conditions to avoid, and a transition strategy."
+---
+
+Slashy reads and writes to Gmail through its API. Changes in either place sync to the other. This guide covers what syncs, what to watch out for, and how to transition smoothly.
+
+## What Stays in Sync
+
+| Action | Slashy to Gmail | Gmail to Slashy |
+|---|---|---|
+| Read / Unread | Yes | Yes |
+| Archive | Yes | Yes |
+| Trash | Yes | Yes |
+| Star / Unstar | Yes | Yes |
+| Labels (Gmail) | Yes | Yes |
+| Send email | Yes | Yes |
+| Drafts | Yes | Yes |
+| Spam | Yes | Yes |
+
+## Slashy-Only Features
+
+These exist only in Slashy and don't appear in Gmail:
+
+- **Importance labels** (AI-categorized tabs)
+- **AI memories**, automations, email tracking
+- **Reminders/snooze** (independent from Gmail's snooze)
+- **Tasks** (separate from Google Tasks)
+- **Contact enrichment** (LinkedIn data, AI-generated notes)
+
+## Race Conditions to Avoid
+
+<Warning>Sync is fast but not instantaneous. Avoid editing the same draft in both places simultaneously -- last save wins. Pick one client for active email processing.</Warning>
+
+| Scenario | What Happens |
+|---|---|
+| Edit same draft in both | Last save overwrites the other |
+| Archive in Gmail while replying in Slashy | Reply sends, thread reappears (normal behavior) |
+| Label in both places at once | Both labels stick (harmless) |
+
+## Transition Strategy
+
+<Steps>
+  <Step title="Week 1: Side by Side">
+    Keep Gmail open alongside Slashy. Try one task per day in Slashy -- a reply, a batch archive, an agent query. Confirm sync works as expected.
+  </Step>
+  <Step title="Week 2: Slashy as Default">
+    Start email sessions in Slashy. Learn shortcuts: `j`/`k` navigate, `e` archive, `r` reply, `Cmd+Enter` AI draft. Set up 2-3 automations.
+  </Step>
+  <Step title="Week 3: Desktop App">
+    Install the desktop app. Use `Cmd+/` to summon Slashy from anywhere, replacing the Gmail tab habit.
+  </Step>
+  <Step title="Week 4+: Gmail as Backup">
+    Slashy handles your daily workflow. Gmail stays for occasional filter management or Google Chat.
+  </Step>
+</Steps>
+
+<Tip>The more you use Slashy as primary, the better the AI learns your patterns. Splitting email between both clients means the AI misses half the signal.</Tip>
+
+## If Something Gets Out of Sync
+
+1. Press `Cmd+R` to reload Slashy (forces fresh sync)
+2. Wait 10-15 seconds
+3. Check **Settings > Account** to confirm connection health
+
+Gmail is always the source of truth since Slashy reads from Gmail's servers.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Moving from Gmail" icon="right-left" href="/getting-started/connecting-gmail">
+    Permissions, security, and what Slashy accesses.
+  </Card>
+  <Card title="Multiple Accounts" icon="at" href="/how-to-guides/multiple-accounts">
+    Manage work and personal inboxes together.
+  </Card>
+</CardGroup>

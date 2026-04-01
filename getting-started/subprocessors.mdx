@@ -1,0 +1,80 @@
+---
+title: "Subprocessors & Infrastructure"
+description: "Full list of third-party services, infrastructure details, encryption, email security standards, and compliance status."
+---
+
+Every third-party service that processes data on Slashy's behalf, plus infrastructure details for security reviews and vendor assessments.
+
+## Subprocessors
+
+| Provider | Purpose | Data Processed |
+|---|---|---|
+| **AWS** (us-east-1) | Cloud infrastructure, compute (ECS) | All application data in transit and at rest |
+| **Supabase** (US) | PostgreSQL database | Account data, memories, automations, labels, email metadata |
+| **Vercel** (US, global edge) | Frontend hosting, CDN | Static assets only -- no email content |
+| **Typesense** (US) | Full-text search | Email metadata and content indexes |
+| **Pusher** (US) | Real-time WebSocket | Event signals only -- no email content |
+| **Anthropic** (US) | AI -- agent, drafts, automations | Per-request email content, 30-day logs, no training |
+| **OpenAI** (US) | AI -- certain features, embeddings | Per-request content, 30-day logs, training opted out |
+| **Google Gemini** (US) | AI -- certain features | Per-request, no retention |
+| **Groq** (US) | Fast AI inference | Per-request, no retention |
+| **Sentry** (US) | Error monitoring | Stack traces, no email content |
+| **PostHog** (US) | Product analytics | Anonymized events, no email content |
+| **Firebase** (US) | Authentication | OAuth tokens and identity only |
+| **Firecrawl** (US) | Web scraping for agent research | URLs only, no email content |
+| **Perplexity** (US) | Web search for agent research | Search queries only, no email content |
+
+## Infrastructure
+
+<AccordionGroup>
+  <Accordion title="Database">
+    PostgreSQL via Supabase. AES-256 encryption at rest, TLS 1.2+ in transit. Daily automated backups with 30-day retention and point-in-time recovery.
+  </Accordion>
+  <Accordion title="Compute">
+    AWS ECS in us-east-1. VPC with private subnets -- public access only through load balancers.
+  </Accordion>
+  <Accordion title="Frontend">
+    React (web), Electron (desktop), React Native/Expo (mobile) on Vercel. No server-side rendering of email content.
+  </Accordion>
+  <Accordion title="Search">
+    Typesense with TLS 1.2+. Indexes deleted on account deletion.
+  </Accordion>
+  <Accordion title="Recovery">
+    RTO: 24 hours. RPO: 24 hours. Backups stored in a separate AWS region. Infrastructure redeployable from code.
+  </Accordion>
+</AccordionGroup>
+
+## Email Security
+
+Emails sent through Slashy use Gmail's API (not custom SMTP), inheriting Gmail's SPF, DKIM, and DMARC authentication. Deliverability is identical to sending from Gmail directly.
+
+## Access Controls
+
+- **Employee access:** Production database restricted to essential engineering. All access logged and auditable.
+- **No email content access:** Employees do not have tools to read individual user emails.
+- **Secrets management:** API keys and tokens in AWS Secrets Manager, never in code.
+
+## Compliance
+
+| Standard | Status |
+|---|---|
+| **GDPR** | Full compliance. [DPA available](https://slashy.com/dpa). |
+| **CCPA** | Compliant |
+| **SOC 2** | Following Type II principles; certification planned |
+
+## Security Reports
+
+Report vulnerabilities to [security@slashy.com](mailto:security@slashy.com). Include description, reproduction steps, and potential impact. Acknowledged within 24 hours on business days.
+
+*Last updated: March 2026*
+
+---
+
+<CardGroup cols={2}>
+  <Card title="AI Privacy" icon="shield-halved" href="/getting-started/ai-privacy">
+    How AI providers handle your data.
+  </Card>
+  <Card title="Data Storage" icon="database" href="/getting-started/data-storage">
+    What Slashy stores and your controls.
+  </Card>
+</CardGroup>

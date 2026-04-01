@@ -1,0 +1,53 @@
+---
+title: "Mobile App Troubleshooting"
+description: "Fixes for iOS app issues: crashes, badge counts, sync delays, TestFlight migration, and known mobile limitations."
+---
+
+The iOS app shares the same backend as web and desktop, but has its own quirks. Find your issue below.
+
+## Common Issues
+
+| Problem | Fix |
+|---|---|
+| **App crashes during composing** | Force quit (swipe up, swipe Slashy away) and reopen. For long drafts, use web/desktop. Update to latest version. |
+| **Badge count stuck** | iOS Settings > Slashy > Notifications -- toggle off, wait 5 seconds, toggle on. Badge corrects on next sync. |
+| **Sync slower than desktop** | Expected: mobile syncs every 30-60 seconds vs. real-time push on desktop. Pull down to force refresh. |
+| **TestFlight to App Store** | Delete the TestFlight version, download from App Store, sign in. All data syncs automatically. |
+| **Calendar not available** | Calendar is desktop/web only for now. Use Google Calendar on mobile. On the roadmap. |
+| **Return key sends instead of newline** | Use dictation (microphone icon) for longer messages, or compose in Notes and paste. |
+| **Push notifications delayed** | iOS Settings > Slashy > enable all notification types. Also enable Background App Refresh. |
+| **Dark mode not matching system** | Check in-app settings. Update to latest version (dark mode improved recently). |
+| **Swipe actions not registering** | Swipe from the middle of the row (not edge, which triggers iOS navigation). Use a slower, deliberate swipe. |
+| **Blank screen** | Force quit and reopen. Requires network connection. Try cellular if Wi-Fi isn't working. |
+
+## Known Mobile Limitations
+
+<Note>These features are available on web/desktop but not yet on mobile:</Note>
+
+- **Calendar** -- full views and event management
+- **Agent sidebar** -- use the iMessage agent for similar functionality on mobile
+- **Keyboard shortcuts** -- mobile uses tap and swipe gestures
+- **Booking links management** -- create on desktop, booking pages work for invitees on mobile browsers
+
+## Keep the App Updated
+
+1. Open the App Store
+2. Tap your profile icon
+3. Check for Slashy updates
+
+<Tip>Enable automatic updates: iOS Settings > App Store > App Updates (toggle on). Many issues are fixed in newer versions.</Tip>
+
+## Report a Mobile Bug
+
+Contact [founders@slashy.com](mailto:founders@slashy.com) with your iPhone model, iOS version, Slashy app version, description, and a screenshot/recording.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Desktop Fixes" icon="desktop" href="/troubleshooting/desktop-fixes">
+    Solutions for macOS app issues.
+  </Card>
+  <Card title="Sync Issues" icon="rotate" href="/troubleshooting/sync-issues">
+    Email and calendar sync troubleshooting.
+  </Card>
+</CardGroup>

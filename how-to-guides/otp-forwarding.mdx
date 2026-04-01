@@ -1,0 +1,69 @@
+---
+title: "OTP/2FA Forwarding via iMessage"
+description: "Auto-forward verification codes from email to your phone in seconds."
+---
+
+When a service sends a verification code to your email, Slashy's agent extracts just the code and texts it to you via iMessage. 3 seconds instead of 30.
+
+<Info>Requires the [iMessage agent](/how-to-guides/imessage-setup) to be connected.</Info>
+
+## Set Up the Automation
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Create the trigger">
+    Type: *"Create an email automation: when I receive an email with a verification code, OTP, or two-factor authentication code, send me the code on iMessage immediately."*
+  </Step>
+  <Step title="Confirm">
+    The agent creates a trigger matching common OTP patterns: subject lines with "verification code," "security code," "one-time password," plus body content with 4-8 digit codes.
+  </Step>
+</Steps>
+
+## How It Works
+
+1. Verification code email arrives
+2. Trigger fires within seconds
+3. Agent extracts the code (not the full email)
+4. You receive an iMessage: *"Your verification code from GitHub: 847291"*
+
+## What Gets Detected
+
+- Numeric codes (4-8 digits) and alphanumeric codes
+- Magic links with embedded tokens
+- Codes in subject lines or email body
+- Codes from banks, SaaS apps, social platforms, developer tools
+
+## Customize the Trigger
+
+<Tabs>
+  <Tab title="Reduce False Positives">
+    - *"Only forward codes with 'verification' or 'security code' in the subject"*
+    - *"Don't forward marketing emails that contain numbers"*
+  </Tab>
+  <Tab title="Catch More Codes">
+    - *"Include emails with 'login code' or 'confirm your identity' in the subject"*
+    - *"Include magic link emails too -- send me the link"*
+  </Tab>
+</Tabs>
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| Code not forwarded | Check that iMessage agent is active (send it a text). Verify automation is enabled in Settings > Automations. |
+| Code arrives too late | Typically 3-10 seconds. Check email sync if delays persist. |
+| Wrong emails forwarded | Narrow the trigger: *"Update my OTP automation to only match emails with a numeric code and 'verification' in the subject."* |
+| iMessage agent not responding | Send a text to reactivate. See [iMessage setup](/how-to-guides/imessage-setup). |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="iMessage Agent Setup" icon="message" href="/how-to-guides/imessage-setup">
+    Connect your phone for agent access.
+  </Card>
+  <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
+    Essential automations every user should set up.
+  </Card>
+</CardGroup>

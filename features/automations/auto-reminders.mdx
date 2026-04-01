@@ -1,0 +1,95 @@
+---
+title: "Auto-Reminders"
+description: "AI automatically creates follow-up reminders on sent emails. Determines if a reply is expected, sets a wait time of 1-14 days, and skips no-reply addresses, newsletters, and auto-replies."
+---
+
+Auto-reminders silently analyze every email you send and create "if no reply" follow-up reminders when the AI determines you're waiting for a response. No manual action required.
+
+<Frame>
+  <img src="/images/screenshots/auto-reminders.png" alt="Sent email with auto-reminder indicator showing remind in 3 days if no reply" />
+</Frame>
+
+## How It Works
+
+<Steps>
+  <Step title="You send an email">
+    Works on all outgoing email automatically.
+  </Step>
+  <Step title="AI analyzes it">
+    Reads content, tone, and whether you asked a question, made a request, or set a deadline.
+  </Step>
+  <Step title="AI sets wait time">
+    Picks 1-14 days based on urgency and nature of the email.
+  </Step>
+  <Step title="If no reply reminder created">
+    Only fires if the recipient hasn't replied by the wait period.
+  </Step>
+  <Step title="Reply cancels the reminder">
+    If the recipient replies before the timer, the reminder is automatically canceled.
+  </Step>
+</Steps>
+
+## Enabling Auto-Reminders
+
+Off by default. Turn on in **Settings** (`Cmd+,`) **> Account > Auto-reminders** toggle. Only applies to future sent emails -- not retroactive.
+
+## What Gets a Reminder
+
+The AI creates reminders when your email:
+
+- Asks a question expecting an answer
+- Makes a request or asks someone to do something
+- Proposes a meeting, deadline, or next step
+- Sends information requiring confirmation
+
+## What Gets Skipped
+
+| Category | Why |
+|----------|-----|
+| **No-reply addresses** | Will never get a response |
+| **Newsletters** | Replies aren't expected |
+| **Auto-replies** | Out-of-office messages don't need follow-up |
+| **Thank-you notes** | Simple acknowledgments don't expect a reply |
+| **System notifications** | Receipts and confirmations |
+
+## Wait Time Selection
+
+- **1-2 days** -- urgent requests, short deadlines
+- **3-5 days** -- standard business requests, scheduling
+- **7-14 days** -- low-urgency, informational, cold outreach
+
+## Auto vs. Manual Reminders
+
+| | Auto-Reminders | Manual Reminders |
+|---|---------------|-----------------|
+| **Trigger** | AI creates on sent emails | You set with `h` |
+| **Config** | One toggle -- AI decides everything | You choose time and conditions |
+| **Type** | Always "if no reply" | "If no reply" or "regardless" |
+| **Applies to** | Sent emails only | Any thread |
+| **Wait time** | AI selects 1-14 days | You set exactly |
+
+Both features work together. If both fire on the same thread, whichever triggers first moves it to your inbox.
+
+## Disabling
+
+Toggle off in **Settings > Account**. Existing reminders still fire at their scheduled times; new sent emails won't get auto-reminders.
+
+| Action | How |
+|--------|-----|
+| Enable/disable | **Settings > Account > Auto-reminders** |
+| Set manual reminder | `h` while viewing a thread |
+| View all reminders | `g h` |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Never Miss a Follow-Up" icon="bell" href="/how-to-guides/never-miss-followup">
+    Complete follow-up workflow
+  </Card>
+  <Card title="Email Triggers" icon="bolt" href="/features/automations/email-triggers">
+    Automate actions on incoming email
+  </Card>
+  <Card title="Scheduled Reminders" icon="clock" href="/features/automations/scheduled-reminders">
+    Schedule the agent for future tasks
+  </Card>
+</CardGroup>

@@ -1,68 +1,202 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Slashy Help Center",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Help Center",
+        "icon": "house",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "getting-started/first-week",
+              "getting-started/connecting-gmail",
+              "getting-started/desktop-app",
+              "getting-started/mobile",
+              "getting-started/calendar-setup",
+              "getting-started/importance-labels",
+              "getting-started/ai-memories",
+              "getting-started/multi-account",
+              "getting-started/why-primary"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Automation Guides",
+            "icon": "robot",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "how-to-guides/10-automations",
+              "how-to-guides/ai-drafts",
+              "how-to-guides/customize-agent",
+              "how-to-guides/automate-receipts",
+              "how-to-guides/customer-followups",
+              "how-to-guides/never-miss-followup",
+              "how-to-guides/meeting-prep",
+              "how-to-guides/otp-forwarding"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "iMessage Agent",
+            "icon": "message",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "how-to-guides/imessage-setup",
+              "how-to-guides/imessage-capabilities",
+              "how-to-guides/imessage-briefings"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Productivity & Workflow",
+            "icon": "gauge-high",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "how-to-guides/inbox-zero",
+              "how-to-guides/batch-processing",
+              "how-to-guides/keyboard-shortcuts",
+              "how-to-guides/email-tracking",
+              "how-to-guides/track-opens",
+              "how-to-guides/signatures",
+              "how-to-guides/booking-page",
+              "how-to-guides/multiple-accounts",
+              "how-to-guides/gmail-together",
+              "how-to-guides/slashy-method"
+            ]
+          },
+          {
+            "group": "Switching to Slashy",
+            "icon": "arrow-right-arrow-left",
+            "pages": [
+              "switching/gmail-migration",
+              "switching/superhuman-migration",
+              "switching/shortwave-migration"
+            ]
+          },
+          {
+            "group": "Security & Trust",
+            "icon": "shield-check",
+            "pages": [
+              "getting-started/security-privacy",
+              "getting-started/ai-privacy",
+              "getting-started/data-storage",
+              "getting-started/subprocessors"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "icon": "wrench",
+            "pages": [
+              "troubleshooting/faq",
+              "troubleshooting/unexpected-behavior",
+              "troubleshooting/sync-issues",
+              "troubleshooting/desktop-fixes",
+              "troubleshooting/mobile-fixes",
+              "troubleshooting/disconnect",
+              "troubleshooting/known-issues"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Features",
+        "icon": "sparkles",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "AI Agent & Chat",
+            "icon": "message-bot",
             "pages": [
-              "api-reference/introduction"
+              "features/ai-agent/autonomy",
+              "features/ai-agent/composing"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "AI Drafts & Autocomplete",
+            "icon": "wand-magic-sparkles",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "features/ai-drafts/autocomplete",
+              "features/ai-drafts/editing"
+            ]
+          },
+          {
+            "group": "Automations",
+            "icon": "bolt",
+            "pages": [
+              "features/automations/overview",
+              "features/automations/email-triggers",
+              "features/automations/calendar-triggers",
+              "features/automations/auto-reminders",
+              "features/automations/scheduled-reminders"
+            ]
+          },
+          {
+            "group": "Calendar & Scheduling",
+            "icon": "calendar",
+            "pages": [
+              "features/calendar/creating-events",
+              "features/calendar/availability",
+              "features/calendar/booking-links",
+              "features/calendar/rsvp",
+              "features/calendar/granola"
+            ]
+          },
+          {
+            "group": "Email & Compose",
+            "icon": "envelope",
+            "pages": [
+              "features/email/composing",
+              "features/email/replying",
+              "features/email/scheduled-send",
+              "features/email/inbox-views",
+              "features/email/labels",
+              "features/email/snippets",
+              "features/email/unsubscribe",
+              "features/email/notifications"
+            ]
+          },
+          {
+            "group": "Search & Contacts",
+            "icon": "magnifying-glass",
+            "pages": [
+              "features/search/overview",
+              "features/contacts/overview"
+            ]
+          },
+          {
+            "group": "Tasks & Reminders",
+            "icon": "list-check",
+            "pages": [
+              "features/tasks/overview"
+            ]
+          },
+          {
+            "group": "Settings & Integrations",
+            "icon": "gear",
+            "pages": [
+              "features/settings/theme",
+              "features/integrations/zoom"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Slashy for Your Role",
+        "icon": "user-tie",
+        "groups": [
+          {
+            "group": "Personas",
+            "icon": "users",
+            "pages": [
+              "personas/founders",
+              "personas/sales",
+              "personas/vcs",
+              "personas/recruiters",
+              "personas/executives"
             ]
           }
         ]
@@ -71,14 +205,24 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "What's New",
+          "href": "/whats-new/changelog",
+          "icon": "sparkle"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Roadmap",
+          "href": "/troubleshooting/roadmap",
+          "icon": "map"
+        },
+        {
+          "anchor": "Get Slashy",
+          "href": "https://slashy.com",
+          "icon": "envelope"
+        },
+        {
+          "anchor": "Contact Support",
+          "href": "mailto:founders@slashy.com",
+          "icon": "message"
         }
       ]
     }
@@ -90,33 +234,26 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Slashy.com",
+        "href": "https://slashy.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Try Slashy Free",
+      "href": "https://slashy.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/slashyemail",
+      "linkedin": "https://linkedin.com/company/slashy"
     }
+  },
+  "search": {
+    "prompt": "Search help articles..."
+  },
+  "seo": {
+    "indexHiddenPages": false
   }
 }

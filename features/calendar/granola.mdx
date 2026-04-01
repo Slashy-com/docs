@@ -1,0 +1,88 @@
+---
+title: "Granola Integration (Meeting Notes)"
+description: "Connect Granola to sync meeting notes automatically, view them in Slashy, and give the AI agent context for meeting prep and follow-up drafting."
+---
+
+Granola records and summarizes your meetings. Connect it to Slashy and your meeting notes sync automatically, giving you and the AI agent access to meeting context without leaving your email client.
+
+<Frame>
+  <img src="/images/screenshots/granola-integration-meeting-notes-1.png" alt="Granola section in Settings with Connect button" />
+</Frame>
+
+## Connecting Granola
+
+<Steps>
+  <Step title="Open Settings">
+    Press `Cmd+,` and select the **Account** tab.
+  </Step>
+  <Step title="Find Granola">
+    Scroll to the **Granola** section and click **Connect Granola**.
+  </Step>
+  <Step title="Authorize">
+    Sign in to Granola and grant Slashy permission to access your meeting notes.
+  </Step>
+  <Step title="Done">
+    You are redirected back to Slashy. Notes begin syncing automatically.
+  </Step>
+</Steps>
+
+## How Syncing Works
+
+Slashy checks for new meetings every 5 minutes and pulls in new notes automatically. You can also trigger a manual sync from **Settings > Account > Granola**.
+
+Each synced meeting includes:
+
+- **Meeting title** and date/time
+- **Attendees** who participated
+- **Notes and summary** captured by Granola
+
+<Frame>
+  <img src="/images/screenshots/granola-integration-meeting-notes-2.png" alt="Synced Granola meeting note with summary and action items" />
+</Frame>
+
+## AI Agent Context
+
+The most powerful benefit: Slashy's AI agent uses your meeting notes as context.
+
+<CardGroup cols={3}>
+  <Card title="Meeting Prep" icon="clipboard-list">
+    "Prep me for my call with Sarah." The agent references past meetings for relevant context.
+  </Card>
+  <Card title="Follow-up Drafts" icon="envelope">
+    "Draft a follow-up to my Acme meeting." The agent incorporates action items and discussion points.
+  </Card>
+  <Card title="Contact Context" icon="user">
+    When viewing a contact, the agent references past meetings with that person.
+  </Card>
+</CardGroup>
+
+Meeting notes become part of the knowledge base the AI draws from, alongside your emails, memories, and contact data.
+
+## Email Notifications
+
+When Slashy syncs new meeting notes, you receive an email notification so you do not miss important summaries and action items.
+
+## Disconnecting
+
+Go to **Settings > Account > Granola** and click **Disconnect**.
+
+<Note>Previously synced notes remain accessible after disconnecting. The AI can still reference them, but no new notes will sync. You can reconnect at any time.</Note>
+
+## Quick Reference
+
+| Action | Where |
+|--------|-------|
+| Connect Granola | **Settings > Account > Granola > Connect** |
+| Disconnect | **Settings > Account > Granola > Disconnect** |
+| Manual sync | **Settings > Account > Granola > Sync** |
+| Ask agent for prep | `p a` or `Cmd+Shift+L`, then "prep me for [meeting]" |
+| Open settings | `Cmd+,` |
+
+<CardGroup cols={2}>
+  <Card title="Creating Events" icon="calendar-plus" href="/features/calendar/creating-events">
+    Create and manage calendar events in Slashy.
+  </Card>
+  <Card title="RSVP from Email" icon="envelope-open" href="/features/calendar/rsvp">
+    Respond to calendar invites directly from your inbox.
+  </Card>
+</CardGroup>

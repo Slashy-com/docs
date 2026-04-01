@@ -1,0 +1,90 @@
+---
+title: "AI Email Editing & Rating"
+description: "Select text to improve, shorten, lengthen, fix grammar, or custom-edit with diff highlighting. Rate your draft's effectiveness with Cmd+P."
+---
+
+Slashy's AI can edit any part of your email on demand and rate your draft before sending. Both features use your writing style, memories, and recipient context to produce results that sound like you.
+
+## AI Editing: Select and Transform
+
+Highlight text in the compose editor to see a floating toolbar with quick actions.
+
+<Frame>
+  <img src="/images/screenshots/ai-email-editing-rating-1.png" alt="AI editing toolbar with Improve, Fix Grammar, Shorten, Lengthen, and Custom buttons" />
+</Frame>
+
+### Quick Actions
+
+| Action | What It Does |
+|--------|-------------|
+| **Improve** | Rewrites for clarity and professionalism, preserving meaning |
+| **Fix Grammar** | Corrects spelling, grammar, punctuation without changing tone |
+| **Shorten** | Condenses text, removes filler, tightens phrasing |
+| **Lengthen** | Expands with more detail or supporting points |
+| **Custom** | Type any instruction: "make more casual," "rewrite as bullet points," "translate to Spanish" |
+
+### Diff Highlighting
+
+After the AI generates its edit, changes appear highlighted in the editor -- removed text with strikethrough, new text highlighted. Review before committing.
+
+<Frame>
+  <img src="/images/screenshots/ai-email-editing-rating-2.png" alt="Diff view showing removed text struck through and new text highlighted" />
+</Frame>
+
+### Accept or Discard
+
+- **Accept** -- applies the edit, diff highlighting disappears
+- **Discard** -- reverts to your original text
+
+Run multiple edits on different sections independently. Works on any selection -- a word, sentence, paragraph, or the entire body.
+
+### Context Awareness
+
+The AI considers your writing style, memories, thread context, and recipient information. "Improve" on a casual team email produces different results than "Improve" on a client proposal.
+
+---
+
+## AI Email Rating
+
+Press `Cmd+P` to rate your draft before sending. The AI returns:
+
+| Component | Description |
+|-----------|------------|
+| **Inferred goal** | What the AI thinks you're trying to accomplish |
+| **Effectiveness score** | How well the draft achieves that goal |
+| **Specific issues** | Concrete problems (e.g., "the ask is buried in paragraph 3") |
+| **Suggestions** | Actionable improvements (e.g., "move the request to the first sentence") |
+
+<Frame>
+  <img src="/images/screenshots/ai-email-editing-rating-3.png" alt="AI rating panel with goal, score, issues, and suggestions" />
+</Frame>
+
+The rating considers enriched recipient data, your memories, and thread context -- not just grammar. It flags when cold outreach is too long for a busy exec, or when a follow-up misses a reference to the previous conversation.
+
+<Tip>
+**Best for high-stakes emails:** cold outreach, negotiations, sensitive internal comms, and follow-ups where you want to maximize response rate.
+</Tip>
+
+### Quick Reference
+
+| Action | How |
+|--------|-----|
+| AI edit selected text | Select text, choose from toolbar |
+| Custom AI edit | Select text, click Custom, type instruction |
+| Rate email | `Cmd+P` |
+| Accept edit | Click Accept after reviewing diff |
+| Discard edit | Click Discard to revert |
+
+---
+
+<CardGroup cols={2}>
+  <Card title="AI Inline Autocomplete" icon="text" href="/features/ai-drafts/autocomplete">
+    Ghost text predictions while you type
+  </Card>
+  <Card title="How AI Drafts Work" icon="file-pen" href="/how-to-guides/ai-drafts">
+    Automatic draft suggestions on incoming email
+  </Card>
+  <Card title="Customize Your Agent" icon="sliders" href="/how-to-guides/customize-agent">
+    Set writing style and preferences
+  </Card>
+</CardGroup>

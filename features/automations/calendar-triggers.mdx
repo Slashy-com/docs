@@ -1,0 +1,82 @@
+---
+title: "Calendar Triggers"
+description: "Fire automations before, during, or after meetings -- prep briefings, late-to-meeting checks, post-meeting follow-ups, and real-time event change reactions."
+---
+
+Calendar triggers are automations tied to your calendar events. Define which events to match, when to fire, and what the agent should do. These power meeting prep briefings, post-meeting follow-ups, and real-time reactions to schedule changes.
+
+## Anatomy of a Calendar Trigger
+
+Every calendar trigger has three parts:
+
+1. **Condition** -- which events match (e.g., "meetings with external attendees," "1-on-1s with my direct reports")
+2. **Timing** -- when to fire relative to the event
+3. **Action** -- what the agent does (e.g., "prep me and send the briefing on iMessage," "draft a follow-up email")
+
+## Timing Options
+
+| Timing | Range | Use Case |
+|--------|-------|----------|
+| **Minutes before** | 0-120 min before start | Meeting prep, join reminders |
+| **Minutes after start** | 0-30 min after start | "Am I late?" checks |
+| **Minutes after end** | 0-120 min after end | Follow-ups, summary emails |
+| **On event change** | Fires immediately | React to reschedules and cancellations |
+
+## Creating a Calendar Trigger
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `p a` or `Cmd+Shift+L`.
+  </Step>
+  <Step title="Describe the automation">
+    Example: *"10 minutes before any meeting with external attendees, prep me and send the briefing on iMessage."*
+  </Step>
+  <Step title="Review and confirm">
+    The agent creates the trigger with condition, timing, and action.
+  </Step>
+  <Step title="Manage in Settings">
+    Find it in **Settings > Automations** alongside email triggers and reminders.
+  </Step>
+</Steps>
+
+## Meeting Presence Check
+
+Triggers that fire after a meeting starts can check whether you've joined the Google Meet call:
+
+1. Trigger fires N minutes after event start
+2. Agent checks Google Meet API for who's in the call
+3. If you're not present, sends an iMessage alert with the Meet link
+
+<Info>
+Works with Google Meet links attached to calendar events. The agent can see who has joined, who is late, and who hasn't connected.
+</Info>
+
+## Common Patterns
+
+| Pattern | Timing | What to Tell the Agent |
+|---------|--------|----------------------|
+| Meeting prep | 10 min before | *"10 min before external meetings, prep me and send on iMessage"* |
+| Late check | 5 min after start | *"5 min after any meeting starts, check if I've joined the Meet"* |
+| Follow-up | 5 min after end | *"5 min after external meetings end, draft a follow-up email"* |
+| Schedule alert | On event change | *"When investor meetings are rescheduled, message me on iMessage"* |
+| Join reminder | 1 min before | *"1 min before every meeting, message me with the meeting link"* |
+
+## How Scheduling Works
+
+Calendar triggers use AWS EventBridge with timezone-aware scheduling. When you create a trigger, Slashy identifies matching future events and schedules invocations. As events are added, rescheduled, or deleted, invocations update automatically.
+
+When a trigger fires, the agent receives full event context -- title, description, attendees with RSVP status, meeting link, and your action instruction.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Email Triggers" icon="bolt" href="/features/automations/email-triggers">
+    Automate actions on incoming email
+  </Card>
+  <Card title="Scheduled Reminders" icon="clock" href="/features/automations/scheduled-reminders">
+    Schedule the agent for future tasks
+  </Card>
+  <Card title="Agent Autonomy" icon="shield-check" href="/features/ai-agent/autonomy">
+    What the agent can and cannot do
+  </Card>
+</CardGroup>

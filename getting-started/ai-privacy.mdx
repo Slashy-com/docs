@@ -1,0 +1,70 @@
+---
+title: "AI Privacy & Data Protection"
+description: "How Slashy protects your data when using AI: no training on customer data, provider retention policies, prompt injection protection, and Read Mode."
+---
+
+Slashy uses AI for importance labels, drafts, the agent, automations, and search. Here's exactly how your data interacts with AI systems and what protections are in place.
+
+## No Training on Your Data
+
+Your emails, calendar events, contacts, and agent conversations are **never** used to train any AI model -- not ours, not our providers'. This is a contractual guarantee in Slashy's [Data Processing Agreement](https://slashy.com/dpa).
+
+## AI Providers and Retention
+
+| Provider | Used For | Retention | Training |
+|---|---|---|---|
+| **Anthropic (Claude)** | Agent, drafts, automations | 30-day logs, then deleted | No |
+| **OpenAI (GPT)** | Certain features, embeddings | 30-day logs, then deleted | No (opted out) |
+| **Google (Gemini)** | Certain features | No retention beyond request | No |
+| **Groq** | Fast inference | No retention | No |
+
+All providers are accessed via enterprise/API tiers with stricter data handling than consumer products.
+
+## What Data Is Sent
+
+Slashy sends the **minimum** data necessary per request:
+
+- **AI Draft Reply:** The thread you're replying to + relevant memories
+- **Importance Labels:** Subject, sender, content summary
+- **Agent Sidebar:** Your question + relevant email content + memories
+- **Automations:** Trigger condition + matched email content
+
+<Note>Slashy does not send your entire inbox to AI providers. Only specific content relevant to the feature you're using is transmitted.</Note>
+
+<Frame>
+  <img src="/images/screenshots/ai-privacy-data-protection.png" alt="AI privacy settings and Read Mode toggle" />
+</Frame>
+
+## Prompt Injection Protection
+
+Multiple layers protect against malicious email content trying to manipulate the AI:
+
+- **Input sanitization** -- known injection patterns detected and neutralized
+- **Content boundaries** -- email text treated as untrusted data, not instructions
+- **Writing style matching** -- agent defaults to your established patterns if manipulation is detected
+- **Relationship context** -- requests from strangers get more scrutiny
+
+## Agent Read Mode
+
+Toggle in **Settings > Account**:
+
+- **Read Mode ON:** Agent can read, search, and answer questions but cannot send emails, create events, or modify your inbox
+- **Read Mode OFF (default):** Full capabilities -- the agent always asks confirmation before significant actions
+
+## Your Controls
+
+- **Choose AI model** -- Haiku (fast), Sonnet (balanced), Opus (most capable)
+- **Manage memories** -- View, edit, delete in Settings > Memories
+- **Disable AI features** -- Use Slashy as a fast email client without AI
+- **Delete your data** -- Email [privacy@slashy.com](mailto:privacy@slashy.com) for full account deletion
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Data Storage" icon="database" href="/getting-started/data-storage">
+    What Slashy stores and how to control it.
+  </Card>
+  <Card title="Subprocessors" icon="server" href="/getting-started/subprocessors">
+    Full list of infrastructure providers.
+  </Card>
+</CardGroup>

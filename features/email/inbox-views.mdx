@@ -1,0 +1,86 @@
+---
+title: "Inbox Views"
+description: "Navigate All Mail, Starred, Reminders, Scheduled, Drafts, Sent, Done, and Trash with keyboard shortcuts, top section grouping, filters, and multi-inbox switching."
+---
+
+Slashy organizes email across several views, each accessible from the sidebar and via keyboard shortcuts. Combined with label tabs, filters, and multi-inbox switching, you reach any email in one or two keystrokes.
+
+<Frame>
+  <img src="/images/screenshots/inbox-views-1.png" alt="Slashy sidebar showing all inbox views" />
+</Frame>
+
+## Sidebar Views
+
+| View | Shortcut | What It Shows |
+|------|----------|--------------|
+| **All Mail** | `g a` | Every email across all labels |
+| **Starred** | `g s` | Threads you have starred |
+| **Reminders** | `g h` | Threads with active reminders |
+| **Scheduled** | `g l` | Emails scheduled to send later |
+| **Drafts** | `g d` | Unsent drafts |
+| **Sent** | `g t` | Emails you have sent |
+| **Done** | `g e` | Archived threads |
+| **Trash** | `g #` | Deleted threads (auto-removed after 30 days) |
+
+Additional shortcuts: `g i` for Important, `g o` for Other.
+
+## Importance Label Tabs
+
+At the top of your inbox, labels appear as tabs with unread counts. Navigate with `Tab` / `Shift+Tab`. Drag tabs to reorder, or drag threads onto a tab to reclassify.
+
+## Top Section Grouping
+
+Pin a subset of threads to the top of your inbox for a two-tier layout.
+
+| Mode | Top Section Shows |
+|------|-------------------|
+| **None** | Single chronological list |
+| **Unread** | Unread threads pinned at top |
+| **Starred** | Starred threads pinned at top |
+
+Configure in **Settings > Account** or via command palette (`Cmd+K`, search "top section").
+
+<Frame>
+  <img src="/images/screenshots/inbox-views-2.png" alt="Inbox with Unread top section grouping enabled" />
+</Frame>
+
+## Inbox Filters
+
+Toggle filters to narrow your current view. Active filters stack with your view and label.
+
+| Filter | Shortcut | Shows Only |
+|--------|----------|------------|
+| **Unread** | `Shift+U` | Threads with unread messages |
+| **Starred** | `Shift+S` | Starred threads |
+| **Important** | `Shift+I` | AI-classified Important threads |
+| **No Reply** | `Shift+R` | Threads awaiting a reply to your last message |
+
+Press the shortcut once to activate, again to deactivate.
+
+## Multi-Inbox Switching
+
+Switch between connected Gmail accounts instantly with `Alt+1` through `Alt+9` (and `Alt+0` for the tenth). Each inbox has its own labels, threads, and settings.
+
+<Frame>
+  <img src="/images/screenshots/inbox-views-3.png" alt="Account switcher showing two connected Gmail accounts" />
+</Frame>
+
+## Navigation Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Move down | `j` or `Down Arrow` |
+| Move up | `k` or `Up Arrow` |
+| Open thread | `Enter` |
+| Select all | `Cmd+A` |
+| Toggle sidebar | `Cmd+B` |
+| Toggle right sidebar | `Cmd+.` |
+
+<CardGroup cols={2}>
+  <Card title="Labels & AI Classification" icon="tags" href="/features/email/labels">
+    How AI sorts your email into importance labels.
+  </Card>
+  <Card title="Notification Preferences" icon="bell" href="/features/email/notifications">
+    Control what triggers notifications and where they appear.
+  </Card>
+</CardGroup>

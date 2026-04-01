@@ -1,0 +1,111 @@
+---
+title: "Email and Calendar Sync Issues"
+description: "Troubleshoot empty inbox on first login, missing emails, calendar not updating, and how to verify sync status."
+---
+
+Slashy syncs email and calendar from Gmail in real time. Most issues resolve within minutes. This guide covers what is normal, what is not, and when to contact support.
+
+## Empty Inbox After First Login
+
+This is normal. Slashy downloads your entire email history on first connect.
+
+| Timeframe | What to expect |
+|---|---|
+| 2-5 minutes | Inbox may appear empty or show only a few emails |
+| 5-15 minutes | Recent emails loaded. Older emails still syncing. |
+| Up to 30 minutes | Full history complete. Large inboxes (10k+) may take longer. |
+
+<Warning>Do not disconnect and reconnect during initial sync. That restarts the process from scratch.</Warning>
+
+<Frame><img src="/images/screenshots/initial-sync-progress.png" alt="Initial sync progress showing emails loading into inbox" /></Frame>
+
+## Emails in Gmail but Not in Slashy
+
+<Steps>
+  <Step title="Wait and refresh">
+    Gmail push notifications can be delayed. Wait 60 seconds, then `Cmd+R` to reload.
+  </Step>
+  <Step title="Check the right view">
+    The email may be in a different importance label tab. Press `g a` for All Mail to see everything regardless of label. Clear any active filters (Unread Only, Starred, etc.).
+  </Step>
+  <Step title="Search for it">
+    Press `/` and search by sender, subject, or keywords. If it appears in search but not your inbox, it has synced but may be archived or in another label.
+  </Step>
+  <Step title="Check spam and trash">
+    `g #` for Trash. Enable spam folder in **Settings > Account > Show spam folder**, then check it.
+  </Step>
+  <Step title="Verify sync status">
+    **Settings** (`Cmd+,`) > **Account** -- connected inbox should show as **Connected**.
+  </Step>
+</Steps>
+
+If the email still does not appear, contact support with the subject, sender, and approximate date.
+
+## Calendar Not Syncing
+
+<Steps>
+  <Step title="Check selected calendars">
+    Press `2` for calendar view, then **Settings > Calendars**. Make sure the calendars you want are toggled on. Shared and conference room calendars appear here too.
+  </Step>
+  <Step title="Wait briefly">
+    Calendar changes typically appear within 30 seconds. If not, reload the page.
+  </Step>
+  <Step title="Check timezone">
+    If events appear at the wrong time, verify your timezone in **Settings > Account**.
+  </Step>
+</Steps>
+
+<Frame><img src="/images/screenshots/calendar-settings-toggles.png" alt="Calendar settings showing list of calendars with toggle switches" /></Frame>
+
+## How Sync Works
+
+| Mechanism | What it does |
+|---|---|
+| Gmail push notifications | Google notifies Slashy within seconds of any change (primary) |
+| Calendar push notifications | Real-time event create/update/delete notifications |
+| Delta polling | Periodic fallback if push notifications are delayed |
+| Sync monitor | Detects stalled syncs and auto-restarts them |
+| Watch renewal | Push subscriptions renewed every 6 hours |
+| Page reload (`Cmd+R`) | Fetches latest state from server |
+
+## Multi-Account Sync
+
+- Each inbox syncs independently
+- Switch accounts with `Alt+0` through `Alt+9`
+- Issues in one account do not affect others
+
+## Common Scenarios
+
+<Accordion title="Emails appear on mobile but not desktop (or vice versa)">
+  One client has a stale cache. Reload the app: `Cmd+R` on desktop, pull down to refresh on mobile.
+</Accordion>
+
+<Accordion title="Actions in Slashy don't sync back to Gmail">
+  Your OAuth token may need refreshing. Disconnect and reconnect your Gmail account in Settings.
+</Accordion>
+
+<Accordion title="Calendar events created in Slashy don't appear in Google Calendar">
+  Check that you are creating events on a calendar you own, not a shared read-only calendar.
+</Accordion>
+
+## When to Contact Support
+
+Contact support if:
+- Inbox empty for 30+ minutes after first connecting
+- Specific emails consistently missing (not a one-time delay)
+- Inbox status shows an error after reconnecting
+- Actions not reflected in Gmail after several minutes
+- Calendar sync completely broken (no events at all)
+
+Include: email address, when it started, what you tried, and screenshots from both Slashy and Gmail.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Gmail Migration" icon="right-to-bracket" href="/switching/gmail-migration">
+    Full guide to moving from Gmail to Slashy.
+  </Card>
+  <Card title="Your First Week" icon="calendar-check" href="/getting-started/first-week">
+    Day-by-day onboarding guide.
+  </Card>
+</CardGroup>

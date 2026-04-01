@@ -1,0 +1,101 @@
+---
+title: "Creating Events & Invites"
+description: "Create, edit, and manage calendar events with click-and-drag scheduling, conferencing links, recurrence rules, attendee management, and drag-to-reschedule."
+---
+
+Slashy has a full calendar built into your email client. Create events by clicking and dragging, add attendees and conferencing links, set recurrence rules, and send invites — all without leaving Slashy.
+
+## Opening the Calendar
+
+Press `2` to switch to calendar view, or `p c` to open the calendar in the sidebar panel. Use arrow keys to navigate, `t` to jump to today, or `g` to go to a specific date.
+
+<Frame>
+  <img src="/images/screenshots/creating-events-invites-1.png" alt="Slashy calendar in Week view with color-coded events" />
+</Frame>
+
+## Creating an Event
+
+<Tabs>
+  <Tab title="Click and Drag">
+    The fastest method — click on the start time in the calendar grid, drag to the end time, and release. The event editor opens immediately with the time pre-filled.
+  </Tab>
+  <Tab title="Create Button">
+    Click **Create** in the calendar toolbar to open the event editor with a default duration. Set the time and details manually.
+  </Tab>
+  <Tab title="From Email">
+    Press `b` while viewing an email thread to create a calendar event with context from the conversation.
+  </Tab>
+</Tabs>
+
+## The Event Editor
+
+| Field | Description |
+|-------|-------------|
+| **Title** | Event name shown on the calendar |
+| **Date and time** | Start/end with date pickers. Supports all-day events. |
+| **Location** | Physical address with Google Places autocomplete |
+| **Description** | Notes or agenda for attendees |
+| **Attendees** | Add by email. Autocompletes from your contacts. |
+| **Conferencing** | Google Meet, Zoom, Teams, Webex, or custom link |
+| **Calendar** | Which connected calendar to create the event on |
+| **Timezone** | Defaults to yours, changeable for cross-timezone scheduling |
+| **Recurrence** | Daily, weekly, monthly, yearly, or custom patterns |
+
+<Frame>
+  <img src="/images/screenshots/creating-events-invites-2.png" alt="Event editor with all fields filled in" />
+</Frame>
+
+## Conferencing Options
+
+<CardGroup cols={2}>
+  <Card title="Google Meet" icon="video">
+    Auto-creates a Meet link. Available by default for Google Calendar users.
+  </Card>
+  <Card title="Zoom" icon="video">
+    Creates a Zoom link. Connect your account in **Settings > Calendars**.
+  </Card>
+  <Card title="Microsoft Teams" icon="video">
+    Adds a Teams meeting link.
+  </Card>
+  <Card title="Webex / Custom" icon="link">
+    Adds a Webex link or paste any meeting URL.
+  </Card>
+</CardGroup>
+
+<Tip>Set a default conferencing provider in **Settings > Calendars** so every new event includes your preferred meeting link automatically.</Tip>
+
+## Recurrence
+
+Toggle recurrence in the event editor. Supported patterns: daily, weekly (specific days), monthly (date or day-of-month), yearly, and custom intervals.
+
+When editing or deleting a recurring event, choose to apply to **this event only**, **this and following events**, or **all events**.
+
+## Drag to Reschedule
+
+Drag any event to a new time slot. Drag the bottom edge to extend or shorten duration. Attendees are notified automatically.
+
+## Deleting Events
+
+Click an event and select **Delete**. For recurring events, choose which instances to delete. Press `z` or `Cmd+Z` to undo within seconds.
+
+## Quick Reference
+
+| Action | How |
+|--------|-----|
+| Switch to calendar | `2` or `p c` |
+| Create event | Click and drag, or Create button |
+| Create from email | `b` while viewing a thread |
+| Reschedule | Drag event to new time |
+| Delete event | Click event, then Delete |
+| Undo delete | `z` or `Cmd+Z` |
+| Jump to today | `t` |
+| Go to date | `g` |
+
+<CardGroup cols={2}>
+  <Card title="Sharing Your Availability" icon="calendar-check" href="/features/calendar/availability">
+    Insert available time slots directly into emails.
+  </Card>
+  <Card title="Booking Links" icon="link" href="/features/calendar/booking-links">
+    Built-in Calendly alternative for scheduling.
+  </Card>
+</CardGroup>

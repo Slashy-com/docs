@@ -1,0 +1,74 @@
+---
+title: "Snippets & Templates"
+description: "Create reusable email templates with keyboard shortcuts, AI-powered variables, auto-fill placeholders, pre-set recipients, and usage tracking."
+---
+
+Snippets are reusable email blocks you insert in seconds. Each can have its own shortcut, pre-set recipients, attachments, and AI variables that personalize content per recipient.
+
+<Frame><img src="/images/screenshots/snippets-templates-1.png" alt="Snippet creation modal with name, shortcut, body editor, and attached file" /></Frame>
+
+## Creating a Snippet
+
+Press `n s` from anywhere, or go to **Settings > Snippets > New Snippet**.
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| **Name** | Yes | Label shown in the picker (e.g., "Intro follow-up") |
+| **Shortcut** | Yes | Unique keyword to trigger insertion (e.g., `intro`) |
+| **Subject** | No | Pre-fills subject line on new compose |
+| **Body** | Yes | Email content with rich text, placeholders, AI variables |
+| **To / CC** | No | Pre-set recipients that auto-populate |
+| **Attachments** | No | Files included with every use (up to 24 MB each) |
+
+## Inserting a Snippet
+
+Press `Cmd+Shift+S` while composing to open the snippet picker. Search by name or shortcut, then select. The content inserts at your cursor, recipients populate To/CC, attachments attach, and subject pre-fills if empty.
+
+You can also type the shortcut keyword directly in the composer -- Slashy offers to expand it.
+
+## AI Variables
+
+AI variables embed a prompt inside a snippet. When inserted, the AI generates personalized content based on the recipient, thread history, and your memories.
+
+Click the AI icon in the snippet editor to add one. Example prompts:
+
+- "Personalize a greeting based on our previous conversations"
+- "Write a one-sentence summary of why I'm reaching out"
+- "Generate a relevant icebreaker based on the recipient's company"
+
+<Tip>AI variables generate automatically on insertion. You can edit the output before sending.</Tip>
+
+## Pre-Set Recipients & Attachments
+
+Add default To/CC recipients for templates where the same people are always included (e.g., weekly updates that CC your team lead). Recipients are **added** to existing fields, not replaced, and duplicates are auto-deduplicated.
+
+Attached files are stored with the snippet and included every time it's used.
+
+## Usage Tracking
+
+View per-snippet analytics in **Settings > Snippets**:
+
+| Metric | What It Measures |
+|--------|-----------------|
+| **Usage count** | Times inserted |
+| **Sent count** | Emails actually sent |
+| **Open rate** | % opened by recipients |
+| **Reply rate** | % that received a reply |
+| **Performance score** | Combined score across all metrics |
+
+Sort by any metric to find top performers or templates that need improvement.
+
+## Managing Snippets
+
+All management lives in **Settings > Snippets** (`Cmd+,` then Snippets). Search, edit, delete, and sort by name, usage, last used, creation date, opens, or replies.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Composing Emails" icon="pen" href="/features/email/composing">
+    Rich text editor and multi-account sending
+  </Card>
+  <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
+    Auto-suggestions and AI-generated replies
+  </Card>
+</CardGroup>

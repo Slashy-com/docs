@@ -1,0 +1,77 @@
+---
+title: "Setting Up the iMessage Agent"
+description: "Connect your phone number to the Slashy iMessage agent and troubleshoot common issues."
+---
+
+The iMessage agent lets you manage email, calendar, and automations entirely through text messages. Once connected, you can search emails, draft replies, get briefings, and more — without opening any app.
+
+## Connecting During Onboarding
+
+iMessage connection is step 6 of the onboarding wizard.
+
+<Steps>
+  <Step title="Complete earlier onboarding steps">
+    Google sign-in, Gmail connection, labels, memories, bulk cleanup.
+  </Step>
+  <Step title="Click Connect iMessage">
+    This generates a link that opens iMessage with a pre-filled message to the Slashy number.
+  </Step>
+  <Step title="Send the pre-filled message">
+    Do not edit it — the message contains invisible zero-width Unicode characters that link your phone number to your account.
+  </Step>
+  <Step title="Confirm the connection">
+    The Slashy agent responds within seconds confirming the link.
+  </Step>
+</Steps>
+
+<Frame><img src="/images/screenshots/onboarding-imessage-step.png" alt="Onboarding iMessage step showing the Connect iMessage button" /></Frame>
+
+<Warning>If you retype the message manually, the linking will fail. Always use the generated link.</Warning>
+
+## Re-Activating the Agent
+
+If the iMessage agent stops responding or you skipped it during onboarding: **just send it a text.** A simple "hi" works. There is no toggle — the agent is always listening once linked. Sending a new message restarts the connection.
+
+<Frame><img src="/images/screenshots/imessage-reactivate.png" alt="iMessage conversation showing user sending hi and agent responding" /></Frame>
+
+## Linking a New Phone Number
+
+<Steps>
+  <Step title="Update your number">
+    Go to **Settings** (`Cmd+,`) > **Account** and update your phone number.
+  </Step>
+  <Step title="Generate a new link">
+    Open the agent sidebar (`p a`) and type: *"Generate my iMessage link."*
+  </Step>
+  <Step title="Send the pre-filled message from your new number">
+    Click the provided URL to open iMessage and send.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+| Symptom | Fix |
+|---------|-----|
+| Agent stopped responding | Send any message (even "hi") to restart the connection |
+| Never received a response after setup | Re-generate the iMessage link in Settings — the pre-filled message may have been edited |
+| Agent doesn't recognize your number | Phone number not linked. Use the agent sidebar to generate a new iMessage link |
+| Messages sending as green (SMS) | Slashy requires iMessage, not SMS. Enable iMessage: **iPhone Settings > Messages > iMessage** |
+| Agent responds slowly (>30s) | Complex tasks take longer. If consistently slow, contact support |
+
+## Privacy
+
+iMessage conversations are processed by the same AI as the web and desktop apps. Messages follow the same rolling summary approach — they are not stored permanently.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="iMessage Capabilities" icon="list-check" href="/how-to-guides/imessage-capabilities">
+    Everything you can do via text
+  </Card>
+  <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
+    Set up the most impactful automations
+  </Card>
+  <Card title="Customize Your Agent" icon="sliders" href="/how-to-guides/customize-agent">
+    Control your agent's writing style
+  </Card>
+</CardGroup>

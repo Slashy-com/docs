@@ -1,0 +1,101 @@
+---
+title: "Getting Started with Slashy Mobile"
+description: "Set up the iOS app -- sync, swipe gestures, voice compose, push notifications, and known limitations."
+---
+
+The Slashy iOS app gives you the full AI email experience on your phone -- swipe actions, voice-first compose, and the AI agent, optimized for one-handed use.
+
+## Download and Sign In
+
+<Steps>
+  <Step title="Download">
+    Get Slashy from the [App Store](https://apps.apple.com/app/slashy-email/id6738646622).
+  </Step>
+  <Step title="Sign in">
+    Tap **Sign in with Google** using the same account as Slashy web/desktop.
+  </Step>
+  <Step title="Sync">
+    Your inbox syncs in 2-5 minutes. Labels, memories, and settings carry over automatically.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/mobile-login.png" alt="Slashy mobile login screen with Sign in with Google button" />
+</Frame>
+
+## Swipe Gestures
+
+Each direction has two levels -- short swipe and long swipe -- giving you four actions total. Haptic feedback confirms which action you are about to trigger.
+
+| Direction | Short Swipe | Long Swipe |
+|---|---|---|
+| Right | Toggle Read/Unread | Set Reminder |
+| Left | Archive | Trash |
+
+**Customize swipes:** Sidebar > Settings > Swipe Settings. Drag to reorder actions with a live preview.
+
+## Voice Transcription
+
+On-device speech recognition (whisper-small). No audio sent to the cloud.
+
+1. Open any compose window.
+2. Hold the **"Hold to speak"** button and talk.
+3. Release. Speech transcribes instantly into the compose field.
+
+Voice also works in the AI agent chat.
+
+## Selection Mode (Bulk Actions)
+
+Long-press any thread to enter selection mode (haptic pulse confirms). Tap additional threads or use **Select All**. A floating action bar appears with: **Mark Read**, **Archive**, **Trash**, and **Change Label**.
+
+<Frame>
+  <img src="/images/screenshots/mobile-selection-mode.png" alt="Three threads selected with floating bulk action bar at bottom" />
+</Frame>
+
+## Sidebar Navigation
+
+Open via the menu icon or swipe right from the left edge.
+
+- **Labels** -- importance labels with unread counts
+- **Views** -- All Mail, Starred, Reminders, Scheduled, Drafts, Sent, Done, Trash
+- **Account switcher** -- tap your avatar to switch accounts or view unified inbox
+
+## Push Notifications
+
+Enabled by default. If not working:
+
+1. iPhone **Settings > Notifications > Slashy** -- confirm allowed.
+2. In-app **Settings > Notifications** -- confirm toggle is on.
+3. Force-quit and reopen to re-register the notification token.
+
+<Info>Slashy suppresses notifications for threads you are currently viewing.</Info>
+
+## Multiple Accounts
+
+Sidebar > tap avatar > **Connect another address** > complete OAuth. Switch accounts from the same menu, or select **All** for a unified inbox.
+
+## TestFlight Migration
+
+If migrating from the beta: download the App Store version, sign in with the same account, then delete the TestFlight build. Data syncs from the server.
+
+## Known Limitations
+
+| Feature | Status |
+|---|---|
+| Calendar view | Web/desktop only. Mobile agent can still create and check events via AI chat. |
+| Newline in AI compose | Not available. Use voice dictation or full compose screen. |
+| Snippets (templates) | Coming soon. Use the AI agent for templated replies. |
+| Booking links | Create and manage from the web app. |
+
+For issues not listed here, email founders@slashy.com or use **Settings > Support** in the app.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Your First Week" icon="rocket" href="/getting-started/first-week">
+    Day-by-day onboarding guide.
+  </Card>
+  <Card title="Calendar Setup" icon="calendar" href="/getting-started/calendar-setup">
+    Sync, timezones, and booking links.
+  </Card>
+</CardGroup>

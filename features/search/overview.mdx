@@ -1,0 +1,87 @@
+---
+title: "Search Operators & Filters"
+description: "Find any email instantly with Gmail-compatible search operators, boolean logic, and AI-powered natural language search."
+---
+
+Press `/` from anywhere in Slashy to open search. Results stream as you type. Use `j`/`k` to navigate results and `Enter` to open.
+
+<Frame><img src="/images/screenshots/search-operators-filters.png" alt="Slashy search bar with operator query and streaming results" /></Frame>
+
+## Operator Reference
+
+<Tabs>
+  <Tab title="People">
+    | Operator | Example | Finds |
+    |----------|---------|-------|
+    | `from:` | `from:sarah@acme.com` | Emails from this sender |
+    | `to:` | `to:team@company.com` | Emails to this address |
+    | `cc:` | `cc:manager@company.com` | CC'd emails |
+    | `bcc:` | `bcc:finance@company.com` | BCC'd emails |
+
+    Partial matches work: `from:sarah` matches any sender with "sarah" in their name or email.
+  </Tab>
+  <Tab title="Content">
+    | Operator | Example | Finds |
+    |----------|---------|-------|
+    | `subject:` | `subject:quarterly report` | Words in the subject line |
+    | (free text) | `budget proposal` | Words anywhere in subject or body |
+    | `"quoted"` | `"action items"` | Exact phrase match |
+  </Tab>
+  <Tab title="Status & Attachments">
+    | Operator | Finds |
+    |----------|-------|
+    | `is:unread` | Unread emails |
+    | `is:starred` | Starred emails |
+    | `is:important` | AI-classified Important emails |
+    | `is:draft` | Drafts |
+    | `is:sent` | Sent emails |
+    | `has:attachment` | Emails with attachments |
+    | `filename:report.pdf` | Attachment by filename |
+  </Tab>
+  <Tab title="Location & Date">
+    | Operator | Example |
+    |----------|---------|
+    | `label:` | `label:important` |
+    | `in:inbox` / `in:sent` / `in:trash` / `in:spam` | Location filter |
+    | `category:` | `category:promotions` |
+    | `after:` / `before:` | `after:2025-01-01` |
+    | `newer_than:` / `older_than:` | `newer_than:7d` |
+    | `larger:` / `smaller:` | `larger:10M` |
+  </Tab>
+</Tabs>
+
+## Combining Operators
+
+Multiple terms are joined with **AND** by default. Use `OR` for either condition, `NOT` or `-` prefix to exclude.
+
+```
+from:sarah budget                              # implicit AND
+from:sarah OR from:mike                        # either sender
+from:sarah -subject:newsletter                 # exclude newsletters
+(from:sarah OR from:mike) is:unread            # grouped logic
+```
+
+<Tip>Combine date ranges for precision: `after:2025-01-01 before:2025-02-01` finds emails from January 2025 only.</Tip>
+
+## AI Search
+
+For natural language queries, open the command palette with `Cmd+K` and type in plain English:
+
+- "Emails about Q3 budget from last month"
+- "Threads where someone asked me for feedback"
+- "Unread emails from investors about term sheets"
+
+The AI translates your question into a search query and returns results -- useful when you don't remember the exact sender, date, or keywords.
+
+<Tip>Search results respect your active inbox filters. If you have `Shift+U` (unread) active, search only returns unread matches.</Tip>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Contacts & Enrichment" icon="address-book" href="/features/contacts/overview">
+    Enriched profiles for everyone you email
+  </Card>
+  <Card title="Keyboard Shortcuts" icon="keyboard" href="/how-to-guides/keyboard-shortcuts">
+    Navigate Slashy at full speed
+  </Card>
+</CardGroup>

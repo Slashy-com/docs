@@ -1,0 +1,77 @@
+---
+title: "Composing New Emails"
+description: "Write emails with full-screen or pop-up mode, rich text formatting, drag-and-drop recipients, multi-account sending, and forgotten attachment detection."
+---
+
+Press `c` to compose a new email. Slashy gives you a rich text editor with autocomplete recipients, formatting shortcuts, file attachments, and multi-account sending.
+
+<Frame><img src="/images/screenshots/composing-new-emails-1.png" alt="Slashy compose window with rich text editor and recipient chips" /></Frame>
+
+## Full-Screen vs. Pop-Up Mode
+
+| Mode | Description |
+|------|-------------|
+| **Full-screen** | Compose takes over the main area (default) |
+| **Pop-up** | Floating window -- reference inbox while writing, open multiple drafts |
+
+Toggle with `Cmd+Shift+P`. Set your default in **Settings > Account > Compose Mode**.
+
+## Recipients
+
+Type a name or email in the **To** field -- Slashy autocompletes from your contact history with fuzzy search. Press `Tab` to cycle between To, CC, and BCC.
+
+**Drag and drop** recipient chips between fields (To to CC, CC to BCC, etc.). Remove chips with the X button or `Backspace`.
+
+## From Selector
+
+With multiple Gmail accounts connected, the **From** dropdown lets you choose which account to send from. Defaults to the account you're currently viewing.
+
+## Rich Text Editor
+
+| Format | Shortcut |
+|--------|----------|
+| Bold | `Cmd+B` |
+| Italic | `Cmd+I` |
+| Underline | `Cmd+U` |
+| Strikethrough | `Cmd+Shift+X` |
+| Highlight | `Cmd+Shift+H` |
+| Bulleted list | `Cmd+Shift+8` |
+| Numbered list | `Cmd+Shift+7` |
+| Blockquote | `Cmd+Shift+9` |
+| Insert link | `Cmd+K` |
+
+## Attachments
+
+<Steps>
+  <Step title="File picker">`Cmd+Shift+U` opens the file picker</Step>
+  <Step title="Drag and drop">Drag files onto the compose window</Step>
+  <Step title="Paste images">Copy an image and paste directly into the editor body</Step>
+</Steps>
+
+<Warning>**Forgotten attachment detection** -- if your email mentions an attachment but none is attached, Slashy warns you before sending. You can add the file or send anyway.</Warning>
+
+## AI Features While Composing
+
+- **AI Autocomplete** -- ghost text appears as you type; press `Tab` to accept
+- **AI Draft Reply** -- `Cmd+Enter` in a reply to generate a full draft
+- **AI Edit** -- select text and invoke the AI editor to improve, shorten, or fix grammar
+- **AI Email Rating** -- `Cmd+P` to score your draft with specific suggestions
+
+## Sending
+
+- **Send now:** `Cmd+Enter` (with undo send delay)
+- **Schedule send:** `Cmd+Shift+Enter` to pick a future time
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Snippets & Templates" icon="copy" href="/features/email/snippets">
+    Reusable email templates with AI variables
+  </Card>
+  <Card title="Signatures" icon="signature" href="/how-to-guides/signatures">
+    Configure and manage email signatures
+  </Card>
+  <Card title="Unsubscribe & Block" icon="ban" href="/features/email/unsubscribe">
+    Block senders and bulk unsubscribe
+  </Card>
+</CardGroup>

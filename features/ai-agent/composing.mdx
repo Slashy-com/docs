@@ -1,0 +1,95 @@
+---
+title: "Sidebar Agent & Command Palette"
+description: "Open the AI agent sidebar to chat with Slashy, search emails, draft replies, manage your calendar, and run commands from a conversational interface."
+---
+
+The agent sidebar is your primary way to interact with Slashy's AI. The command palette gives fast access to every action without touching a mouse.
+
+## Opening the Sidebar
+
+Two ways to open it:
+
+- `p a` -- press `p` then `a` in sequence (panel: agent)
+- `Cmd+Shift+L` -- direct shortcut from anywhere
+
+The sidebar opens on the right and stays open as you navigate your inbox. Resize by dragging the left edge.
+
+<Frame>
+  <img src="/images/screenshots/using-the-sidebar-agent-command-palette-1.png" alt="Agent sidebar open alongside the inbox" />
+</Frame>
+
+## What the Agent Can Do
+
+The agent has full tool access for email and calendar. Tool use indicators show what it did (e.g., "Searched emails," "Created draft").
+
+- **Search emails** -- "Find all emails from Sarah last week about the budget"
+- **Read threads** -- "What did John say in his last email?"
+- **Draft and send** -- "Draft a reply saying we accept the proposal"
+- **Manage calendar** -- "Schedule a 30-minute call with Mike tomorrow"
+- **Create automations** -- "Set up an email trigger for receipts"
+- **Research contacts** -- "Look up this person on LinkedIn"
+- **Manage memories** -- "Remember that I always CC finance@ on vendor invoices"
+
+## Thread Context Chips
+
+When you open the sidebar while viewing a thread, the agent automatically has context about it. A context chip shows which thread is referenced. Ask "summarize this thread" or "draft a reply" without specifying which email.
+
+<Frame>
+  <img src="/images/screenshots/using-the-sidebar-agent-command-palette-2.png" alt="Agent input with thread context chip" />
+</Frame>
+
+## File Upload
+
+Upload files into the conversation via the attachment icon or drag-and-drop. Supports PDF, images, Word docs, and other common formats. The agent processes content and can reference it when drafting.
+
+## Model Selector
+
+| Model | Best For | Speed |
+|-------|---------|-------|
+| **Haiku** | Quick questions, simple tasks | Fastest |
+| **Sonnet** | Most tasks -- good balance | Fast |
+| **Opus** | Complex reasoning, nuanced writing | Highest quality |
+
+Switch models mid-conversation from the top of the sidebar.
+
+## Conversation History
+
+Past conversations are saved and searchable. Click the history icon at the top of the sidebar to browse previous chats. Start a fresh conversation with `Cmd+Alt+N`.
+
+<Frame>
+  <img src="/images/screenshots/using-the-sidebar-agent-command-palette-3.png" alt="Conversation history panel with past chats" />
+</Frame>
+
+## The Command Palette
+
+Press `Cmd+K` to open the command palette. It has three modes:
+
+<Tabs>
+  <Tab title="Commands">
+    Type any action name: "Archive," "Compose," "Star," "Go to Sent," "Settings." Every action in Slashy is accessible here.
+  </Tab>
+  <Tab title="Search">
+    Find emails with natural language or Gmail-style operators. AI search interprets intent: "emails where someone asked me for a reference."
+  </Tab>
+  <Tab title="Links">
+    Jump to links from the current thread -- URLs, calendar event links, attachment downloads.
+  </Tab>
+</Tabs>
+
+<Frame>
+  <img src="/images/screenshots/using-the-sidebar-agent-command-palette-4.png" alt="Command palette in Commands mode" />
+</Frame>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Agent Autonomy" icon="shield-check" href="/features/ai-agent/autonomy">
+    What the agent can and cannot do
+  </Card>
+  <Card title="Email Triggers" icon="bolt" href="/features/automations/email-triggers">
+    Automate actions on incoming email
+  </Card>
+  <Card title="Scheduled Reminders" icon="clock" href="/features/automations/scheduled-reminders">
+    Schedule the agent for future tasks
+  </Card>
+</CardGroup>

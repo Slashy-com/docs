@@ -1,0 +1,60 @@
+---
+title: "Frequently Asked Questions"
+description: "Answers to the most common Slashy questions: warnings, tasks, AI sidebar, accounts, offline mode, data, and deletion."
+---
+
+<AccordionGroup>
+  <Accordion title="What does the warning symbol mean?">
+    A triangle with exclamation mark indicates:
+    - **Sync issue:** Email couldn't sync with Gmail. Usually resolves in seconds. `Cmd+R` to reload.
+    - **Send failure:** Email didn't go through. Open the thread for error details and retry.
+    - **Automation error:** A trigger encountered a problem. Check Settings > Automations for details.
+  </Accordion>
+
+  <Accordion title="What happens to overdue tasks?">
+    Tasks past their due date move to the **Overdue** group in the Tasks panel (`p t`). They stay visible until you complete, reschedule, or delete them. They don't auto-archive.
+  </Accordion>
+
+  <Accordion title="How do I open the AI sidebar?">
+    Press `p a` (two key presses: `p` then `a`) or `Cmd+Shift+L`. Ask questions, draft emails, create automations, search, and manage calendar in natural language. Close with `Cmd+.` or click outside.
+  </Accordion>
+
+  <Accordion title="Can I use multiple email accounts?">
+    Yes. Settings > Account > **Add Account**. Switch with `Alt+0-9`. Each inbox has its own labels, automations, and settings. The AI agent accesses all connected inboxes.
+  </Accordion>
+
+  <Accordion title="Does Slashy work offline?">
+    Slashy requires internet for most features. The desktop and web apps cache recent emails for brief offline reading, but you cannot send, search, or use AI features without a connection.
+  </Accordion>
+
+  <Accordion title="What data does Slashy store?">
+    Account info, AI memories, automations, snippets, labels, settings, cached email data, tracking data, and tasks. Slashy does **not** store your Gmail password -- authentication uses Google OAuth. Your emails remain in Gmail. See [Data Storage](/getting-started/data-storage) for full details.
+  </Accordion>
+
+  <Accordion title="How do I delete my account?">
+    Email [founders@slashy.com](mailto:founders@slashy.com) from your Slashy email address. All data is permanently removed. Gmail is unaffected. See [Disconnect, Pause, or Reconnect](/troubleshooting/disconnect) for softer options.
+  </Accordion>
+
+  <Accordion title="Why does the AI sometimes get labels wrong?">
+    Classification improves over time. Move misclassified emails to the correct label with `l` or `v` -- this trains the model. Accuracy improves significantly by week 3-4. Adjust label descriptions in Settings > Labels for better guidance.
+  </Accordion>
+
+  <Accordion title="Can I use Google Workspace accounts?">
+    Yes. Same setup process as personal Gmail. If your organization restricts third-party apps, your Workspace admin may need to approve Slashy in the admin console.
+  </Accordion>
+
+  <Accordion title="Does Slashy read my emails?">
+    The AI processes email content to provide labels, drafts, search, and automations. Slashy does not sell your data, share it for advertising, or use it outside of providing the service. See [AI Privacy](/getting-started/ai-privacy) and the [Privacy Policy](https://slashy.com/privacy).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Disconnect, Pause, or Reconnect" icon="plug" href="/troubleshooting/disconnect">
+    Account management options.
+  </Card>
+  <Card title="Desktop Fixes" icon="desktop" href="/troubleshooting/desktop-fixes">
+    Quick solutions for desktop issues.
+  </Card>
+</CardGroup>

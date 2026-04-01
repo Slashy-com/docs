@@ -1,0 +1,71 @@
+---
+title: "Automate Receipt Forwarding"
+description: "Auto-forward receipts and invoices to Expensify, Ramp, Brex, or any email address."
+---
+
+Slashy's AI agent detects receipts, invoices, and payment confirmations the moment they arrive and forwards them automatically. Setup takes 90 seconds.
+
+## Before You Start
+
+Get the intake email for your expense tool:
+
+- **Expensify:** `receipts@expensify.com` (or your custom address)
+- **Ramp:** Your unique `@receipts.ramp.com` address
+- **Brex:** Your unique `@receipts.brex.com` address
+- **Other:** Whatever email your accounting system accepts
+
+## Set Up the Automation
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L` or `p a`.
+  </Step>
+  <Step title="Create the trigger">
+    Type: *"Create an email automation: whenever I receive a receipt or invoice, auto-forward it to receipts@expensify.com"* (replace with your actual address).
+  </Step>
+  <Step title="Review and confirm">
+    The agent shows the trigger details -- receipt detection by content patterns (order confirmations, invoices, transaction alerts). Confirm to activate.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/how-to-automate-receipt-forwarding-1.png" alt="Agent sidebar showing completed receipt forwarding automation" />
+</Frame>
+
+## Customize the Trigger
+
+<Tabs>
+  <Tab title="Narrow">
+    - *"Only forward receipts over $50"*
+    - *"Only forward receipts from Amazon, Uber, and airlines"*
+    - *"Forward invoices but not subscription renewals"*
+    - *"Only forward receipts with a PDF attachment"*
+  </Tab>
+  <Tab title="Broaden">
+    - *"Also include shipping confirmations and tracking emails"*
+    - *"Include bank transaction alerts"*
+  </Tab>
+</Tabs>
+
+To update after setup, tell the agent or edit directly in **Settings > Automations**.
+
+## Forward to Multiple Addresses
+
+Ask the agent: *"When I receive a receipt, forward it to both receipts@expensify.com and bookkeeper@myaccountant.com."*
+
+## Test It
+
+Wait for your next receipt, then verify it appeared in your expense tool. Check **Settings > Automations** to confirm the trigger fired. If a receipt wasn't caught, ask the agent: *"Why didn't my last Amazon receipt get forwarded?"*
+
+<Tip>All automations live in **Settings > Automations** where you can toggle them on/off or delete them.</Tip>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="10 Automations to Set Up" icon="bolt" href="/how-to-guides/10-automations">
+    The essential automations every user should configure.
+  </Card>
+  <Card title="iMessage Agent Setup" icon="message" href="/how-to-guides/imessage-setup">
+    Connect your phone for alerts and OTP forwarding.
+  </Card>
+</CardGroup>

@@ -1,0 +1,75 @@
+---
+title: "Email Tracking and Read Receipts"
+description: "How Slashy's tracking pixel works, how to enable or disable it, view open data, and understand tracking limitations."
+---
+
+Slashy embeds an invisible tracking pixel in outgoing emails so you know when a recipient opens your message.
+
+## How It Works
+
+When tracking is enabled, each outgoing email gets a tiny invisible image per recipient. When the recipient's email client loads images, Slashy records:
+
+- Exact timestamp
+- Device type and OS
+- Email client
+
+Tracking is per-recipient — if you send to three people, you see exactly who opened.
+
+<Frame>
+  <img src="/images/screenshots/email-tracking-read-receipts-1.png" alt="" />
+</Frame>
+
+## Enabling and Disabling
+
+**Globally:** **Settings** (`Cmd+,`) > **Account** > toggle **Email Tracking**
+
+**Per email:** Toggle tracking on/off in the compose window before sending.
+
+<Frame>
+  <img src="/images/screenshots/email-tracking-read-receipts-2.png" alt="" />
+</Frame>
+
+## Viewing Open Data
+
+Press `p o` to open the **Recent Opens** panel — a live feed of who's reading your tracked emails.
+
+Each entry shows: recipient name, email subject, time opened, device type, OS, and email client.
+
+You can also view tracking data on individual threads — sent messages show an "Opened by" indicator.
+
+<Frame><img src="/images/screenshots/recent-opens-panel.png" alt="Recent Opens panel showing email opens with time segments and device info" /></Frame>
+
+## When Tracking Doesn't Work
+
+| Cause | Impact |
+|-------|--------|
+| **Apple Mail Privacy Protection** | Pre-fetches all images via proxy. Slashy filters these to avoid false positives, which may also filter real opens. |
+| **Gmail Image Proxy** | Routes images through Google servers. Opens still register but device details may be less accurate. |
+| **Outlook / corporate email** | Often blocks external images by default. Pixel won't fire unless recipient clicks "Load images." |
+| **Images disabled** | Any client blocking remote images prevents tracking. |
+| **Plain-text readers** | Strip all images including tracking pixels. |
+
+## Auto-Open Filtering
+
+Slashy filters automated opens from Gmail Image Proxy, Apple MPP, Microsoft SafeLinks, and corporate security scanners. You may miss occasional real opens, but the ones you see are genuine.
+
+## Open Trigger Automations
+
+Create automations that fire when a tracked email is opened — e.g., get notified when a prospect opens your proposal.
+
+1. Open the agent sidebar (`Cmd+Shift+L`)
+2. Ask the agent to create an email open trigger
+3. Define your condition and action
+
+Open triggers include the same auto-open filtering and can fire on first open only or every open.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
+    Set up email open alerts and more
+  </Card>
+  <Card title="Never Miss a Follow-up" icon="bell" href="/how-to-guides/never-miss-followup">
+    Four layers of follow-up protection
+  </Card>
+</CardGroup>

@@ -1,0 +1,70 @@
+---
+title: "Known Issues & Service Status"
+description: "Current known issues, workarounds, sync status indicators, and how to report bugs."
+---
+
+Check here first if something isn't working as expected.
+
+## Is It Me or Slashy?
+
+<Steps>
+  <Step title="Check your internet">
+    Open any website. If it loads, your connection is fine.
+  </Step>
+  <Step title="Reload Slashy">
+    `Cmd+R` (web or desktop). Many transient issues resolve with a reload.
+  </Step>
+  <Step title="Check Gmail directly">
+    Open [mail.google.com](https://mail.google.com). If Gmail is slow or down, the problem is Google's.
+  </Step>
+  <Step title="Check sync status">
+    Bottom of the sidebar: green = healthy, yellow = catching up, red = connection problem.
+  </Step>
+  <Step title="Try another browser">
+    If the issue is browser-specific, try an incognito window to rule out extensions.
+  </Step>
+</Steps>
+
+## Current Known Issues
+
+| Issue | Status | Workaround |
+|---|---|---|
+| **Outlook organizations block tracking pixels** | Known limitation | Industry-wide -- open data may be incomplete for Outlook recipients. |
+| **iMessage agent stops responding after long inactivity** | Known issue | Send a new text to wake it up. Contact support if unresponsive after 2 messages. |
+| **Large inboxes (10k+ threads) slow initial sync** | Expected | First sync takes 5-15 minutes. Subsequent syncs are fast. |
+| **Calendar timezone display after zone switch** | Known issue | Press `Z` in calendar view and select your current timezone. |
+| **Draft sync delay (Slashy to Gmail)** | Known limitation | Drafts sync every few seconds. Avoid editing the same draft in both places. |
+
+## Sync Status Indicators
+
+- **Green:** All systems normal, real-time sync
+- **Yellow:** Syncing but behind (normal after being offline or connecting a new account)
+- **Red:** Cannot reach server -- check internet. If working, wait a few minutes and reload
+
+<Warning>If the indicator stays red for more than 5 minutes with a working internet connection, contact support.</Warning>
+
+## Quick Fixes
+
+| Symptom | Fix |
+|---|---|
+| Emails not loading | `Cmd+R` to reload. Check sync indicator. |
+| AI agent not responding | Reload. Close and reopen sidebar with `p a`. |
+| Desktop app frozen | `Cmd+Q` and relaunch. |
+| Shortcuts not working | Click the email list area first (shortcuts need inbox focus). |
+| New emails not arriving | Check sync indicator. Verify email arrived in Gmail. Reload. |
+| Calendar events missing | Verify calendar is enabled in Settings > Calendars. |
+
+## Report a New Issue
+
+Email [founders@slashy.com](mailto:founders@slashy.com) or tell the agent sidebar. Include what happened, what you expected, your browser/OS, and a screenshot if possible.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Desktop Fixes" icon="desktop" href="/troubleshooting/desktop-fixes">
+    Problem-fix table for desktop issues.
+  </Card>
+  <Card title="Mobile Fixes" icon="mobile" href="/troubleshooting/mobile-fixes">
+    iOS app troubleshooting.
+  </Card>
+</CardGroup>

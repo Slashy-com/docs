@@ -1,0 +1,72 @@
+---
+title: "Connecting a Second Email Account"
+description: "Add multiple Gmail accounts, switch with keyboard shortcuts, and use unified All mode."
+---
+
+Slashy supports multiple Gmail accounts in one interface. Connect work and personal inboxes without signing in and out.
+
+## Connect Another Account
+
+<Steps>
+  <Step title="Open Settings">
+    Go to **Settings > Account** (`Cmd+,`).
+  </Step>
+  <Step title="Add Account">
+    Click **Connect Account** under Connected Accounts.
+  </Step>
+  <Step title="Authorize">
+    Sign in with Google and grant the same permissions as your first account.
+  </Step>
+  <Step title="Sync">
+    Initial sync takes 2-15 minutes depending on inbox size. Labels are set up automatically.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/connecting-a-second-email-account-1.png" alt="Settings showing two connected Gmail accounts" />
+</Frame>
+
+## Switching Accounts
+
+Use `Alt+1`, `Alt+2`, `Alt+3` to switch accounts. `Alt+0` opens **All mode** -- a unified inbox showing emails from every account interleaved by date.
+
+## All Mode
+
+In All mode:
+
+- Importance labels combine emails from all accounts under each tab
+- Search covers all accounts at once
+- When composing, choose which account to send from via the **From** dropdown
+- Replies automatically use the account that received the email
+
+## What Merges vs. Stays Separate
+
+| Merged Across Accounts | Separate Per Account |
+|---|---|
+| Inbox view (All mode) | Importance labels |
+| Search | Gmail labels |
+| AI Memories | Calendar |
+| AI Agent | Signatures |
+| Automations | Contacts |
+
+## Per-Inbox Settings
+
+Each account has independent importance labels, signatures, notification preferences, and undo send delay. Switch to the target account first, then open **Settings**.
+
+## Tips
+
+<Tip>Use All mode as your default for unified inbox processing. Switch to a single account with `Alt+1`/`Alt+2` when you need to focus.</Tip>
+
+- **Set different importance labels per account.** Work and personal inboxes have different classification needs.
+- **The AI agent has context from all accounts.** Ask: "Did anyone from Sequoia email either of my accounts this week?"
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Importance Labels" icon="tags" href="/getting-started/importance-labels">
+    Customize AI sorting per account.
+  </Card>
+  <Card title="Why Primary Matters" icon="star" href="/getting-started/why-primary">
+    How using Slashy full-time accelerates AI learning.
+  </Card>
+</CardGroup>

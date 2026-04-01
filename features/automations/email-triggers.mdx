@@ -1,0 +1,87 @@
+---
+title: "Email Triggers"
+description: "Automatically act on incoming and outgoing emails -- match conditions in natural language, fire one-time or repeating actions, and use open triggers for tracked email alerts."
+---
+
+Email triggers fire when an email matches a condition you define in plain English. The AI evaluates every incoming and outgoing email against your triggers and executes the action -- drafting a reply, forwarding, sending an iMessage alert, or anything else the agent can do.
+
+## Anatomy of a Trigger
+
+Every email trigger has two parts:
+
+1. **Condition** -- natural language description of which emails match (e.g., "receipts and payment confirmations," "emails where someone asks me for a reference")
+2. **Action** -- what the agent does on match (e.g., "forward to receipts@expensify.com," "message me on iMessage with a preview")
+
+<Note>
+Conditions use AI understanding, not keyword matching. "Emails about legal matters" matches contracts, litigation, compliance, and NDAs even if "legal" never appears.
+</Note>
+
+<Frame>
+  <img src="/images/screenshots/email-triggers-how-they-work-1.png" alt="Email trigger showing condition and action in Settings" />
+</Frame>
+
+## Creating a Trigger
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `p a` or `Cmd+Shift+L`.
+  </Step>
+  <Step title="Describe the automation">
+    Example: *"Create an email trigger: when I receive an email from @sequoia.com, message me on iMessage with a preview."*
+  </Step>
+  <Step title="Confirm">
+    The agent shows the condition and action for review.
+  </Step>
+  <Step title="Manage in Settings">
+    Find it in **Settings > Automations** to toggle, edit, or delete.
+  </Step>
+</Steps>
+
+## One-Time vs. Repeating
+
+| Mode | Behavior | Use Case |
+|------|----------|----------|
+| **Repeating** | Fires every match, stays active indefinitely | Receipt forwarding, VIP alerts |
+| **One-time** | Fires once, then auto-disables | "Let me know when Sarah replies to my proposal" |
+
+Triggers default to repeating. Say "create a one-time trigger" to get single-fire behavior.
+
+## Open Triggers
+
+Open triggers fire when a tracked email you sent is opened by the recipient.
+
+1. You send an email with tracking enabled (on by default)
+2. Recipient opens it -- tracking pixel notifies Slashy
+3. If an open trigger matches, the agent executes the action
+
+Slashy filters out automated opens (Gmail Image Proxy, Apple Mail Privacy Protection, Microsoft SafeLinks) so you only get alerts on real human opens.
+
+<Frame>
+  <img src="/images/screenshots/email-triggers-how-they-work-2.png" alt="Open trigger with first-open-only indicator" />
+</Frame>
+
+## Smart Sent-Email Filtering
+
+Triggers fire on outgoing emails from real email clients (Gmail, Slashy, Superhuman, Shortwave) but **not** from mass mailer tools (Apollo, Outreach). This prevents triggers from firing hundreds of times during batch campaigns.
+
+## Automatic Memory Extraction
+
+A hidden system trigger runs on every incoming email, extracting useful information -- contact job changes, commitments, meeting reschedules -- and storing it as memories. Review in **Settings > Memories**.
+
+## Managing Triggers
+
+All triggers appear in **Settings > Automations** (`Cmd+,` then Automations). Toggle on/off, delete, or view details. You can also manage conversationally: *"list my email triggers"* or *"disable the receipt forwarding trigger."*
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Calendar Triggers" icon="calendar" href="/features/automations/calendar-triggers">
+    Automate meeting prep and follow-ups
+  </Card>
+  <Card title="Scheduled Reminders" icon="clock" href="/features/automations/scheduled-reminders">
+    Schedule the agent for future tasks
+  </Card>
+  <Card title="Agent Autonomy" icon="shield-check" href="/features/ai-agent/autonomy">
+    What the agent can and cannot do
+  </Card>
+</CardGroup>
