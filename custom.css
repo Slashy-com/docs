@@ -366,6 +366,34 @@ img,
 }
 
 /* ============================================
+   NAVIGATION TABS - Notion-style clean underline
+   ============================================ */
+
+/* Tab bar: thin bottom border like Notion */
+[class*="TabGroup"],
+nav[class*="tabs"],
+[role="tablist"] {
+  border-bottom: 1px solid #E5E5E5 !important;
+}
+
+.dark [class*="TabGroup"],
+.dark nav[class*="tabs"],
+.dark [role="tablist"],
+[data-theme="dark"] [class*="TabGroup"],
+[data-theme="dark"] nav[class*="tabs"],
+[data-theme="dark"] [role="tablist"] {
+  border-bottom-color: rgba(255, 255, 255, 0.055) !important;
+}
+
+/* Tab items: no icons, clean text */
+[class*="TabGroup"] a,
+[role="tab"] {
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0 !important;
+}
+
+/* ============================================
    ACCORDION STYLING
    ============================================ */
 

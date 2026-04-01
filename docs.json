@@ -12,7 +12,6 @@
     "tabs": [
       {
         "tab": "Help Center",
-        "icon": "house",
         "groups": [
           {
             "group": "Getting Started",
@@ -115,7 +114,6 @@
       },
       {
         "tab": "Features",
-        "icon": "sparkles",
         "groups": [
           {
             "group": "AI Agent & Chat",
@@ -195,8 +193,7 @@
         ]
       },
       {
-        "tab": "Slashy for Your Role",
-        "icon": "user-tie",
+        "tab": "Roles",
         "groups": [
           {
             "group": "Personas",
