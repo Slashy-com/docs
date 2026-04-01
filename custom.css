@@ -1,55 +1,55 @@
-/* Slashy Help Center - Notion-Inspired Custom Styles */
+/* Slashy Help Center - Matching Slashy App Design System */
 
 /* ============================================
-   TYPOGRAPHY - Notion-style muted body text
+   TYPOGRAPHY - Slashy foreground colors
    ============================================ */
 
-/* Muted body text color like Notion */
+/* Body text: Slashy foreground */
 body {
-  color: #37352f;
+  color: rgb(44, 44, 43);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #ffffffcf;
-  }
+.dark body,
+[data-theme="dark"] body {
+  color: rgb(211, 211, 211);
 }
 
-/* Paragraph and body text: muted gray */
+/* Paragraph and body text: Slashy foreground secondary */
 p,
 li,
 td,
 th,
 dd,
 dt {
-  color: #787774;
+  color: #7D7A75;
   line-height: 1.75;
 }
 
-@media (prefers-color-scheme: dark) {
-  p,
-  li,
-  td,
-  th,
-  dd,
-  dt {
-    color: #9b9a97;
-  }
+.dark p,
+.dark li,
+.dark td,
+.dark th,
+.dark dd,
+.dark dt,
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] td,
+[data-theme="dark"] th {
+  color: rgb(127, 127, 127);
 }
 
-/* Bolder headings with more spacing */
+/* Headings: Slashy foreground */
 h1, h2, h3, h4 {
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #37352f;
+  color: rgb(44, 44, 43);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  h1, h2, h3, h4 {
-    color: #ffffffcf;
-  }
+.dark h1, .dark h2, .dark h3, .dark h4,
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 {
+  color: rgb(211, 211, 211);
 }
 
 h1 {
@@ -63,51 +63,51 @@ h2 {
   padding-top: 1rem;
 }
 
-/* Generous section spacing */
 h2 + p,
 h2 + div {
   margin-top: 0.5rem;
 }
 
 /* ============================================
-   CARD STYLING - Subtle borders, no shadow
+   CARD STYLING - Slashy border color
    ============================================ */
 
-/* Cards: subtle gray border, no shadow, no lift */
 [class*="Card"] a,
 .card,
 [class*="card"] {
-  border: 1px solid #e3e2e0 !important;
+  border: 1px solid #E5E5E5 !important;
   box-shadow: none !important;
   transition: border-color 0.15s ease, background-color 0.15s ease;
   border-radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  [class*="Card"] a,
-  .card,
-  [class*="card"] {
-    border-color: #ffffff1a !important;
-  }
+.dark [class*="Card"] a,
+.dark .card,
+.dark [class*="card"],
+[data-theme="dark"] [class*="Card"] a,
+[data-theme="dark"] .card,
+[data-theme="dark"] [class*="card"] {
+  border-color: rgba(255, 255, 255, 0.055) !important;
 }
 
-/* Card hover: darken border only, no translateY */
+/* Card hover */
 [class*="Card"] a:hover,
 .card:hover,
 [class*="card"]:hover {
   transform: none !important;
   box-shadow: none !important;
   border-color: #c4c4c0 !important;
-  background-color: #fafaf9;
+  background-color: #F7F7F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  [class*="Card"] a:hover,
-  .card:hover,
-  [class*="card"]:hover {
-    border-color: #ffffff33 !important;
-    background-color: #ffffff08;
-  }
+.dark [class*="Card"] a:hover,
+.dark .card:hover,
+.dark [class*="card"]:hover,
+[data-theme="dark"] [class*="Card"] a:hover,
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] [class*="card"]:hover {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background-color: rgb(32, 32, 32);
 }
 
 /* Larger icons in cards */
@@ -117,42 +117,54 @@ h2 + div {
   height: 1.5rem !important;
 }
 
-/* Card title styling */
+/* Card title */
 [class*="Card"] h3,
 .card h3 {
   font-weight: 600;
-  color: #37352f;
+  color: rgb(44, 44, 43);
 }
 
-@media (prefers-color-scheme: dark) {
-  [class*="Card"] h3,
-  .card h3 {
-    color: #ffffffcf;
-  }
+.dark [class*="Card"] h3,
+.dark .card h3,
+[data-theme="dark"] [class*="Card"] h3,
+[data-theme="dark"] .card h3 {
+  color: rgb(211, 211, 211);
 }
 
-/* Card description text */
+/* Card description */
 [class*="Card"] p,
 .card p {
-  color: #787774;
+  color: #7D7A75;
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
 /* ============================================
-   HORIZONTAL DIVIDERS - Notion-style thin rules
+   LINKS - Slashy accent color
+   ============================================ */
+
+a {
+  color: #3392DD;
+}
+
+.dark a,
+[data-theme="dark"] a {
+  color: rgb(35, 131, 226);
+}
+
+/* ============================================
+   HORIZONTAL DIVIDERS - Slashy border color
    ============================================ */
 
 hr {
   border: none;
-  border-top: 1px solid #e3e2e0;
+  border-top: 1px solid #E5E5E5;
   margin: 2rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  hr {
-    border-top-color: #ffffff1a;
-  }
+.dark hr,
+[data-theme="dark"] hr {
+  border-top-color: rgba(255, 255, 255, 0.055);
 }
 
 /* ============================================
@@ -161,38 +173,79 @@ hr {
 
 pre {
   border-radius: 8px;
-  border: 1px solid #e3e2e0;
+  border: 1px solid #E5E5E5;
 }
 
-@media (prefers-color-scheme: dark) {
-  pre {
-    border-color: #ffffff1a;
-  }
+.dark pre,
+[data-theme="dark"] pre {
+  border-color: rgba(255, 255, 255, 0.055);
 }
 
 /* ============================================
-   FOCUS STATES - Accessibility
+   FOCUS STATES - Slashy accent
    ============================================ */
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #6366F1;
+  outline: 2px solid #3392DD;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  a:focus-visible,
-  button:focus-visible {
-    outline-color: #818CF8;
-  }
+.dark a:focus-visible,
+.dark button:focus-visible,
+[data-theme="dark"] a:focus-visible,
+[data-theme="dark"] button:focus-visible {
+  outline-color: rgb(35, 131, 226);
 }
 
 /* ============================================
-   TABLES - Responsive horizontal scroll
+   CALLOUTS - Slashy semantic colors
    ============================================ */
 
-/* Wrap tables for horizontal scroll on mobile */
+/* Success/Tip callouts */
+[class*="Tip"],
+[class*="tip"] {
+  border-left-color: #10B981 !important;
+}
+
+.dark [class*="Tip"],
+.dark [class*="tip"],
+[data-theme="dark"] [class*="Tip"],
+[data-theme="dark"] [class*="tip"] {
+  border-left-color: #34d399 !important;
+}
+
+/* Warning callouts */
+[class*="Warning"],
+[class*="warning"] {
+  border-left-color: #F59E0B !important;
+}
+
+.dark [class*="Warning"],
+.dark [class*="warning"],
+[data-theme="dark"] [class*="Warning"],
+[data-theme="dark"] [class*="warning"] {
+  border-left-color: #fbbf24 !important;
+}
+
+/* Error/Note callouts */
+[class*="Note"],
+[class*="note"] {
+  border-left-color: #EF4444 !important;
+}
+
+.dark [class*="Note"],
+.dark [class*="note"],
+[data-theme="dark"] [class*="Note"],
+[data-theme="dark"] [class*="note"] {
+  border-left-color: rgb(222, 85, 80) !important;
+}
+
+/* ============================================
+   TABLES - Responsive
+   ============================================ */
+
 .table-wrapper,
 div:has(> table) {
   overflow-x: auto;
@@ -204,7 +257,7 @@ table {
 }
 
 /* ============================================
-   IMAGES - Responsive with proper aspect ratio
+   IMAGES - Responsive
    ============================================ */
 
 img,
@@ -218,8 +271,6 @@ img,
    ============================================ */
 
 @media (max-width: 640px) {
-  /* Hero text scales down */
-  .landing-hero h1,
   h1 {
     font-size: 1.75rem !important;
     line-height: 1.25;
@@ -227,14 +278,14 @@ img,
 
   h2 {
     font-size: 1.25rem;
+    margin-top: 1.25rem;
+    padding-top: 0.5rem;
   }
 
-  /* Body font size scales down */
   p, li, td, th {
     font-size: 0.9375rem;
   }
 
-  /* Proper side padding */
   .max-w-4xl,
   .max-w-3xl,
   [class*="mx-auto"] {
@@ -242,7 +293,6 @@ img,
     padding-right: 1rem !important;
   }
 
-  /* Cards stack to single column */
   [class*="CardGroup"],
   [class*="card-group"],
   [class*="Columns"] {
@@ -250,51 +300,39 @@ img,
     gap: 0.75rem !important;
   }
 
-  /* Reduce card padding on mobile */
   [class*="Card"] a,
   .card,
   [class*="card"] {
     padding: 0.875rem !important;
   }
 
-  /* Card icons slightly smaller on mobile */
   [class*="Card"] svg,
   .card svg {
     width: 1.25rem !important;
     height: 1.25rem !important;
   }
 
-  /* Tables scroll horizontally */
   table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Images responsive */
   img,
   [class*="Frame"] {
     max-width: 100% !important;
     height: auto !important;
   }
 
-  /* Reduce vertical spacing on mobile */
-  h2 {
-    margin-top: 1.25rem;
-    padding-top: 0.5rem;
-  }
-
   hr {
     margin: 1.25rem 0;
   }
 
-  /* Reduce hero padding on mobile */
   .px-4.pt-16 {
     padding-top: 2rem !important;
     padding-bottom: 1.5rem !important;
   }
 
-  /* Tighter section spacing */
   .pb-12 {
     padding-bottom: 2rem !important;
   }
@@ -313,7 +351,7 @@ img,
 }
 
 /* ============================================
-   NAVIGATION - Clean on mobile
+   MOBILE NAV
    ============================================ */
 
 @media (max-width: 640px) {
@@ -321,7 +359,6 @@ img,
     padding: 0.5rem 1rem;
   }
 
-  /* Sidebar clean spacing */
   nav a {
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
@@ -329,19 +366,18 @@ img,
 }
 
 /* ============================================
-   ACCORDION STYLING - Notion-inspired
+   ACCORDION STYLING
    ============================================ */
 
 details {
-  border: 1px solid #e3e2e0;
+  border: 1px solid #E5E5E5;
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  details {
-    border-color: #ffffff1a;
-  }
+.dark details,
+[data-theme="dark"] details {
+  border-color: rgba(255, 255, 255, 0.055);
 }
 
 details summary {

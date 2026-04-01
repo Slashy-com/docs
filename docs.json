@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Slashy Help Center",
   "colors": {
-    "primary": "#6366F1",
-    "light": "#818CF8",
-    "dark": "#4F46E5"
+    "primary": "#3392DD",
+    "light": "#2383E2",
+    "dark": "#2383E2"
   },
   "favicon": "/favicon.png",
   "navigation": {
