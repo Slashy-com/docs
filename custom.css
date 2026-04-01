@@ -118,6 +118,13 @@ h2 + div {
   gap: 0.25rem !important;
 }
 
+/* Remove CardGroup outer border */
+[class*="CardGroup"],
+[class*="card-group"] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* Hide card icons entirely — clean text-only cards */
 [class*="Card"] svg,
 .card svg {
