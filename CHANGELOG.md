@@ -1,5 +1,51 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 6)
+
+### iMessage articles: enhanced with Steps, Tips, Accordions
+
+Upgraded all 3 iMessage articles with richer Mintlify components and better structure:
+
+- `how-to-guides/imessage-setup.mdx` -- Added Tip (differentiator callout), "Quick Test After Setup" Steps (3-step verification), converted troubleshooting table to AccordionGroup (5 items with expanded answers), added privacy link to AI Privacy page, expanded Related Articles to 4 cards, added seoDescription
+- `how-to-guides/imessage-capabilities.mdx` -- Added Tip (remote control metaphor), converted Draft and Send Replies from bullets to 3-step Steps walkthrough, added Warning (send it vs save as draft), added Tip for voice messages, replaced Tips section with "Power User Tips" AccordionGroup (4 items), expanded Related Articles to 4 cards with Daily Briefings link, added seoDescription
+- `how-to-guides/imessage-briefings.mdx` -- Added 4th step to setup Steps, added Tip (setup timing advice), added "Add an End-of-Day Wrap-Up" section with Steps, added Tip (briefing is interactive), expanded Related Articles from 2 to 4 cards, added seoDescription
+
+### Security & Trust: trust badges, expanded FAQs, cross-linking
+
+Enhanced all 3 Security & Trust articles:
+
+- `getting-started/security-privacy.mdx` -- Added "Trust at a Glance" CardGroup with 3 trust badge cards (SOC 2, Zero-Training, AES-256), expanded Enterprise Security FAQ AccordionGroup from 4 to 7 questions (added breach response, Workspace admin, company safety), renamed section to "Common Security Questions", expanded Related Articles from 2 to 4 cards
+- `getting-started/ai-privacy.mdx` -- Added "Common AI Privacy Questions" AccordionGroup (4 items: accidental send, cross-account, BYOK, memories privacy), expanded Related Articles from 2 to 4 cards
+- `getting-started/data-storage.mdx` -- Added "Common Data Questions" AccordionGroup (3 items: attachments, export, Gmail after deletion), expanded Related Articles from 2 to 3 cards, added seoDescription
+
+### Founders persona: CEO Morning Email Routine workflow
+
+Added "Workflow: CEO Morning Email Routine (15 Minutes)" Steps section to `personas/founders.mdx`:
+
+- 5-step workflow: iMessage briefing (2 min), VIP triage (3 min), keyboard shortcut processing (5 min), dropped ball check (2 min), meeting prep (3 min)
+- Added Tip about inbox zero timing with importance labels
+- Cross-links to daily briefings and meeting prep guides
+
+### New page: Automation Recipes
+
+Created `how-to-guides/automation-recipes.mdx` with 6 copy-paste automation recipes:
+
+1. Auto-forward receipts to accountant
+2. Send meeting prep 30 minutes before external calls
+3. Daily dropped ball scanner at 8am
+4. VIP email alerts with visual preview
+5. Post-meeting follow-up drafts
+6. Weekly email digest every Friday
+
+Each recipe uses Steps with exact agent commands users can paste directly. Added to Automation Guides nav group in docs.json.
+
+### Homepage polish
+
+- Added "Security & Trust" section with 3 cards (Security & Privacy, AI Privacy, Data Storage)
+- Added "Automation Recipes" card to the automations section (changed from 3-col to 2-col for 4 cards)
+
+---
+
 ## 2026-03-31 (Iteration 5)
 
 ### Troubleshooting: expanded FAQ with grouped Accordions

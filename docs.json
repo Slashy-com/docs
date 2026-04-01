@@ -35,6 +35,7 @@
             "icon": "robot",
             "pages": [
               "how-to-guides/10-automations",
+              "how-to-guides/automation-recipes",
               "how-to-guides/ai-drafts",
               "how-to-guides/customize-agent",
               "how-to-guides/automate-receipts",

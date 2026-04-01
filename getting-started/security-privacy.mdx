@@ -64,11 +64,25 @@ All stored data: AES-256 at rest, TLS 1.2+ in transit.
 
 Delete your account from **Settings > Account** or email founders@slashy.com.
 
-## Enterprise Security FAQ
+## Trust at a Glance
+
+<CardGroup cols={3}>
+  <Card title="SOC 2 Type II" icon="shield-check">
+    Audited annually by an independent firm
+  </Card>
+  <Card title="Zero-Training Guarantee" icon="lock">
+    No AI provider trains on your data
+  </Card>
+  <Card title="AES-256 Encryption" icon="key">
+    Data encrypted at rest and in transit
+  </Card>
+</CardGroup>
+
+## Common Security Questions
 
 <AccordionGroup>
   <Accordion title="Where is my data stored?">
-    Encrypted servers in the United States, hosted on AWS with SOC 2 compliance.
+    Encrypted servers in the United States, hosted on AWS with SOC 2 compliance. All data encrypted with AES-256 at rest and TLS 1.2+ in transit.
   </Accordion>
   <Accordion title="Do Slashy employees read my emails?">
     No. Employee access to production data is restricted, logged, and auditable. No one reads your email unless you explicitly share it for debugging.
@@ -79,15 +93,32 @@ Delete your account from **Settings > Account** or email founders@slashy.com.
   <Accordion title="Do you have a bug bounty program?">
     Yes. Email founders@slashy.com with details. We respond within 24 hours.
   </Accordion>
+  <Accordion title="Is Slashy safe for my company's data?">
+    Yes. Slashy is built for professionals handling sensitive email. SOC 2 Type II audited, quarterly pen-tested, and all AI providers contractually prohibited from training on your data. Many VC firms, startups, and enterprise teams use Slashy for confidential communications.
+  </Accordion>
+  <Accordion title="What happens if Slashy is breached?">
+    Slashy maintains an incident response plan tested quarterly. In the event of a breach, affected users are notified within 72 hours per GDPR requirements. Encrypted data at rest means raw email content is not exposed even if infrastructure is compromised.
+  </Accordion>
+  <Accordion title="Can I use Slashy with a Google Workspace admin policy?">
+    Yes. Slashy uses standard Google OAuth 2.0 with scoped permissions. Your Workspace admin can approve Slashy as a trusted app and control which users can connect. See [Connecting Gmail](/getting-started/connecting-gmail) for permission details.
+  </Accordion>
 </AccordionGroup>
 
 ---
 
+## Related Articles
+
 <CardGroup cols={2}>
-  <Card title="Connecting Gmail" icon="envelope" href="/getting-started/connecting-gmail">
-    OAuth permissions and what Slashy accesses.
+  <Card title="AI Privacy" icon="shield-halved" href="/getting-started/ai-privacy">
+    How AI providers handle your data
   </Card>
-  <Card title="Your First Week" icon="rocket" href="/getting-started/first-week">
-    Day-by-day onboarding guide.
+  <Card title="Data Storage" icon="database" href="/getting-started/data-storage">
+    What Slashy stores and your controls
+  </Card>
+  <Card title="Connecting Gmail" icon="envelope" href="/getting-started/connecting-gmail">
+    OAuth permissions and what Slashy accesses
+  </Card>
+  <Card title="Subprocessors" icon="server" href="/getting-started/subprocessors">
+    Full list of infrastructure providers
   </Card>
 </CardGroup>

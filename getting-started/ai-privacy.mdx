@@ -58,13 +58,38 @@ Toggle in **Settings > Account**:
 - **Disable AI features** -- Use Slashy as a fast email client without AI
 - **Delete your data** -- Email [privacy@slashy.com](mailto:privacy@slashy.com) for full account deletion
 
+## Common AI Privacy Questions
+
+<AccordionGroup>
+  <Accordion title="Can the AI accidentally send an email without my approval?">
+    No. The agent always drafts emails for your review. It cannot send, delete, or modify emails without your explicit confirmation. Toggle on **Read Mode** in Settings for an extra layer of protection.
+  </Accordion>
+  <Accordion title="Does Slashy share my data across accounts?">
+    No. Each account is completely isolated. If you connect multiple Gmail accounts, data from one account is never used to generate responses for another.
+  </Accordion>
+  <Accordion title="What if I use Bring Your Own Key (BYOK)?">
+    When you use your own API keys, requests go directly to the AI provider under your own account and usage terms. Slashy does not proxy or log the content of BYOK requests.
+  </Accordion>
+  <Accordion title="Are my AI memories shared with anyone?">
+    No. Memories are private to your account. They are used only to personalize your AI experience and are never shared with other users, AI providers for training, or third parties.
+  </Accordion>
+</AccordionGroup>
+
 ---
 
+## Related Articles
+
 <CardGroup cols={2}>
+  <Card title="Security & Privacy" icon="shield-check" href="/getting-started/security-privacy">
+    Certifications, encryption, and compliance
+  </Card>
   <Card title="Data Storage" icon="database" href="/getting-started/data-storage">
-    What Slashy stores and how to control it.
+    What Slashy stores and how to control it
   </Card>
   <Card title="Subprocessors" icon="server" href="/getting-started/subprocessors">
-    Full list of infrastructure providers.
+    Full list of infrastructure providers
+  </Card>
+  <Card title="Customize Your Agent" icon="sliders" href="/how-to-guides/customize-agent">
+    Control your agent's writing style and autonomy
   </Card>
 </CardGroup>

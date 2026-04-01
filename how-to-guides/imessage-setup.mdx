@@ -1,9 +1,12 @@
 ---
 title: "Setting Up the iMessage Agent"
 description: "Connect your phone number to the Slashy iMessage agent and troubleshoot common issues."
+seoDescription: "Set up Slashy's iMessage agent to manage email, calendar, and automations from your phone via text message. Step-by-step connection guide and troubleshooting."
 ---
 
-The iMessage agent lets you manage email, calendar, and automations entirely through text messages. Once connected, you can search emails, draft replies, get briefings, and more — without opening any app.
+The iMessage agent lets you manage email, calendar, and automations entirely through text messages. Once connected, you can search emails, draft replies, get briefings, and more -- without opening any app.
+
+<Tip>The iMessage agent is one of Slashy's biggest differentiators. No other email client lets you manage your entire inbox via text. Set it up now and you will wonder how you ever lived without it.</Tip>
 
 ## Connecting During Onboarding
 
@@ -17,7 +20,7 @@ iMessage connection is step 6 of the onboarding wizard.
     This generates a link that opens iMessage with a pre-filled message to the Slashy number.
   </Step>
   <Step title="Send the pre-filled message">
-    Do not edit it — the message contains invisible zero-width Unicode characters that link your phone number to your account.
+    Do not edit it -- the message contains invisible zero-width Unicode characters that link your phone number to your account.
   </Step>
   <Step title="Confirm the connection">
     The Slashy agent responds within seconds confirming the link.
@@ -30,7 +33,7 @@ iMessage connection is step 6 of the onboarding wizard.
 
 ## Re-Activating the Agent
 
-If the iMessage agent stops responding or you skipped it during onboarding: **just send it a text.** A simple "hi" works. There is no toggle — the agent is always listening once linked. Sending a new message restarts the connection.
+If the iMessage agent stops responding or you skipped it during onboarding: **just send it a text.** A simple "hi" works. There is no toggle -- the agent is always listening once linked. Sending a new message restarts the connection.
 
 <Frame><img src="/images/screenshots/imessage-reactivate.png" alt="iMessage conversation showing user sending hi and agent responding" /></Frame>
 
@@ -48,25 +51,56 @@ If the iMessage agent stops responding or you skipped it during onboarding: **ju
   </Step>
 </Steps>
 
+## Quick Test After Setup
+
+Verify everything works by trying these three messages right after connecting:
+
+<Steps>
+  <Step title="Test search">
+    Text: *"Show me my latest unread email"* -- the agent should respond with a visual preview within 10 seconds.
+  </Step>
+  <Step title="Test calendar">
+    Text: *"What's on my calendar today?"* -- confirms calendar access is working.
+  </Step>
+  <Step title="Test a draft">
+    Text: *"Draft a test reply to my most recent email saying thanks"* -- confirms the agent can compose on your behalf.
+  </Step>
+</Steps>
+
 ## Troubleshooting
 
-| Symptom | Fix |
-|---------|-----|
-| Agent stopped responding | Send any message (even "hi") to restart the connection |
-| Never received a response after setup | Re-generate the iMessage link in Settings — the pre-filled message may have been edited |
-| Agent doesn't recognize your number | Phone number not linked. Use the agent sidebar to generate a new iMessage link |
-| Messages sending as green (SMS) | Slashy requires iMessage, not SMS. Enable iMessage: **iPhone Settings > Messages > iMessage** |
-| Agent responds slowly (>30s) | Complex tasks take longer. If consistently slow, contact support |
+<AccordionGroup>
+  <Accordion title="Agent stopped responding">
+    Send any message (even "hi") to restart the connection. If it still does not respond after 60 seconds, re-generate the iMessage link from the agent sidebar.
+  </Accordion>
+  <Accordion title="Never received a response after setup">
+    The pre-filled message may have been edited. Go to the agent sidebar (`p a`) and type *"Generate my iMessage link"* to get a fresh link. Send the new pre-filled message without editing.
+  </Accordion>
+  <Accordion title="Agent doesn't recognize your number">
+    Your phone number is not linked to your Slashy account. Update it in **Settings > Account**, then generate a new iMessage link from the agent sidebar.
+  </Accordion>
+  <Accordion title="Messages sending as green (SMS)">
+    Slashy requires iMessage, not SMS. Enable iMessage on your iPhone: **Settings > Messages > iMessage** (toggle on). If you are on Android, iMessage is not available -- use the Slashy mobile app instead.
+  </Accordion>
+  <Accordion title="Agent responds slowly (>30 seconds)">
+    Complex tasks (meeting prep, multi-email searches) take longer. If simple queries like "show my unread emails" are consistently slow, contact [founders@slashy.com](mailto:founders@slashy.com).
+  </Accordion>
+</AccordionGroup>
 
 ## Privacy
 
-iMessage conversations are processed by the same AI as the web and desktop apps. Messages follow the same rolling summary approach — they are not stored permanently.
+iMessage conversations are processed by the same AI as the web and desktop apps. Messages follow the same rolling summary approach -- they are not stored permanently. See [AI Privacy](/getting-started/ai-privacy) for full details on how your data is handled.
 
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="iMessage Capabilities" icon="list-check" href="/how-to-guides/imessage-capabilities">
     Everything you can do via text
+  </Card>
+  <Card title="Daily Briefings" icon="sun" href="/how-to-guides/imessage-briefings">
+    Morning summaries delivered to your phone
   </Card>
   <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
     Set up the most impactful automations

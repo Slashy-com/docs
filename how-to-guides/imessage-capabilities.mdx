@@ -1,11 +1,16 @@
 ---
 title: "What You Can Do via iMessage"
-description: "Everything the Slashy iMessage agent can do — search, draft, preview, briefings, voice messages, reminders, calendar, and more."
+description: "Everything the Slashy iMessage agent can do -- search, draft, preview, briefings, voice messages, reminders, calendar, and more."
+seoDescription: "Full list of Slashy iMessage agent capabilities -- search emails, draft replies, get visual previews, manage calendar, set reminders, and run automations via text."
 ---
 
 The iMessage agent is your personal email assistant via text. Everything the AI can do in the Slashy sidebar, it can do through iMessage. Text instructions in plain English.
 
+<Tip>Think of iMessage as a remote control for your inbox. You can do everything from your phone that you would do on your laptop -- without opening any app.</Tip>
+
 ## Search Emails
+
+Find any email with natural language. The agent searches your entire inbox history.
 
 - *"Find the last email from Sarah about the Q4 budget"*
 - *"Show me unread emails from today"*
@@ -13,7 +18,7 @@ The iMessage agent is your personal email assistant via text. Everything the AI 
 
 ## Visual Email Previews
 
-The agent renders any email as a screenshot and sends it in the conversation — full layout, formatting, and images.
+The agent renders any email as a screenshot and sends it in the conversation -- full layout, formatting, and images.
 
 - *"Show me the email from Alex about the partnership"*
 - *"Send me that invoice from yesterday"*
@@ -22,14 +27,25 @@ The agent renders any email as a screenshot and sends it in the conversation —
 
 ## Draft and Send Replies
 
-Tell the agent what to say. Review the draft via preview, then respond with *"send it"*, *"make it more formal"*, or *"add a line about the timeline"* to iterate.
+Tell the agent what to say. Review the draft via preview, then iterate before sending.
 
-- *"Reply to Sarah's email saying I'll have the report ready by Thursday"*
-- *"Forward the Acme contract to legal@mycompany.com with a note to review section 3"*
+<Steps>
+  <Step title="Request a draft">
+    Text: *"Reply to Sarah's email saying I'll have the report ready by Thursday"*
+  </Step>
+  <Step title="Review the preview">
+    The agent sends a visual preview of the draft for your review.
+  </Step>
+  <Step title="Iterate or send">
+    Reply with *"send it"*, *"make it more formal"*, or *"add a line about the timeline"* to refine. The agent keeps adjusting until you approve.
+  </Step>
+</Steps>
+
+<Warning>Saying *"send it"* actually sends the email. If you want to save it as a draft to review on desktop, say *"save as draft"* instead.</Warning>
 
 ## Daily Briefings
 
-Set up a [recurring automation](/how-to-guides/10-automations) or request on demand:
+Set up a [recurring briefing](/how-to-guides/imessage-briefings) or request on demand:
 
 - *"Give me my morning briefing"*
 - *"What's on my plate today?"*
@@ -37,6 +53,8 @@ Set up a [recurring automation](/how-to-guides/10-automations) or request on dem
 Covers important unread emails, today's calendar, pending replies, and dropped balls.
 
 ## Meeting Prep
+
+Get attendee research and context before any meeting.
 
 - *"Prep me for my 2pm meeting"*
 - *"Research the attendees of my call with Sequoia tomorrow"*
@@ -47,7 +65,9 @@ Pulls LinkedIn profiles, past email history, and relevant memories for each atte
 
 ## Voice Messages
 
-Send a voice message through iMessage. The agent transcribes it and acts on your instructions — useful on the move.
+Send a voice message through iMessage. The agent transcribes it and acts on your instructions -- useful when you are driving, walking, or in between meetings.
+
+<Tip>Voice messages are great for complex requests. Instead of typing *"Find all emails from investors this month where I haven't replied and draft updates for each,"* just say it out loud.</Tip>
 
 ## Set Reminders
 
@@ -74,23 +94,36 @@ The agent searches the web via Perplexity AI on your behalf.
 
 - *"What's the latest funding round for Acme Corp?"*
 
-## Tips
+## Power User Tips
 
-- **Be specific.** *"Reply to Sarah's email about the budget"* works better than *"reply to that email."*
-- **Iterate.** After a draft preview, tell the agent what to change.
-- **Complex tasks work.** *"Find all emails from investors where I haven't replied, draft a short update for each"* is valid.
+<AccordionGroup>
+  <Accordion title="Be specific with email references">
+    *"Reply to Sarah's email about the budget"* works better than *"reply to that email."* The more context you give, the faster the agent finds the right thread.
+  </Accordion>
+  <Accordion title="Chain multiple actions">
+    Complex multi-step tasks work in a single message: *"Find all emails from investors where I haven't replied, draft a short update for each, and list them for my review."*
+  </Accordion>
+  <Accordion title="Use voice for long instructions">
+    Send a voice message for anything longer than a sentence. The agent transcribes and executes -- no typing needed.
+  </Accordion>
+  <Accordion title="Save drafts for desktop review">
+    If you want to polish a reply on your laptop before sending, say *"save as draft"* instead of *"send it."* The draft will be waiting in Slashy when you open it.
+  </Accordion>
+</AccordionGroup>
 
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="Set Up iMessage" icon="message" href="/how-to-guides/imessage-setup">
     Connect your phone number
   </Card>
+  <Card title="Daily Briefings" icon="sun" href="/how-to-guides/imessage-briefings">
+    Morning summaries delivered to your phone
+  </Card>
   <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
     Automate your inbox
-  </Card>
-  <Card title="Customize Your Agent" icon="sliders" href="/how-to-guides/customize-agent">
-    Control writing style
   </Card>
   <Card title="How AI Drafts Work" icon="wand-magic-sparkles" href="/how-to-guides/ai-drafts">
     Auto-suggestions and learning

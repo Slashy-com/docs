@@ -1,6 +1,7 @@
 ---
 title: "What Data Slashy Stores & How to Control It"
 description: "Detailed breakdown of stored data, the OAuth access model, your GDPR rights, deletion timelines, and data controls."
+seoDescription: "What data Slashy stores, how to export or delete it, GDPR rights, OAuth access model, and full deletion timeline for your email data."
 hidden: true
 ---
 
@@ -74,17 +75,36 @@ Slashy has **no access** to Google Drive, Docs, or other services. Review and re
 
 ## GDPR Rights
 
-If you're in the EEA: right of access, rectification, erasure, data portability, restrict processing, and right to object. Email [privacy@slashy.com](mailto:privacy@slashy.com) -- all requests handled within 30 days.
+If you are in the EEA: right of access, rectification, erasure, data portability, restrict processing, and right to object. Email [privacy@slashy.com](mailto:privacy@slashy.com) -- all requests handled within 30 days.
 
 See the [Privacy Policy](https://slashy.com/privacy) and [DPA](https://slashy.com/dpa) for full legal details.
 
+## Common Data Questions
+
+<AccordionGroup>
+  <Accordion title="Does Slashy store my attachments?">
+    No. Slashy stores attachment metadata (filename, size, type) but fetches the actual file content from Gmail on demand. Your attachments remain in Google's infrastructure.
+  </Accordion>
+  <Accordion title="Can I export all my Slashy data?">
+    Yes. Email [privacy@slashy.com](mailto:privacy@slashy.com) for a machine-readable export of your memories, automations, snippets, and agent history. Delivered within 30 days per GDPR.
+  </Accordion>
+  <Accordion title="What happens to my Gmail if I delete Slashy?">
+    Nothing. Slashy never modifies your Gmail data destructively. Your emails, labels, and contacts remain exactly as they were. Deleting Slashy simply removes the sync connection.
+  </Accordion>
+</AccordionGroup>
+
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="AI Privacy" icon="shield-halved" href="/getting-started/ai-privacy">
-    How AI providers handle your data.
+    How AI providers handle your data
+  </Card>
+  <Card title="Security & Privacy" icon="shield-check" href="/getting-started/security-privacy">
+    Certifications, encryption, and compliance
   </Card>
   <Card title="Subprocessors" icon="server" href="/getting-started/subprocessors">
-    Full infrastructure provider list.
+    Full infrastructure provider list
   </Card>
 </CardGroup>

@@ -1,0 +1,152 @@
+---
+title: "Automation Recipes"
+description: "Copy-paste automation setups for common workflows -- receipts, meeting prep, follow-ups, VIP alerts, and more. Each takes under 2 minutes."
+seoDescription: "Ready-to-use Slashy automation recipes with exact agent commands. Auto-forward receipts, send meeting prep, track follow-ups, and more."
+---
+
+These are ready-to-use automation recipes. Open the agent sidebar (`Cmd+Shift+L`), paste the command, and confirm. Each one takes under two minutes to set up.
+
+<Tip>You can customize any recipe after setup. Just tell the agent what to change -- *"Make the receipt forwarder also catch invoices"* or *"Change the meeting prep timing to 20 minutes before."*</Tip>
+
+## Recipe 1: Auto-Forward Receipts to Your Accountant
+
+Automatically forward receipts, invoices, and payment confirmations to your bookkeeper or expense tool.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"When I receive an email that is a receipt, invoice, or payment confirmation, forward it to receipts@expensify.com. Don't forward subscription renewal notices or marketing emails."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent shows you the trigger condition and action. Confirm to activate.
+  </Step>
+</Steps>
+
+<Note>Replace `receipts@expensify.com` with your Expensify, Ramp, Brex, or accountant's intake email address.</Note>
+
+---
+
+## Recipe 2: Send Meeting Prep 30 Minutes Before External Calls
+
+Get attendee research, recent email threads, and suggested talking points before every external meeting.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"30 minutes before any meeting with external attendees, research all attendees and send me a meeting prep briefing on iMessage. Include their LinkedIn summary, our recent email history, and any open threads. Skip internal-only meetings."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent creates a calendar trigger. Your first briefing arrives before your next external meeting.
+  </Step>
+</Steps>
+
+<Tip>Add *"and suggest 3 talking points based on our email history"* to get conversation starters.</Tip>
+
+---
+
+## Recipe 3: Daily Dropped Ball Scanner at 8am
+
+Every morning, get a summary of emails you forgot to reply to, commitments you made but have not followed up on, and threads where someone is waiting on you.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"Every weekday at 8am, scan my inbox for dropped balls: emails I sent with no reply in 7 days, emails I received but didn't respond to where a response is expected, and commitments I made in email that I haven't followed up on. Send the summary on iMessage."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent creates a scheduled reminder via AWS EventBridge.
+  </Step>
+</Steps>
+
+---
+
+## Recipe 4: VIP Email Alerts with Visual Preview
+
+Get an instant iMessage alert with a screenshot preview when specific people email you.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"When I receive an email from anyone @sequoia.com, anyone @bigclient.com, or my co-founder alex@mycompany.com, send me an iMessage alert with a visual preview of the email."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent creates an email trigger. Alerts arrive within seconds of the email landing.
+  </Step>
+</Steps>
+
+<Note>Replace the domains and addresses with your own VIPs. You can also use conditions like *"any email with 'urgent' in the subject"* or *"anyone in my Investors label."*</Note>
+
+---
+
+## Recipe 5: Post-Meeting Follow-Up Drafts
+
+Automatically draft a follow-up email to all attendees after every external meeting ends.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"5 minutes after any external meeting ends, draft a follow-up email to all attendees. Include a brief summary of the meeting context based on our email history and a 'Next Steps' section. Don't send it -- save as draft for my review."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent creates a calendar trigger. Drafts appear in your Slashy drafts folder after each meeting.
+  </Step>
+</Steps>
+
+<Tip>Connect [Granola](/features/calendar/granola) for more accurate follow-ups. The agent uses your meeting notes to write better summaries.</Tip>
+
+---
+
+## Recipe 6: Weekly Email Digest Every Friday
+
+Get a categorized summary of your entire email week -- what is resolved, what is pending, and who you owe replies to.
+
+<Steps>
+  <Step title="Open the agent sidebar">
+    Press `Cmd+Shift+L`.
+  </Step>
+  <Step title="Paste this command">
+    *"Every Friday at 3pm, review my email from this week. Categorize into: resolved threads, pending threads waiting on others, emails I owe replies to, and important threads to watch next week. Send the summary on iMessage."*
+  </Step>
+  <Step title="Confirm the automation">
+    The agent creates a scheduled reminder. Your first digest arrives on Friday.
+  </Step>
+</Steps>
+
+---
+
+## Managing Your Automations
+
+All automations live in **Settings > Automations** (`Cmd+,`). You can toggle, edit, or delete any automation. You can also manage via the agent sidebar:
+
+- *"List my automations"*
+- *"Disable the receipt forwarding trigger"*
+- *"Change my dropped ball scanner to 9am instead of 8am"*
+
+---
+
+## Related Articles
+
+<CardGroup cols={2}>
+  <Card title="10 Automations Every User Should Set Up" icon="bolt" href="/how-to-guides/10-automations">
+    The full list of must-have automations
+  </Card>
+  <Card title="Automations Overview" icon="robot" href="/features/automations/overview">
+    How automations work under the hood
+  </Card>
+  <Card title="Email Triggers" icon="envelope" href="/features/automations/email-triggers">
+    Match conditions in natural language
+  </Card>
+  <Card title="Calendar Triggers" icon="calendar" href="/features/automations/calendar-triggers">
+    Automate around your meetings
+  </Card>
+</CardGroup>
