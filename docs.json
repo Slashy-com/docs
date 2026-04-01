@@ -8,10 +8,6 @@
     "dark": "#4F46E5"
   },
   "favicon": "/favicon.png",
-  "banner": {
-    "content": "New: iMessage Agent briefings, automation recipes, and more. [See what's new](/whats-new/changelog)",
-    "dismissible": true
-  },
   "navigation": {
     "tabs": [
       {
@@ -286,11 +282,14 @@
   },
   "rounded": "default",
   "background": {
-    "decoration": "gradient"
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#191919"
+    }
   },
   "typography": {
     "headings": {
-      "weight": 600
+      "weight": 700
     }
   }
 }

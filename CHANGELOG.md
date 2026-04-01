@@ -1,5 +1,62 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 12 -- Notion-Style UI Redesign + Mobile Optimization)
+
+Redesigned the help center to match Notion's developer docs styling (developers.notion.com) with a clean, minimal aesthetic and full mobile responsiveness.
+
+### docs.json changes
+
+- Removed `background.decoration: "gradient"` -- replaced with pure white background (`#FFFFFF` light / `#191919` dark) like Notion
+- Removed announcement banner entirely -- Notion does not use one, cleaner top-of-page experience
+- Increased heading font-weight from 600 to 700 for bolder Notion-style headings
+
+### custom.css -- Notion-style overhaul (complete rewrite)
+
+**Typography:**
+- Muted body text color (#787774) matching Notion's signature gray
+- Bolder headings (700 weight) with tighter letter-spacing (-0.02em)
+- Generous line-height (1.75) for body text
+- Proper dark mode variants for all text colors
+
+**Card styling:**
+- Replaced shadow + translateY hover with subtle gray border (#e3e2e0)
+- Hover effect: border darkens to #c4c4c0, subtle background tint, no lift
+- Larger card icons (1.5rem)
+- Muted card description text (0.875rem, #787774)
+
+**Mobile responsive (< 640px):**
+- Cards stack to 1 column via `grid-template-columns: 1fr`
+- Hero text scales down (1.75rem on mobile vs 3rem+ on desktop)
+- Side padding reduced to 1rem for space efficiency
+- Card padding reduced on mobile
+- Tables horizontally scrollable with `-webkit-overflow-scrolling: touch`
+- Images max-width: 100% with auto height
+- Reduced vertical spacing (margins, padding) on mobile
+- Navigation cleaned up with tighter padding
+
+**Tablet responsive (641-1024px):**
+- Cards display in 2-column grid
+
+**Other:**
+- Thin Notion-style horizontal dividers (#e3e2e0)
+- Accordion borders matching card style
+- Code blocks with border instead of shadow
+- All styles have dark mode counterparts
+
+### index.mdx -- Notion-inspired homepage
+
+- Changed hero from centered to left-aligned (matching Notion's developer docs)
+- Changed heading from "How can we help?" to "Slashy Help Center" (more direct)
+- Reduced hero padding for tighter above-the-fold layout
+- Made all card descriptions more concise (1 line each)
+- Added horizontal rules (---) between every major section
+- Reordered sections to put 4 key entry points first: Get Started, Features, Automations, Troubleshooting
+- Moved "Slashy for your role" and "Security" sections below the fold
+- Added Growth persona card to the role section
+- Removed redundant "What can Slashy do?" heading, renamed to "Features"
+
+---
+
 ## 2026-03-31 (Iteration 11 -- Best Practices Research & UX Improvements)
 
 Researched top SaaS help centers (Notion, Linear, Stripe, Vercel, Zendesk best-of lists) and Mintlify's latest features to identify gaps. Applied concrete improvements inspired by patterns from the best documentation sites.
