@@ -1,5 +1,44 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 4)
+
+### Article quality: Tip, Warning, and Steps components
+
+Added Mintlify callout components to 7 articles for better readability and scannability:
+
+- `how-to-guides/ai-drafts.mdx` -- Added Tip (getting started advice), Warning (accept does not send), Tip (manual drafts use case), Tip (model selection guidance)
+- `how-to-guides/inbox-zero.mdx` -- Added Tip (time-to-inbox-zero), Warning (labels are required), converted label setup from numbered list to Steps component
+- `how-to-guides/email-tracking.mdx` -- Added Warning (tracking is not 100% reliable), Tip (combine tracking with follow-up automation)
+- `how-to-guides/batch-processing.mdx` -- Added Warning (check selection before bulk actions)
+- `how-to-guides/never-miss-followup.mdx` -- Added Tip (recommended two-layer setup)
+- `how-to-guides/customize-agent.mdx` -- Added Tip (fastest training approach), converted BYOK from numbered list to Steps, added Warning (Opus billing)
+- `features/email/snippets.mdx` -- Converted AI Variables section from bullet list to Steps walkthrough, added Tip (snippets + AI for outreach at scale)
+
+### Persona pages: Sample Agent Commands with Tabs
+
+Added `<Tabs>` sections to all 5 persona pages showing concrete agent sidebar commands organized by workflow type:
+
+- `personas/founders.mdx` -- Tabs: Inbox Triage, Investor Relations, Team & Delegation (9 example commands)
+- `personas/sales.mdx` -- Tabs: Pipeline Management, Outreach, Meeting Prep (9 example commands)
+- `personas/vcs.mdx` -- Tabs: Deal Flow, Portfolio, Intros & Passes (9 example commands)
+- `personas/recruiters.mdx` -- Tabs: Pipeline, Outreach, Coordination (9 example commands)
+- `personas/executives.mdx` -- Tabs: Triage & Summaries, Delegation, Decisions (9 example commands)
+
+### Cross-linking: expanded Related Articles sections
+
+Added or expanded "Related Articles" headings and CardGroup sections in 8 articles:
+
+- `how-to-guides/ai-drafts.mdx` -- expanded from 3 to 4 cards (added Never Miss a Follow-up)
+- `how-to-guides/inbox-zero.mdx` -- expanded from 2 to 4 cards (added Batch Processing, Keyboard Shortcuts)
+- `how-to-guides/email-tracking.mdx` -- expanded to 4 cards (added Slashy for Sales, Customer Follow-ups)
+- `how-to-guides/batch-processing.mdx` -- expanded from 2 to 4 cards (added Keyboard Shortcuts, AI Drafts)
+- `how-to-guides/never-miss-followup.mdx` -- expanded from 2 to 4 cards (added Customer Follow-ups, Inbox Zero)
+- `how-to-guides/customize-agent.mdx` -- replaced iMessage Capabilities with AI Memories card, added Related Articles heading
+- `features/email/snippets.mdx` -- expanded from 2 to 4 cards (added Slashy for Sales, Slashy for Recruiters)
+- `personas/founders.mdx` -- expanded from 2 to 4 cards (added Never Miss a Follow-up, Meeting Prep)
+
+---
+
 ## 2026-03-31 (Iteration 3)
 
 ### Cross-linking: Related Articles CardGroup sections
