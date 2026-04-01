@@ -11,11 +11,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Help Center",
+        "tab": "Home",
         "groups": [
           {
             "group": "Getting Started",
-            "icon": "rocket",
             "pages": [
               "index",
               "getting-started/first-week",
@@ -30,8 +29,41 @@
             ]
           },
           {
+            "group": "Switching to Slashy",
+            "pages": [
+              "switching/gmail-migration",
+              "switching/superhuman-migration",
+              "switching/shortwave-migration"
+            ]
+          },
+          {
+            "group": "Security & Trust",
+            "pages": [
+              "getting-started/security-privacy",
+              "getting-started/ai-privacy",
+              "getting-started/data-storage",
+              "getting-started/subprocessors"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/faq",
+              "troubleshooting/unexpected-behavior",
+              "troubleshooting/sync-issues",
+              "troubleshooting/desktop-fixes",
+              "troubleshooting/mobile-fixes",
+              "troubleshooting/disconnect",
+              "troubleshooting/known-issues"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
             "group": "Automation Guides",
-            "icon": "robot",
             "pages": [
               "how-to-guides/10-automations",
               "how-to-guides/automation-recipes",
@@ -46,7 +78,6 @@
           },
           {
             "group": "iMessage Agent",
-            "icon": "message",
             "pages": [
               "how-to-guides/imessage-setup",
               "how-to-guides/imessage-capabilities",
@@ -55,7 +86,6 @@
           },
           {
             "group": "Productivity & Workflow",
-            "icon": "gauge-high",
             "pages": [
               "how-to-guides/inbox-zero",
               "how-to-guides/batch-processing",
@@ -68,47 +98,6 @@
               "how-to-guides/gmail-together",
               "how-to-guides/slashy-method"
             ]
-          },
-          {
-            "group": "Switching to Slashy",
-            "icon": "arrow-right-arrow-left",
-            "pages": [
-              "switching/gmail-migration",
-              "switching/superhuman-migration",
-              "switching/shortwave-migration"
-            ]
-          },
-          {
-            "group": "Security & Trust",
-            "icon": "shield-check",
-            "pages": [
-              "getting-started/security-privacy",
-              "getting-started/ai-privacy",
-              "getting-started/data-storage",
-              "getting-started/subprocessors"
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "wrench",
-            "pages": [
-              "troubleshooting/faq",
-              "troubleshooting/unexpected-behavior",
-              "troubleshooting/sync-issues",
-              "troubleshooting/desktop-fixes",
-              "troubleshooting/mobile-fixes",
-              "troubleshooting/disconnect",
-              "troubleshooting/known-issues"
-            ]
-          },
-          {
-            "group": "What's New",
-            "icon": "sparkle",
-            "hidden": true,
-            "pages": [
-              "whats-new/changelog",
-              "troubleshooting/roadmap"
-            ]
           }
         ]
       },
@@ -117,7 +106,6 @@
         "groups": [
           {
             "group": "AI Agent & Chat",
-            "icon": "message-bot",
             "pages": [
               "features/ai-agent/autonomy",
               "features/ai-agent/composing"
@@ -125,7 +113,6 @@
           },
           {
             "group": "AI Drafts & Autocomplete",
-            "icon": "wand-magic-sparkles",
             "pages": [
               "features/ai-drafts/autocomplete",
               "features/ai-drafts/editing"
@@ -133,7 +120,6 @@
           },
           {
             "group": "Automations",
-            "icon": "bolt",
             "pages": [
               "features/automations/overview",
               "features/automations/email-triggers",
@@ -144,7 +130,6 @@
           },
           {
             "group": "Calendar & Scheduling",
-            "icon": "calendar",
             "pages": [
               "features/calendar/creating-events",
               "features/calendar/availability",
@@ -155,7 +140,6 @@
           },
           {
             "group": "Email & Compose",
-            "icon": "envelope",
             "pages": [
               "features/email/composing",
               "features/email/replying",
@@ -169,7 +153,6 @@
           },
           {
             "group": "Search & Contacts",
-            "icon": "magnifying-glass",
             "pages": [
               "features/search/overview",
               "features/contacts/overview"
@@ -177,14 +160,12 @@
           },
           {
             "group": "Tasks & Reminders",
-            "icon": "list-check",
             "pages": [
               "features/tasks/overview"
             ]
           },
           {
             "group": "Settings & Integrations",
-            "icon": "gear",
             "pages": [
               "features/settings/theme",
               "features/integrations/zoom"
@@ -197,7 +178,6 @@
         "groups": [
           {
             "group": "Personas",
-            "icon": "users",
             "pages": [
               "personas/founders",
               "personas/sales",
@@ -208,25 +188,22 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Updates",
+            "pages": [
+              "whats-new/changelog",
+              "troubleshooting/roadmap"
+            ]
+          }
+        ]
       }
     ],
     "global": {
       "anchors": [
-        {
-          "anchor": "What's New",
-          "href": "/whats-new/changelog",
-          "icon": "sparkle"
-        },
-        {
-          "anchor": "Roadmap",
-          "href": "/troubleshooting/roadmap",
-          "icon": "map"
-        },
-        {
-          "anchor": "Get Slashy",
-          "href": "https://slashy.com",
-          "icon": "envelope"
-        },
         {
           "anchor": "Contact Support",
           "href": "mailto:founders@slashy.com",

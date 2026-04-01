@@ -125,10 +125,13 @@ h2 + div {
   box-shadow: none !important;
 }
 
-/* Hide card icons entirely — clean text-only cards */
+/* Card icons: small and subtle */
 [class*="Card"] svg,
 .card svg {
-  display: none !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  margin-bottom: 0.25rem !important;
+  opacity: 0.6;
 }
 
 /* Card title: tight to icon */
