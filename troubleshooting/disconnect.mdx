@@ -6,11 +6,24 @@ seoDescription: "Pause, disconnect, or delete your Slashy account. Learn about R
 
 Whether you need to temporarily pause the AI, disconnect an inbox, or delete your account, here are your options and what happens to your data at each step.
 
+<Frame><img src="/images/screenshots/how-to-disconnect-pause-or-reconnect-1.png" alt="Connected accounts settings showing disconnect button" /></Frame>
+
 ## Pause the AI Agent (Read Mode)
 
 Toggle **Read Mode** in Settings > Account. The agent can still search, read, and draft for your review, but cannot send emails, archive, modify labels, or create events. Action-taking automations pause; read-only automations (like dropped ball scanner) continue.
 
 Toggle Read Mode off to resume full functionality.
+
+<Tip>Read Mode is the safest first step if something feels off. It stops all outbound actions instantly while keeping search, reading, and draft generation active so you can investigate without disruption.</Tip>
+
+### What Read Mode Preserves vs. Stops
+
+| Active | Paused |
+|--------|--------|
+| Search and read emails | Send emails |
+| Answer inbox questions | Archive, label, or trash |
+| Generate drafts for review | Create or modify calendar events |
+| Dropped ball scanner (read-only) | Action-based automations |
 
 ## Disconnect an Inbox
 
@@ -29,6 +42,8 @@ Toggle Read Mode off to resume full functionality.
 
 Go to Settings > Account, click **Add Account**, and sign in with the same Google account. Slashy re-syncs your history (2-15 minutes). Previous labels, memories, and automations may still be available.
 
+<Frame><img src="/images/screenshots/how-to-disconnect-pause-or-reconnect-2.png" alt="Add Account button in connected accounts settings" /></Frame>
+
 ## Revoke Access via Google
 
 For maximum certainty, revoke from Google's side:
@@ -38,6 +53,8 @@ For maximum certainty, revoke from Google's side:
 3. This immediately revokes the OAuth token
 
 Re-authorization through onboarding is required to reconnect.
+
+<Frame><img src="/images/screenshots/how-to-disconnect-pause-or-reconnect-3.png" alt="Google account permissions page showing Slashy access" /></Frame>
 
 ## What Happens to Your Data
 
@@ -50,9 +67,23 @@ Re-authorization through onboarding is required to reconnect.
 
 ## Delete Your Account
 
-Email [founders@slashy.com](mailto:founders@slashy.com) from your Slashy email address and request deletion. All data is removed: account, memories, automations, snippets, cached email data.
+Email [founders@slashy.com](mailto:founders@slashy.com) from your Slashy email address and request deletion. All data is removed within 30 days: account, memories, automations, snippets, cached email data, and any enrichment profiles.
 
-<Warning>Account deletion is permanent and cannot be undone. If you might come back, consider disconnecting instead.</Warning>
+<Warning>Account deletion is permanent and cannot be undone. If you might come back, consider disconnecting instead -- your configuration, memories, and automations are preserved.</Warning>
+
+## Choosing the Right Option
+
+<AccordionGroup>
+  <Accordion title="Taking a break for a few days?">
+    Use **Read Mode**. Everything stays configured. Toggle it back off when you return and pick up exactly where you left off.
+  </Accordion>
+  <Accordion title="Switching email clients temporarily?">
+    **Disconnect the inbox**. Your Gmail continues working normally in any other client. Reconnect later and Slashy re-syncs within minutes, with your memories and automations intact.
+  </Accordion>
+  <Accordion title="Removing Slashy completely?">
+    **Revoke via Google** for immediate access cutoff, then request **account deletion** via email. This removes all Slashy data permanently.
+  </Accordion>
+</AccordionGroup>
 
 ---
 

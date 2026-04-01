@@ -35,6 +35,26 @@ Go to **Settings > Calendars > Default conferencing** and select **Zoom**. Every
 
 When you ask Slashy's AI to create an event (e.g., "Schedule a call with Sarah tomorrow at 2pm"), it uses your default conferencing setting. If Zoom is the default, the agent automatically creates and attaches a Zoom meeting.
 
+## Zoom with Automations
+
+Calendar trigger automations work seamlessly with Zoom. For example, the "Meeting Prep 30 Minutes Before" automation detects events with Zoom links and includes the Zoom meeting URL in the prep summary. No extra configuration needed -- if the event has a Zoom link, the automation sees it.
+
+<Tip>Pair Zoom with the meeting prep automation for a powerful workflow: 30 minutes before each call, Slashy sends you attendee profiles, recent email history, and the Zoom join link -- all in one place.</Tip>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Zoom link not appearing on new events">
+    Verify Zoom is still connected in **Settings > Calendars**. If the status shows disconnected, reconnect by clicking **Connect Zoom** again. Also check that the **Conferencing** field in the event editor is set to Zoom rather than another provider.
+  </Accordion>
+  <Accordion title="Authorization fails during setup">
+    Make sure you are signing in with the correct Zoom account. If your organization uses Zoom SSO, you may need to sign in through your company's SSO portal first. Try disconnecting and reconnecting.
+  </Accordion>
+  <Accordion title="AI creates events without Zoom links">
+    The AI uses your default conferencing provider. If Zoom is not set as default, say explicitly: *"Schedule a Zoom call with Sarah tomorrow at 2pm"* -- the keyword "Zoom" overrides the default.
+  </Accordion>
+</AccordionGroup>
+
 ## Disconnecting Zoom
 
 Go to **Settings > Calendars > Zoom** and click **Disconnect**.

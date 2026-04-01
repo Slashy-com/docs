@@ -1,5 +1,62 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 8 -- Refinement & Advanced Features)
+
+### Feedback widget and theming enhancements (docs.json)
+
+Added Mintlify configuration for reader engagement and visual polish:
+
+- `feedback.thumbsRating: true` -- thumbs up/down rating on every article
+- `feedback.suggestEdit: true` -- readers can suggest edits
+- `rounded: "default"` -- consistent rounded corners on images and cards
+- `background.decoration: "gradient"` -- subtle gradient decoration on pages
+- `typography.headings.weight: 600` -- semi-bold headings for visual hierarchy
+
+### Internal link audit: 2 broken links fixed
+
+Fixed broken internal links in `troubleshooting/unexpected-behavior.mdx`:
+
+- `/how-to-guides/automations` (404) -> `/features/automations/overview`
+- `/how-to-guides/writing-style` (404) -> `/how-to-guides/customize-agent`
+
+### Broken image references fixed: connecting-gmail screenshots
+
+Fixed 3 broken image `src` paths in `getting-started/connecting-gmail.mdx` where filenames were missing the `-sla` segment:
+
+- `connecting-gmail-permissions-security-and-what-1.png` -> `connecting-gmail-permissions-security-and-what-sla-1.png`
+- `connecting-gmail-permissions-security-and-what-2.png` -> `connecting-gmail-permissions-security-and-what-sla-2.png`
+- `connecting-gmail-permissions-security-and-what-3.png` -> `connecting-gmail-permissions-security-and-what-sla-3.png`
+
+### Image utilization: all 25 remaining unused screenshots added (113/113 mapped images now used)
+
+Cross-referenced image-mapping.json with article usage. Added Frame+img tags for all 25 previously unused screenshots:
+
+- `troubleshooting/disconnect.mdx` -- 3 screenshots (connected accounts, reconnect button, Google permissions page)
+- `getting-started/connecting-gmail.mdx` -- 1 screenshot (connected accounts overview)
+- `features/settings/theme.mdx` -- 1 screenshot (dark theme preview)
+- `features/email/composing.mdx` -- 1 screenshot (full compose window with toolbar)
+- `features/email/snippets.mdx` -- 3 screenshots (snippet list, AI variable editor, analytics dashboard)
+- `how-to-guides/ai-drafts.mdx` -- 1 screenshot (AI email rating with score)
+- `features/tasks/overview.mdx` -- 1 screenshot (task detail with linked email)
+- `getting-started/ai-memories.mdx` -- 1 screenshot (memories management page)
+- `getting-started/importance-labels.mdx` -- 2 screenshots (training examples, per-label settings)
+- `how-to-guides/never-miss-followup.mdx` -- 1 screenshot (follow-up automation settings)
+- `features/email/unsubscribe.mdx` -- 1 screenshot (bulk unsubscribe confirmation)
+- `getting-started/desktop-app.mdx` -- 1 screenshot (system tray and dock badge)
+- `how-to-guides/multiple-accounts.mdx` -- 1 screenshot (connected accounts overview)
+- `how-to-guides/customize-agent.mdx` -- 1 screenshot (writing style preferences)
+- `getting-started/calendar-setup.mdx` -- 3 screenshots (calendar toggles, event editor, Meet With overlay)
+
+### Content expansion: 3 thin articles enriched
+
+Expanded substance in the 3 thinnest feature/troubleshooting articles:
+
+- `troubleshooting/disconnect.mdx` -- added Read Mode preservation table, Tip about safety, "Choosing the Right Option" AccordionGroup (3 scenarios), expanded deletion info
+- `features/integrations/zoom.mdx` -- added "Zoom with Automations" section with meeting prep tip, "Troubleshooting" AccordionGroup (3 common issues)
+- `features/email/replying.mdx` -- added threading Tip, comprehensive "Reply Shortcuts at a Glance" table (7 shortcuts)
+
+---
+
 ## 2026-03-31 (Iteration 7 -- Final Polish)
 
 ### Complete SEO coverage: seoDescription on all 80 articles (28 remaining added)
