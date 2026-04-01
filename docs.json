@@ -100,6 +100,15 @@
               "troubleshooting/disconnect",
               "troubleshooting/known-issues"
             ]
+          },
+          {
+            "group": "What's New",
+            "icon": "sparkle",
+            "hidden": true,
+            "pages": [
+              "whats-new/changelog",
+              "troubleshooting/roadmap"
+            ]
           }
         ]
       },
