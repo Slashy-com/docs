@@ -1,78 +1,63 @@
 ---
 title: "What's New in Slashy"
-description: "Recent features, improvements, and fixes. Newest updates first."
-seoDescription: "Slashy changelog -- latest features, improvements, and fixes for the AI email client. Updated monthly with new capabilities and enhancements."
+description: "Recent features and improvements. Newest updates first."
+seoDescription: "Slashy changelog -- latest features and improvements for the AI email client. Updates ship continuously with new capabilities and enhancements."
 ---
 
 Stay up to date with the latest Slashy features and improvements. Updates ship continuously -- this page covers the highlights.
 
 ---
 
-## March 2026
+## March 30 -- April 1
 
-### v2.14 -- Top-Section Grouping (March 23)
-
-Pin unread or starred emails to the top of any label view. **Settings > Account > Top Section** -- choose None, Unread at Top, or Starred at Top.
-
-<Frame>
-  <img src="/images/screenshots/what-s-new-in-slashy.png" alt="Top-section grouping feature showing pinned unread emails" />
-</Frame>
-
-### v2.13 -- Calendar RSVP on Mobile (March 16)
-
-Accept, decline, or tentatively accept calendar invitations directly from the Slashy mobile app. Works for Google Calendar and Outlook/Teams invitations.
-
-<Frame>
-  <img src="/images/screenshots/mobile-rsvp-buttons.png" alt="Mobile app showing RSVP buttons on a calendar invite email" />
-</Frame>
-
-### v2.12 -- Desktop Auto-Update (March 9)
-
-The desktop app now updates silently in the background. A small prompt appears at bottom-left when a new version is ready -- click to restart and apply.
-
-### v2.11 -- Agent Sidebar Improvements (March 2)
-
-The AI Agent sidebar (`Cmd+Shift+L`) now supports:
-- View and resume past conversations
-- Rename conversations
-- Upload files (PDFs, images, docs) for context
-- Real-time tool-use indicators
+- **Inline reply from macOS notifications** -- Reply-all directly from notification banners without opening the app.
+- **Mobile quoted content toggle** -- Show or hide the original message in reply compose with a three-dot toggle, matching the desktop experience.
+- **iOS push notification layout** -- Cleaner three-line notifications showing sender name, subject, and snippet.
 
 ---
 
-## February 2026
+## March 23 -- 29
 
-### v2.10 -- AI Autocomplete in Compose (February 20)
-
-Ghost text suggestions appear as you type. Press `Tab` to accept. Works in compose, reply, and forward modes. Predictions are based on thread context, your writing style, and memories.
-
-### v2.9 -- Booking Links (February 12)
-
-Built-in scheduling pages -- no Calendly needed. **Settings > Calendars** to create links with configurable duration, availability, and buffer time. Guests can cancel or reschedule without an account.
-
-<Frame>
-  <img src="/images/screenshots/booking-link-config.png" alt="Booking link configuration with duration, availability windows, and public URL" />
-</Frame>
-
-### v2.8 -- Bulk Unsubscribe Improvements (February 5)
-
-Cleaner sender list with one-click unsubscribe. Bulk select multiple senders. Unsubscribed senders are auto-blocked so future emails are archived.
+- **Propose new time for calendar invites** -- Organizers can propose alternative times for events. Attendees see proposal indicators and can accept, decline, or counter-propose.
+- **Multi-attendee availability checking** -- When scheduling, Slashy can now check multiple attendees' calendars at once and return mutual free slots.
+- **Automations filter** -- Filter dropdown in the automations tab to separate recurring automations from one-off reminders.
 
 ---
 
-## January 2026
+## March 14 -- 22
 
-### v2.7 -- AI Label Feedback Loop (January 25)
+- **Email rating: missing recipient detection** -- The email rating system now flags when key recipients are missing from To or Cc fields before you send.
+- **Sender timezone hints** -- AI drafts now factor in the sender's timezone for more context-aware responses.
+- **Google-first profile pictures** -- Contact profiles now prefer Google profile photos for more accurate avatars.
+- **Stable agent file links** -- Files shared by the AI Agent use stable URLs that don't expire, preventing broken links in conversations.
+- **Name-only contact research** -- The AI Agent can now research contacts using just a name (no email required), with smart disambiguation for multiple matches.
 
-Moving an email to a different importance label now trains the AI. Classification accuracy improves over time for your specific patterns.
+---
 
-### v2.6 -- Insert Availability (January 15)
+## March 1 -- 13
 
-Press `Shift+Cmd+A` while composing to insert available time slots with a scheduling link. Recipients click to book.
+- **Claude Sonnet 4.6 upgrade** -- Slashy's AI model upgraded to Claude Sonnet 4.6 for better drafting and agent responses.
+- **Self-contained thread list** -- Major performance improvement: the inbox now loads full thread metadata in a single call, making list views significantly faster.
+- **Smarter iMessage replies** -- iMessage replies now include full thread context for more accurate agent responses.
+- **Better email editing context** -- Email edits now use thread context and shared memory for more personalized suggestions.
 
-### v2.5 -- Meet With: Overlay Busy Times (January 8)
+---
 
-In calendar view, overlay other people's busy times to find open slots without back-and-forth.
+## February 16 -- 28
+
+- **Mobile push notifications** -- Full push notification pipeline for the Slashy mobile app via Expo, triggered for important emails.
+- **AI auto-reminders** -- When enabled, Slashy analyzes each sent email and automatically schedules follow-up reminders with AI-determined timing. Covers business requests, cold outreach, scheduling, and more.
+- **Booking page cancel and reschedule** -- Guests can now cancel or reschedule bookings without a Slashy account using public endpoints.
+- **Teams, thread sharing, and comments** -- Share email threads with teammates, leave threaded comments with @mentions, and get real-time notifications. Shared threads auto-import from Gmail.
+
+---
+
+## February 1 -- 15
+
+- **Default conferencing preference** -- Set a default video conferencing type (Google Meet, Zoom, or custom link) for new calendar events. The AI Agent respects this preference automatically.
+- **Optional calendar attendees** -- The AI Agent can now mark attendees as optional when creating calendar events.
+- **Per-label All Mail control** -- Choose which importance labels show threads in the All Mail view.
+- **AI draft tracking** -- Slashy now tracks when you've used an AI-generated draft, so the auto-fill UI doesn't re-appear.
 
 ---
 
