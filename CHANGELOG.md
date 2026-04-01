@@ -1,5 +1,81 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 7 -- Final Polish)
+
+### Complete SEO coverage: seoDescription on all 80 articles (28 remaining added)
+
+Added `seoDescription` frontmatter with unique, keyword-rich meta descriptions to all remaining 28 articles:
+
+- `features/settings/theme.mdx`
+- `features/tasks/overview.mdx`
+- `features/calendar/booking-links.mdx`
+- `features/calendar/availability.mdx`
+- `features/calendar/rsvp.mdx`
+- `features/calendar/granola.mdx`
+- `features/contacts/overview.mdx`
+- `features/search/overview.mdx`
+- `features/integrations/zoom.mdx`
+- `features/email/replying.mdx`
+- `features/email/snippets.mdx`
+- `features/email/scheduled-send.mdx`
+- `features/email/unsubscribe.mdx`
+- `features/email/notifications.mdx`
+- `troubleshooting/roadmap.mdx`
+- `troubleshooting/known-issues.mdx`
+- `getting-started/ai-privacy.mdx`
+- `getting-started/why-primary.mdx`
+- `getting-started/subprocessors.mdx`
+- `how-to-guides/slashy-method.mdx`
+- `how-to-guides/signatures.mdx`
+- `how-to-guides/track-opens.mdx`
+- `how-to-guides/automate-receipts.mdx`
+- `how-to-guides/multiple-accounts.mdx`
+- `how-to-guides/otp-forwarding.mdx`
+- `how-to-guides/gmail-together.mdx`
+- `how-to-guides/booking-page.mdx`
+- `how-to-guides/customer-followups.mdx`
+
+All 80 articles now have seoDescription for search engine optimization.
+
+### Image utilization: 9 unused screenshots added to articles
+
+Cross-referenced image-mapping.json with article usage. Added Frame+img tags for 9 previously unused screenshots:
+
+- `how-to-guides/customer-followups.mdx` -- added follow-up automation settings screenshot
+- `how-to-guides/automate-receipts.mdx` -- added automations panel screenshot
+- `features/email/unsubscribe.mdx` -- added 2 screenshots (bulk unsubscribe rankings, blocked sender management)
+- `how-to-guides/batch-processing.mdx` -- added batch action confirmation screenshot
+- `features/email/composing.mdx` -- added pop-up compose mode screenshot
+- `how-to-guides/customize-agent.mdx` -- added writing style settings screenshot
+- `switching/superhuman-migration.mdx` -- added Superhuman comparison hero screenshot
+- `how-to-guides/track-opens.mdx` -- added VIP open alert automation screenshot
+
+### Multi-account articles: enhanced with Tips, Steps, Warnings, cross-linking
+
+- `getting-started/multi-account.mdx` -- added Warning about From field in All mode, added second screenshot (account switcher), expanded Related Articles from 2 to 4 cards with cross-link to how-to-guides/multiple-accounts
+- `how-to-guides/multiple-accounts.mdx` -- added Tip about account limits, converted connection instructions to Steps (4-step), added Warning about From field default, added third screenshot (From dropdown), added Tip about cross-account agent queries, expanded Related Articles from 2 to 4 cards with cross-link to getting-started/multi-account
+
+### Slashy Method: showcase article enhancement
+
+Rewrote `how-to-guides/slashy-method.mdx` as a showcase article:
+
+- Added opening Tip callout about the 70-85% time savings
+- Converted Principle 1 from bullet list to 4-step Steps walkthrough (enable labels, start in Important, bulk-process, correct misclassifications)
+- Added "Setup Command" column to the automations table in Principle 2 with exact agent commands users can paste
+- Added Tip about 10-minute setup for all six automations
+- Expanded "Getting Started Today" from 3-step to 5-step "Day-by-Day Plan" covering labels, first automation, writing memories, desktop app, and review
+- Added "Measuring Your Progress" table showing expected improvements across Week 1, Month 1, and Month 3
+- Expanded Related Articles from 2 to 4 cards (added First Week guide and Why Primary Matters)
+
+### Hidden pages: 2 additional niche pages hidden from nav
+
+- `how-to-guides/otp-forwarding.mdx` -- niche iMessage sub-feature, linked from iMessage capabilities and automation guides
+- `features/calendar/granola.mdx` -- specific third-party integration, linked from meeting prep
+
+Total hidden pages: 8 (up from 6). All remain accessible via search and direct links.
+
+---
+
 ## 2026-03-31 (Iteration 6b -- Polish & Consistency)
 
 ### Consistency audit: seoDescription added to 27 more articles (52/80 total)

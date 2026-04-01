@@ -1,9 +1,12 @@
 ---
 title: "The Slashy Method"
 description: "Three principles for AI-first email: let AI triage, automate repetitive actions, and keep Slashy as your primary client."
+seoDescription: "Master the Slashy Method: three principles for AI-first email that cut daily email time from 2 hours to 15 minutes with compounding AI improvements every week."
 ---
 
 Slashy is a fundamentally different approach to email. Users who follow three principles spend 10-15 minutes per day on email instead of 1-2 hours, with compounding improvements every week.
+
+<Tip>The Slashy Method is not a feature -- it is a mindset shift. Users who adopt all three principles report **70-85% less time** on email within their first month.</Tip>
 
 <Frame>
   <img src="/images/screenshots/the-slashy-method-1.png" alt="AI importance labels pre-sorting inbox" />
@@ -13,10 +16,20 @@ Slashy is a fundamentally different approach to email. Users who follow three pr
 
 Stop reading every email. AI importance labels sort your inbox before you touch it.
 
-- Labels auto-sort into tabs: Important, Newsletter, Notifications, Billing, custom labels
-- Start each session in your **Important** tab -- everything else is secondary
-- Newsletters and notifications get bulk-archived without individual review
-- Move miscategorized emails to correct labels -- the AI learns from corrections
+<Steps>
+  <Step title="Enable importance labels">
+    Go to **Settings > Labels** (`Cmd+,`). The 10 default labels (Important, Newsletter, Billing, etc.) are already active. Add custom labels for your workflow.
+  </Step>
+  <Step title="Start in your Important tab">
+    Press `Tab` to cycle through labels. Begin each email session in the **Important** tab -- everything else is secondary.
+  </Step>
+  <Step title="Bulk-process low-priority labels">
+    Switch to Newsletter or Notifications, press `Cmd+A` to select all, then `e` to archive the batch. No individual review needed.
+  </Step>
+  <Step title="Correct misclassifications">
+    When an email is in the wrong label, move it to the correct one with `l`. The AI learns from every correction and gets more accurate over time.
+  </Step>
+</Steps>
 
 **The shift:** You go from reading 100 emails to reviewing 15 important ones.
 
@@ -24,14 +37,16 @@ Stop reading every email. AI importance labels sort your inbox before you touch 
 
 If you do the same thing with email more than twice, automate it. One sentence to the agent creates an automation.
 
-| Automation | What It Eliminates |
-|---|---|
-| Receipt forwarding | Manually forwarding to expense tools |
-| Meeting prep briefings | Researching attendees before calls |
-| Dropped ball scanner | Manually auditing for missed replies |
-| OTP forwarding | Switching apps for verification codes |
-| VIP email alerts | Checking inbox for important senders |
-| Follow-up drafts | Remembering to follow up manually |
+| Automation | What It Eliminates | Setup Command |
+|---|---|---|
+| Receipt forwarding | Manually forwarding to expense tools | *"Forward all receipts to receipts@expensify.com"* |
+| Meeting prep briefings | Researching attendees before calls | *"Send me a briefing 30 min before external meetings"* |
+| Dropped ball scanner | Manually auditing for missed replies | *"Every morning, show me emails I haven't replied to in 3+ days"* |
+| OTP forwarding | Switching apps for verification codes | *"Forward verification codes to my phone via iMessage"* |
+| VIP email alerts | Checking inbox for important senders | *"Alert me on iMessage when anyone from @sequoia.com emails me"* |
+| Follow-up drafts | Remembering to follow up manually | *"Draft a follow-up when prospects don't reply in 3 days"* |
+
+<Tip>You can set up all six automations in under 10 minutes. Open the agent sidebar (`Cmd+Shift+L`) and paste the commands above one at a time.</Tip>
 
 **The shift:** You handle exceptions and decisions, not repetitive tasks.
 
@@ -48,25 +63,42 @@ This is the one people underestimate. The AI compounds:
 
 **The compounding effect:** Week 1, the AI is decent. Week 4, it's good. Month 3, it writes emails you'd send with minimal edits. But only if you keep using it.
 
-## Getting Started Today
-
-<Steps>
-  <Step title="Today">
-    Set up importance labels. Process your inbox using `Tab` to cycle labels, `e` to archive, `s` to star.
-  </Step>
-  <Step title="Tomorrow">
-    Set up your first automation via the agent sidebar (`Cmd+Shift+L`).
-  </Step>
-  <Step title="This Week">
-    Install the desktop app. Make Slashy your default email client.
-  </Step>
-</Steps>
-
 <Frame>
   <img src="/images/screenshots/the-slashy-method-2.png" alt="AI memories showing accumulated contact facts and preferences" />
 </Frame>
 
+## Your First Week: Day-by-Day Plan
+
+<Steps>
+  <Step title="Day 1: Labels and triage">
+    Set up importance labels. Process your inbox using `Tab` to cycle labels, `e` to archive, `s` to star. Target: reach inbox zero once.
+  </Step>
+  <Step title="Day 2: First automation">
+    Set up your first automation via the agent sidebar (`Cmd+Shift+L`). Start with receipt forwarding or meeting prep -- both are high-value and low-risk.
+  </Step>
+  <Step title="Day 3: Writing memories">
+    Tell the agent your writing style: *"Remember: I write short, direct emails. No fluff. Sign off with just my first name."* Set 3-5 memories.
+  </Step>
+  <Step title="Day 4: Desktop app">
+    Install the desktop app and make Slashy your default email client. The more you use it, the faster the AI improves.
+  </Step>
+  <Step title="Day 5: Review and expand">
+    Check your automations in **Settings > Automations**. Add 2-3 more. Review AI draft quality and provide feedback through the sidebar.
+  </Step>
+</Steps>
+
+## Measuring Your Progress
+
+| Metric | Week 1 | Month 1 | Month 3 |
+|---|---|---|---|
+| Daily email time | 45 min | 20 min | 10-15 min |
+| AI draft accuracy | ~60% | ~80% | ~90%+ |
+| Emails requiring manual response | Most | Half | Exceptions only |
+| Automations running | 1-2 | 5-6 | 8-10 |
+
 ---
+
+## Related Articles
 
 <CardGroup cols={2}>
   <Card title="Reach Inbox Zero" icon="inbox" href="/how-to-guides/inbox-zero">
@@ -74,5 +106,11 @@ This is the one people underestimate. The AI compounds:
   </Card>
   <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
     Essential automations to set up first.
+  </Card>
+  <Card title="Your First Week" icon="calendar" href="/getting-started/first-week">
+    Day-by-day onboarding guide.
+  </Card>
+  <Card title="Why Primary Matters" icon="star" href="/getting-started/why-primary">
+    How full-time usage accelerates AI learning.
   </Card>
 </CardGroup>

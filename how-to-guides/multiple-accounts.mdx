@@ -1,13 +1,29 @@
 ---
 title: "Manage Multiple Email Accounts"
 description: "Connect multiple Gmail accounts, use the All unified view, configure per-inbox labels, and compose from different accounts."
+seoDescription: "Manage multiple Gmail accounts in Slashy with a unified inbox view, per-account labels and automations, and easy account switching with keyboard shortcuts."
 ---
 
 Connect all your Gmail accounts in one place. Each gets its own labels, settings, and automations, but you manage everything from a single interface.
 
+<Tip>Most users connect 2-3 accounts (work + personal). Slashy supports up to 10 connected Gmail accounts with full AI features on each.</Tip>
+
 ## Connect Additional Accounts
 
-Go to **Settings > Account** (`Cmd+,`), click **Add Account**, sign in with Google, and grant permissions. Sync starts immediately.
+<Steps>
+  <Step title="Open Account settings">
+    Go to **Settings > Account** (`Cmd+,`).
+  </Step>
+  <Step title="Add account">
+    Click **Add Account** under Connected Accounts.
+  </Step>
+  <Step title="Authorize with Google">
+    Sign in with Google and grant the same permissions as your first account.
+  </Step>
+  <Step title="Wait for sync">
+    Initial sync takes 2-15 minutes depending on inbox size. Labels and importance classification begin automatically.
+  </Step>
+</Steps>
 
 <Frame>
   <img src="/images/screenshots/how-to-manage-multiple-email-accounts-1.png" alt="Settings showing connected accounts" />
@@ -40,6 +56,12 @@ When composing (`c`), the **From** dropdown lets you choose which account to sen
   <img src="/images/screenshots/how-to-manage-multiple-email-accounts-2.png" alt="Compose window with From address selector" />
 </Frame>
 
+<Warning>Always check the **From** field before sending. New emails default to the account you last viewed, not necessarily the one you intend to send from.</Warning>
+
+<Frame>
+  <img src="/images/screenshots/how-to-manage-multiple-email-accounts-3.png" alt="From dropdown showing multiple account options" />
+</Frame>
+
 ## Separate vs. Merged Behavior
 
 | Feature | Behavior |
@@ -59,13 +81,23 @@ When composing (`c`), the **From** dropdown lets you choose which account to sen
 - **Glance at the From field** before sending to confirm the right account
 - **Add account-specific memories:** *"My work email is CEO of a startup. Professional and concise."*
 
+<Tip>The AI agent can search across all accounts simultaneously. Ask: *"Did anyone from Sequoia email either of my accounts this week?"* and it checks everything.</Tip>
+
 ---
 
+## Related Articles
+
 <CardGroup cols={2}>
+  <Card title="Connecting a Second Account" icon="circle-plus" href="/getting-started/multi-account">
+    Quick setup for adding another Gmail account.
+  </Card>
   <Card title="Your First Week" icon="calendar" href="/getting-started/first-week">
     Day-by-day onboarding guide.
   </Card>
   <Card title="Gmail Together" icon="right-left" href="/how-to-guides/gmail-together">
     How Slashy and Gmail sync bidirectionally.
+  </Card>
+  <Card title="Importance Labels" icon="tags" href="/getting-started/importance-labels">
+    Configure AI sorting per account.
   </Card>
 </CardGroup>
