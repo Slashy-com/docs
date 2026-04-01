@@ -1,7 +1,12 @@
 ---
 title: "Frequently Asked Questions"
 description: "Answers to the most common Slashy questions: warnings, tasks, AI sidebar, accounts, offline mode, data, and deletion."
+seoDescription: "Find answers to frequently asked questions about Slashy, the AI email client for Gmail. Covers accounts, data privacy, AI behavior, offline mode, and more."
 ---
+
+import ContactSupport from '/snippets/contact-support.mdx';
+
+## General
 
 <AccordionGroup>
   <Accordion title="What does the warning symbol mean?">
@@ -48,6 +53,40 @@ description: "Answers to the most common Slashy questions: warnings, tasks, AI s
   </Accordion>
 </AccordionGroup>
 
+## AI & Automations
+
+<AccordionGroup>
+  <Accordion title="How accurate are AI drafts?">
+    Accuracy improves as the agent learns your style. In week 1, expect to edit most drafts. By week 3-4, the agent matches your tone for routine replies. Add memories in **Settings > Memories** to accelerate training -- describe your role, writing style, and common phrases.
+  </Accordion>
+
+  <Accordion title="Can I limit what the agent does automatically?">
+    Yes. Enable **Read Mode** in Settings > Account to restrict the agent to search, read, and draft only -- it cannot send, archive, or modify anything. You can also add a memory like "Always draft for my review, never send directly." See [Agent Autonomy](/features/ai-agent/autonomy).
+  </Accordion>
+
+  <Accordion title="How do I turn off an automation?">
+    **Settings > Automations** -- find the trigger and toggle it off or delete it. Disabled automations keep their configuration so you can re-enable later.
+  </Accordion>
+
+  <Accordion title="Why did my automation not fire?">
+    Common reasons: the email or event did not match the trigger condition, the automation was paused, or Read Mode was enabled. Check **Settings > Automations** for the trigger's recent activity log.
+  </Accordion>
+</AccordionGroup>
+
+## Billing & Plans
+
+<AccordionGroup>
+  <Accordion title="Is there a free trial?">
+    Yes. New users get a full-featured trial. No credit card required to start. Visit [slashy.com](https://slashy.com) for current pricing and trial details.
+  </Accordion>
+
+  <Accordion title="Can I bring my own API key (BYOK)?">
+    Yes. Go to **Settings > AI > API Key** and paste your OpenAI or Anthropic key. You pay the provider directly and Slashy does not charge for AI usage on BYOK plans. See [Customize Your Agent](/how-to-guides/customize-agent) for setup steps.
+  </Accordion>
+</AccordionGroup>
+
+<ContactSupport />
+
 ---
 
 <CardGroup cols={2}>
@@ -56,5 +95,11 @@ description: "Answers to the most common Slashy questions: warnings, tasks, AI s
   </Card>
   <Card title="Desktop Fixes" icon="desktop" href="/troubleshooting/desktop-fixes">
     Quick solutions for desktop issues.
+  </Card>
+  <Card title="Unexpected Behavior" icon="triangle-exclamation" href="/troubleshooting/unexpected-behavior">
+    What to do when the AI acts unexpectedly.
+  </Card>
+  <Card title="Sync Issues" icon="rotate" href="/troubleshooting/sync-issues">
+    Troubleshoot email and calendar sync.
   </Card>
 </CardGroup>

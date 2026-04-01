@@ -1,6 +1,7 @@
 ---
 title: "Calendar Triggers"
 description: "Fire automations before, during, or after meetings -- prep briefings, late-to-meeting checks, post-meeting follow-ups, and real-time event change reactions."
+seoDescription: "Set up Slashy calendar trigger automations -- meeting prep briefings, late-to-meeting alerts, post-meeting follow-ups, and automatic reactions to schedule changes."
 ---
 
 Calendar triggers are automations tied to your calendar events. Define which events to match, when to fire, and what the agent should do. These power meeting prep briefings, post-meeting follow-ups, and real-time reactions to schedule changes.
@@ -60,6 +61,20 @@ Works with Google Meet links attached to calendar events. The agent can see who 
 | Follow-up | 5 min after end | *"5 min after external meetings end, draft a follow-up email"* |
 | Schedule alert | On event change | *"When investor meetings are rescheduled, message me on iMessage"* |
 | Join reminder | 1 min before | *"1 min before every meeting, message me with the meeting link"* |
+
+## Troubleshooting Calendar Triggers
+
+<AccordionGroup>
+  <Accordion title="Trigger did not fire before my meeting">
+    Check **Settings > Automations** to confirm the trigger is enabled. Verify the condition matches the event (e.g., "external attendees" requires at least one non-organization attendee). Also confirm Read Mode is off -- it pauses action-taking automations.
+  </Accordion>
+  <Accordion title="Trigger fires for the wrong events">
+    Edit the trigger condition to be more specific. Instead of "all meetings," try "meetings with external attendees" or "meetings with more than 2 attendees." The agent uses the condition text to match events.
+  </Accordion>
+  <Accordion title="Meeting prep arrives too early or too late">
+    Edit the trigger timing in **Settings > Automations**. Adjust the "minutes before" value. For back-to-back meetings, 5 minutes works better than 10.
+  </Accordion>
+</AccordionGroup>
 
 ## How Scheduling Works
 

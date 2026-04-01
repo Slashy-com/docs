@@ -1,7 +1,10 @@
 ---
 title: "Moving from Gmail to Slashy"
 description: "What syncs automatically, what doesn't, keyboard shortcut mapping, and your first week plan."
+seoDescription: "Complete guide to switching from Gmail to Slashy. What syncs automatically, keyboard shortcut mapping, feature comparison, and a 7-day migration checklist."
 ---
+
+import KeyboardShortcutTip from '/snippets/keyboard-shortcut-tip.mdx';
 
 Slashy is a full replacement for the Gmail web interface. You keep the same Gmail backend -- Slashy reads and writes to it directly. Nothing is lost.
 
@@ -98,6 +101,51 @@ Most Gmail shortcuts work identically. Key differences:
   - Set up Booking Links (Settings > Calendars)
   - Use Bulk Unsubscribe in Settings to clean up newsletters
 </Accordion>
+
+## Gmail vs Slashy at a Glance
+
+| Capability | Gmail | Slashy |
+|---|---|---|
+| **Email reading & sending** | Yes | Yes (same Gmail backend) |
+| **Filters / sorting** | Manual rules | AI importance labels (learns from corrections) |
+| **Drafts** | Manual | AI-generated drafts in your voice |
+| **Calendar** | Separate app | Built-in, side-by-side with inbox |
+| **Scheduling links** | Requires Calendly/third-party | Built-in booking links |
+| **Search** | Keyword-based | AI-powered natural language search |
+| **Automations** | None | Background triggers, scanners, and reminders |
+| **iMessage integration** | None | Alerts, summaries, OTP forwarding |
+| **Keyboard shortcuts** | 30+ shortcuts | 80+ shortcuts (Gmail-compatible) |
+| **AI agent** | Gemini sidebar (limited) | Full agent: drafts, sends, searches, automates |
+
+<KeyboardShortcutTip />
+
+## Migration Checklist
+
+Use this checklist to track your transition:
+
+<Steps>
+  <Step title="Connect your Gmail account">
+    Sign up at [slashy.com](https://slashy.com) and connect via Google OAuth. Wait for initial sync (2-15 minutes).
+  </Step>
+  <Step title="Set up importance labels">
+    Go to **Settings > Labels** and customize your importance categories. These replace Gmail's Primary/Social/Promotions tabs.
+  </Step>
+  <Step title="Add AI memories">
+    **Settings > Memories** -- add your role, writing style, and preferences so AI drafts are accurate immediately.
+  </Step>
+  <Step title="Install the desktop app">
+    Download from [slashy.com/download](https://slashy.com/download). Enable OS notifications.
+  </Step>
+  <Step title="Recreate Gmail filters as automations">
+    Open the agent sidebar (`Cmd+Shift+L`) and describe your old Gmail filters in plain English. The agent creates equivalent automations.
+  </Step>
+  <Step title="Create snippets for canned responses">
+    Press `n s` to create snippets that replace Gmail canned responses. Slashy snippets support AI variable substitution.
+  </Step>
+  <Step title="Disable Gmail notifications">
+    Turn off Gmail desktop/mobile notifications so you only get alerts from Slashy. This avoids double-notifications.
+  </Step>
+</Steps>
 
 ## Can I Still Use Gmail?
 

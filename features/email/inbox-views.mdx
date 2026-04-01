@@ -1,7 +1,10 @@
 ---
 title: "Inbox Views"
 description: "Navigate All Mail, Starred, Reminders, Scheduled, Drafts, Sent, Done, and Trash with keyboard shortcuts, top section grouping, filters, and multi-inbox switching."
+seoDescription: "Navigate Slashy inbox views -- All Mail, Starred, Reminders, Sent, Drafts, Done, and Trash. Learn keyboard shortcuts, filters, top section grouping, and multi-inbox switching."
 ---
+
+import KeyboardShortcutTip from '/snippets/keyboard-shortcut-tip.mdx';
 
 Slashy organizes email across several views, each accessible from the sidebar and via keyboard shortcuts. Combined with label tabs, filters, and multi-inbox switching, you reach any email in one or two keystrokes.
 
@@ -65,6 +68,20 @@ Switch between connected Gmail accounts instantly with `Alt+1` through `Alt+9` (
   <img src="/images/screenshots/inbox-views-3.png" alt="Account switcher showing two connected Gmail accounts" />
 </Frame>
 
+## Common View Workflows
+
+<AccordionGroup>
+  <Accordion title="Morning triage workflow">
+    Start with `g i` (Inbox), work through threads top to bottom with `j`/`k`. Archive with `e`, star important items with `s`, snooze non-urgent with `h`. End with **Done** view (`g e`) to confirm everything is handled.
+  </Accordion>
+  <Accordion title="Follow-up review">
+    Go to **Sent** (`g t`), then filter with `Shift+R` (No Reply) to see threads where you are waiting for a response. Star ones that need a nudge, then batch-follow-up.
+  </Accordion>
+  <Accordion title="End-of-day cleanup">
+    Check **Reminders** (`g h`) for snoozed items that came back. Review **Drafts** (`g d`) for anything unsent. Check **Scheduled** (`g l`) to confirm tomorrow's sends look right.
+  </Accordion>
+</AccordionGroup>
+
 ## Navigation Shortcuts
 
 | Action | Shortcut |
@@ -75,6 +92,8 @@ Switch between connected Gmail accounts instantly with `Alt+1` through `Alt+9` (
 | Select all | `Cmd+A` |
 | Toggle sidebar | `Cmd+B` |
 | Toggle right sidebar | `Cmd+.` |
+
+<KeyboardShortcutTip />
 
 <CardGroup cols={2}>
   <Card title="Labels & AI Classification" icon="tags" href="/features/email/labels">

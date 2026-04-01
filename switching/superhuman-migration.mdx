@@ -1,7 +1,10 @@
 ---
 title: "Switching from Superhuman to Slashy"
 description: "What's familiar, what's better, and a keyboard shortcut mapping for Superhuman users."
+seoDescription: "Switch from Superhuman to Slashy -- feature comparison, keyboard shortcut mapping, and what Slashy does that Superhuman can't: automations, iMessage, and a full AI agent."
 ---
+
+import KeyboardShortcutTip from '/snippets/keyboard-shortcut-tip.mdx';
 
 You chose Superhuman because you wanted fast, keyboard-first email. Slashy shares that DNA -- plus an AI agent that actually does things, not just summarizes.
 
@@ -53,7 +56,25 @@ Most shortcuts transfer directly. Key differences:
 | Settings | `Cmd+K` > Settings | `Cmd+,` |
 | Shortcut reference | -- | `Shift+?` |
 
-<Tip>Press `Shift+?` anytime to see the full shortcut reference.</Tip>
+<KeyboardShortcutTip />
+
+## Full Feature Comparison
+
+| Capability | Superhuman | Slashy |
+|---|---|---|
+| **Keyboard-first design** | Yes | Yes |
+| **AI drafts** | Yes (review only) | Yes (drafts, sends, and automates) |
+| **Split inbox** | Splits | AI importance labels (trainable) |
+| **Snippets / templates** | Yes | Yes + AI variable substitution |
+| **Read receipts** | Yes | Yes |
+| **Scheduled send** | Yes | Yes |
+| **Calendar** | Sidebar only | Full view + booking links + Meet With |
+| **Automations** | None | Email triggers, calendar triggers, reminders |
+| **AI agent** | None | Full conversational agent |
+| **iMessage integration** | None | Alerts, summaries, OTP forwarding |
+| **Booking links** | None (needs Calendly) | Built-in |
+| **Search** | Keyword + instant | AI-powered natural language |
+| **Pricing** | $30/mo per seat | No per-seat pricing |
 
 ## Feature Mapping
 
@@ -74,6 +95,29 @@ Most shortcuts transfer directly. Key differences:
   </Step>
   <Step title="Use variables">
     Add `{{first_name}}`, `{{company}}`, or custom fields. Slashy fills them from contact data automatically.
+  </Step>
+</Steps>
+
+## Migration Checklist
+
+<Steps>
+  <Step title="Connect your Gmail account">
+    Sign up at [slashy.com](https://slashy.com) and connect via Google OAuth. All email, labels, and contacts sync automatically.
+  </Step>
+  <Step title="Recreate your Superhuman Splits as labels">
+    Go to **Settings > Labels** and set up importance labels to match your Superhuman Splits. The AI classification learns from corrections.
+  </Step>
+  <Step title="Migrate snippets">
+    Press `n s` to create each snippet. Copy your Superhuman snippet text and add AI variables like `{{first_name}}` for extra power.
+  </Step>
+  <Step title="Set up automations">
+    Open the agent sidebar (`Cmd+Shift+L`) and set up your first automation -- start with the Dropped Ball Scanner. This is functionality Superhuman does not offer.
+  </Step>
+  <Step title="Add AI memories">
+    **Settings > Memories** -- describe your communication style. This replaces Superhuman's limited tone settings with full-context personalization.
+  </Step>
+  <Step title="Cancel Superhuman">
+    Once you have used Slashy for a week and confirmed your workflow is set up, cancel your Superhuman subscription.
   </Step>
 </Steps>
 

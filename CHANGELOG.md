@@ -1,5 +1,77 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 5)
+
+### Troubleshooting: expanded FAQ with grouped Accordions
+
+Restructured `troubleshooting/faq.mdx` from a single AccordionGroup into three categorized sections:
+
+- **General** (10 existing questions)
+- **AI & Automations** (4 new questions: AI draft accuracy, limiting agent actions, turning off automations, debugging triggers)
+- **Billing & Plans** (2 new questions: free trial, BYOK API keys)
+- Added contact support snippet and expanded Related Articles CardGroup from 2 to 4 cards
+
+### Troubleshooting: contact support snippet integration
+
+Replaced manual "report a bug" / "contact support" blocks with a reusable `<ContactSupport />` snippet across 4 troubleshooting pages:
+
+- `troubleshooting/faq.mdx`
+- `troubleshooting/desktop-fixes.mdx`
+- `troubleshooting/mobile-fixes.mdx`
+- `troubleshooting/sync-issues.mdx`
+
+### Switching guides: comparison tables and migration checklists
+
+Added detailed feature comparison tables (Slashy vs competitor) and step-by-step migration checklists using `<Steps>` to all 3 switching guides:
+
+- `switching/gmail-migration.mdx` -- 10-row "Gmail vs Slashy at a Glance" table + 7-step migration checklist
+- `switching/superhuman-migration.mdx` -- 13-row full feature comparison table + 6-step migration checklist
+- `switching/shortwave-migration.mdx` -- 12-row full feature comparison table + 7-step migration checklist (replaced bullet checklist)
+
+### Features: enhanced 4 articles with Mintlify components
+
+- `features/calendar/creating-events.mdx` -- Added AccordionGroup for "Creating Events with the AI Agent" (3 examples: schedule, find time, reschedule)
+- `features/email/composing.mdx` -- Added Tip for undo send configuration
+- `features/email/inbox-views.mdx` -- Added AccordionGroup for "Common View Workflows" (morning triage, follow-up review, end-of-day cleanup)
+- `features/automations/calendar-triggers.mdx` -- Added AccordionGroup for "Troubleshooting Calendar Triggers" (3 common issues)
+
+### SEO: added seoDescription frontmatter to 15 key articles
+
+Added `seoDescription` field with unique, keyword-rich descriptions optimized for search:
+
+- `index.mdx`
+- `getting-started/first-week.mdx`
+- `getting-started/connecting-gmail.mdx`
+- `getting-started/security-privacy.mdx`
+- `how-to-guides/10-automations.mdx`
+- `how-to-guides/keyboard-shortcuts.mdx`
+- `features/ai-agent/autonomy.mdx`
+- `features/email/composing.mdx`
+- `features/email/inbox-views.mdx`
+- `features/calendar/creating-events.mdx`
+- `features/automations/calendar-triggers.mdx`
+- `switching/gmail-migration.mdx`
+- `switching/superhuman-migration.mdx`
+- `switching/shortwave-migration.mdx`
+- `troubleshooting/faq.mdx`
+- `troubleshooting/sync-issues.mdx`
+- `troubleshooting/desktop-fixes.mdx`
+- `troubleshooting/mobile-fixes.mdx`
+- `troubleshooting/unexpected-behavior.mdx`
+- `troubleshooting/disconnect.mdx`
+
+### Snippets: created 3 reusable content blocks
+
+Created `snippets/` directory with 3 reusable MDX snippets:
+
+- `snippets/contact-support.mdx` -- Standard "Need more help?" Note callout with email and agent sidebar instructions
+- `snippets/keyboard-shortcut-tip.mdx` -- Tip callout linking to full keyboard shortcuts cheatsheet
+- `snippets/agent-sidebar-open.mdx` -- Standard text for opening the AI agent sidebar
+
+Snippets imported and used across 10+ articles (troubleshooting pages, switching guides, feature articles).
+
+---
+
 ## 2026-03-31 (Iteration 4)
 
 ### Article quality: Tip, Warning, and Steps components
