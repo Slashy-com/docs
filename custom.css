@@ -160,11 +160,15 @@ a[class*="card"],
    SEARCH BAR - Notion-style pill
    ============================================ */
 
-/* Search trigger button */
+/* Search + Ask AI buttons: Notion-style pills */
 [class*="Search"] button,
 button[class*="search"],
 [aria-label*="Search"],
-[data-testid*="search"] {
+[data-testid*="search"],
+[class*="Ask"] button,
+button[class*="ask"],
+[aria-label*="Ask AI"],
+[class*="ai-chat"] button {
   background-color: #F7F7F5 !important;
   border: 1px solid #E5E5E5 !important;
   border-radius: 9999px !important;
@@ -174,8 +178,13 @@ button[class*="search"],
 .dark [class*="Search"] button,
 .dark button[class*="search"],
 .dark [aria-label*="Search"],
+.dark [class*="Ask"] button,
+.dark button[class*="ask"],
+.dark [aria-label*="Ask AI"],
 [data-theme="dark"] [class*="Search"] button,
-[data-theme="dark"] button[class*="search"] {
+[data-theme="dark"] button[class*="search"],
+[data-theme="dark"] [class*="Ask"] button,
+[data-theme="dark"] button[class*="ask"] {
   background-color: rgb(32, 32, 32) !important;
   border-color: rgba(255, 255, 255, 0.055) !important;
 }

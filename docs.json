@@ -7,6 +7,10 @@
     "light": "#2383E2",
     "dark": "#2383E2"
   },
+  "logo": {
+    "light": "/images/logo.svg",
+    "dark": "/images/logo-dark.svg"
+  },
   "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
