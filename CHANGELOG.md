@@ -1,5 +1,25 @@
 # Mintlify Help Center Changelog
 
+## 2026-03-31 (Iteration 9 -- QA Pass)
+
+Final quality assurance pass across all 80 articles, docs.json, and 3 snippets.
+
+### Checks performed (all passed)
+
+- **MDX syntax validation**: Verified all JSX component tags (Steps, Tabs, Accordion, CardGroup, Frame, Note, Tip, Warning, etc.) are properly opened and closed across all 80 articles. No mismatches found.
+- **Frontmatter consistency**: Confirmed every article has `title`, `description`, and `seoDescription`. All present.
+- **Snippet usage**: Verified `ContactSupport` (4 articles) and `KeyboardShortcutTip` (5 articles) are correctly imported with `/snippets/` path prefix and properly invoked. `AgentSidebarOpen` snippet exists for future use; its content is already inlined in the `contact-support` snippet.
+- **docs.json validation**: JSON parses cleanly. All 80 page paths resolve to existing .mdx files. No duplicate entries. No orphaned .mdx files outside navigation.
+- **Image alt text**: No empty `alt=""` attributes found. No generic "screenshot" alt texts. All images have descriptive alt text.
+- **Tone/voice**: Spot-checked 5 articles (booking-page, notifications, contacts/overview, ai-memories, disconnect). All consistent: direct, authoritative, 2nd person, 300-800 word range.
+- **No orphaned files**: Every content .mdx file appears in docs.json navigation. Every docs.json entry has a corresponding .mdx file.
+
+### Result
+
+No fixes required. The help center is clean and ready for production.
+
+---
+
 ## 2026-03-31 (Iteration 8 -- Refinement & Advanced Features)
 
 ### Feedback widget and theming enhancements (docs.json)
