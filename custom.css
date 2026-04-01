@@ -1,0 +1,44 @@
+/* Slashy Help Center - Custom Styles */
+
+/* Smooth card hover transitions inspired by Linear/Vercel */
+[class*="Card"] a,
+.card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+[class*="Card"] a:hover,
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+/* Better accordion styling */
+details summary {
+  transition: color 0.15s ease;
+}
+
+/* Improved code block readability */
+pre {
+  border-radius: 8px;
+}
+
+/* Subtle separator between major homepage sections */
+h2 {
+  padding-top: 0.5rem;
+}
+
+/* Better focus states for keyboard navigation (accessibility) */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #6366F1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Dark mode focus ring */
+@media (prefers-color-scheme: dark) {
+  a:focus-visible,
+  button:focus-visible {
+    outline-color: #818CF8;
+  }
+}

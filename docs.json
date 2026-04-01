@@ -8,6 +8,10 @@
     "dark": "#4F46E5"
   },
   "favicon": "/favicon.png",
+  "banner": {
+    "content": "New: iMessage Agent briefings, automation recipes, and more. [See what's new](/whats-new/changelog)",
+    "dismissible": true
+  },
   "navigation": {
     "tabs": [
       {
@@ -261,12 +265,21 @@
       "linkedin": "https://linkedin.com/company/slashy"
     }
   },
+  "css": "/custom.css",
   "search": {
-    "prompt": "Search help articles..."
+    "prompt": "Search for guides, features, or troubleshooting..."
   },
   "seo": {
     "indexHiddenPages": false
   },
+  "redirects": [
+    { "source": "/help", "destination": "/" },
+    { "source": "/support", "destination": "/troubleshooting/faq" },
+    { "source": "/automations", "destination": "/features/automations/overview" },
+    { "source": "/ai-drafts", "destination": "/how-to-guides/ai-drafts" },
+    { "source": "/privacy", "destination": "/getting-started/security-privacy" },
+    { "source": "/imessage", "destination": "/how-to-guides/imessage-setup" }
+  ],
   "feedback": {
     "thumbsRating": true,
     "suggestEdit": true
