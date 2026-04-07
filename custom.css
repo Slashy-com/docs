@@ -459,9 +459,23 @@ details {
 .dark details,
 [data-theme="dark"] details {
   border-color: rgba(255, 255, 255, 0.055);
+  background-color: transparent !important;
 }
 
 details summary {
   transition: color 0.15s ease;
   font-weight: 500;
+}
+
+/* Remove alternating accordion stripe backgrounds in dark mode */
+.dark [class*="Accordion"],
+.dark [class*="accordion"],
+[data-theme="dark"] [class*="Accordion"],
+[data-theme="dark"] [class*="accordion"] {
+  background-color: transparent !important;
+}
+
+.dark [class*="AccordionGroup"] > div,
+[data-theme="dark"] [class*="AccordionGroup"] > div {
+  background-color: transparent !important;
 }

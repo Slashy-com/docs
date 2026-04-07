@@ -239,6 +239,7 @@
   "search": {
     "prompt": "Search for guides, features, or troubleshooting..."
   },
+  "chat": false,
   "seo": {
     "indexHiddenPages": false
   },
