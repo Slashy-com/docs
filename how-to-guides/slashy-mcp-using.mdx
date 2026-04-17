@@ -1,0 +1,64 @@
+---
+title: "Using Slashy MCP"
+description: "Ready-to-use email prompts and an auto-use system prompt for Slashy MCP."
+seoDescription: "Real email prompts for Slashy MCP: triage, drafting, follow-ups, scheduling, labeling, plus a copy-paste auto-use system prompt."
+---
+
+Once connected, you can call Slashy tools directly from chat. Most people use Slashy MCP for email -- triage, drafting, follow-ups, and scheduling. Here are prompts that work out of the box.
+
+## Email prompts
+
+### Triage the inbox
+
+> *"Use Slashy to list my unread emails from the last 24 hours. Group them by sender, flag anything that mentions a deadline, and tell me which three I should reply to first."*
+
+### Draft a reply
+
+> *"Use Slashy to read the latest thread with sarah@acme.com and draft a reply that confirms Thursday 3pm, suggests a 30-min agenda, and matches my usual tone. Save it as a draft -- don't send."*
+
+### Follow up on silent threads
+
+> *"Find threads in my inbox where I sent the last message more than 5 days ago and haven't heard back. Draft a short, friendly follow-up for each and save as drafts."*
+
+### Schedule a meeting from an email
+
+> *"Read the latest email from alex@partner.io. Use Slashy to propose three 30-min slots in my calendar next week that avoid conflicts, and draft a reply offering those times."*
+
+### Auto-label and summarize
+
+> *"Label any email from our investors with 'VC', then send me a one-line summary of each new VC email every weekday at 9am via iMessage."*
+
+### Bulk action on a sender
+
+> *"Archive every email from noreply@notion.so older than 30 days, and add a label 'newsletters' to anything from them going forward."*
+
+### Beyond email
+
+> *"Prep me for my next external meeting -- pull attendee profiles, email history, and recent news."*
+>
+> *"Research john@acme.com before my call tomorrow -- LinkedIn, recent company news, and any prior email threads with them."*
+
+<Tip>Slashy tools respect your account's permissions. If a tool needs calendar or email access you haven't granted, it will return a clear error with a link to authorize.</Tip>
+
+## Auto-use prompt
+
+Paste this into your client's system prompt, Claude project instructions, or Cursor's rules file. It tells the model to reach for Slashy whenever a task fits.
+
+```text
+Always use Slashy MCP tools when relevant.
+If a task involves scraping, web research, email or calendar
+automation, lead collection, meeting prep, or scheduled
+workflows, prioritize Slashy tools before answering from
+general knowledge. Prefer a Slashy tool call over guessing.
+```
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+  <Card title="10 Automations" icon="bolt" href="/how-to-guides/10-automations">
+    Essential Slashy automations to set up first.
+  </Card>
+</CardGroup>
