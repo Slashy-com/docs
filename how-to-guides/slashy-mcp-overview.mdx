@@ -40,19 +40,33 @@ Before you start, make sure you have:
 
 <Note>Slashy MCP uses **OAuth 2.1 with PKCE**. You log in through your browser once -- no manual tokens, no config files with secrets.</Note>
 
-## Pick your client
+## How to install
 
-<CardGroup cols={2}>
-  <Card title="Claude Code" icon="terminal" href="/how-to-guides/slashy-mcp-claude-code">
-    Terminal-based setup. One command.
-  </Card>
-  <Card title="Claude Desktop" icon="desktop" href="/how-to-guides/slashy-mcp-claude-desktop">
-    Visual settings panel. No config files.
-  </Card>
-  <Card title="Cursor" icon="code" href="/how-to-guides/slashy-mcp-cursor">
-    JSON config. Restart to connect.
-  </Card>
-  <Card title="Codex CLI" icon="square-terminal" href="/how-to-guides/slashy-mcp-codex-cli">
-    TOML config in `~/.codex/config.toml`.
-  </Card>
-</CardGroup>
+<Steps>
+  <Step title="Pick your client">
+    Choose the AI tool you want to connect and follow its setup guide. Each takes under a minute.
+
+    <CardGroup cols={2}>
+      <Card title="Claude Code" icon="terminal" href="/how-to-guides/slashy-mcp-claude-code">
+        Terminal-based. One command.
+      </Card>
+      <Card title="Claude Desktop" icon="desktop" href="/how-to-guides/slashy-mcp-claude-desktop">
+        Visual settings panel. No config files.
+      </Card>
+      <Card title="Cursor" icon="code" href="/how-to-guides/slashy-mcp-cursor">
+        JSON config. Restart to connect.
+      </Card>
+      <Card title="Codex CLI" icon="square-terminal" href="/how-to-guides/slashy-mcp-codex-cli">
+        TOML config in `~/.codex/config.toml`.
+      </Card>
+    </CardGroup>
+  </Step>
+
+  <Step title="Install the Slashy skill">
+    Add the Slashy [skill / rules file](/how-to-guides/slashy-mcp-skills) to your client so it always reaches for Slashy MCP when you mention email, calendar, research, or scheduling -- no more repeating "use Slashy" in every prompt.
+  </Step>
+
+  <Step title="Start using it">
+    Try a [ready-made prompt](/how-to-guides/slashy-mcp-using) -- triage your inbox, draft a reply, prep for tomorrow's meetings, attach a file from Drive, or get Slashy links to open threads in the app.
+  </Step>
+</Steps>
