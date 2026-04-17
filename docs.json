@@ -178,10 +178,15 @@
             ]
           },
           {
+            "group": "Slashy MCP",
+            "pages": [
+              "features/integrations/mcp"
+            ]
+          },
+          {
             "group": "Settings & Integrations",
             "pages": [
               "features/settings/theme",
-              "features/integrations/mcp",
               "features/integrations/zoom"
             ]
           }
