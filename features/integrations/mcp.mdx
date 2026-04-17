@@ -1,0 +1,74 @@
+---
+title: "Slashy MCP"
+description: "Bring Slashy's email, calendar, and research tools into Claude, Cursor, and Codex via Model Context Protocol."
+seoDescription: "Slashy MCP integration: use Slashy's automation and scraping tools inside Claude Code, Claude Desktop, Cursor, and Codex CLI through the Model Context Protocol standard."
+---
+
+Slashy MCP is the bridge between Slashy and your AI tools. Once connected, Claude Code, Claude Desktop, Cursor, and Codex CLI can use Slashy's tools directly -- sending email, prepping meetings, scraping pages, enriching contacts -- without switching apps.
+
+## How it works
+
+**Model Context Protocol (MCP)** is an open standard for connecting AI assistants to external tools. Slashy runs an MCP server; your AI client talks to it over HTTP with OAuth 2.1 + PKCE. You log in once through your browser -- no API keys, no config files with secrets.
+
+```
+┌─────────────┐   MCP over HTTP   ┌──────────────┐
+│ Claude /    │ ◀────────────────▶│ Slashy MCP   │
+│ Cursor /    │                   │ server       │
+│ Codex       │                   │              │
+└─────────────┘                   └──────┬───────┘
+                                         │
+                                  ┌──────▼──────┐
+                                  │   Slashy    │
+                                  │  (your acct)│
+                                  └─────────────┘
+```
+
+## What you can do
+
+- **Email** -- draft, send, reply, schedule, label, attach files from Drive
+- **Calendar** -- create events, check availability, propose meeting times
+- **Research** -- enrich contacts with LinkedIn, company news, email history
+- **Meeting prep** -- pull attendee profiles + past thread context
+- **Scraping** -- extract structured data from any URL
+- **Automations** -- create reminders, triggers, scheduled workflows
+
+## Supported clients
+
+<CardGroup cols={2}>
+  <Card title="Claude Code" icon="terminal" href="/how-to-guides/slashy-mcp-claude-code">
+    Terminal CLI. One `claude mcp add` command.
+  </Card>
+  <Card title="Claude Desktop" icon="desktop" href="/how-to-guides/slashy-mcp-claude-desktop">
+    Mac/Windows app. Visual Connectors panel.
+  </Card>
+  <Card title="Cursor" icon="code" href="/how-to-guides/slashy-mcp-cursor">
+    AI code editor. JSON config.
+  </Card>
+  <Card title="Codex CLI" icon="square-terminal" href="/how-to-guides/slashy-mcp-codex-cli">
+    OpenAI's CLI. TOML config.
+  </Card>
+</CardGroup>
+
+## Security
+
+- **OAuth 2.1 with PKCE** -- industry standard, no static tokens
+- **Short-lived access tokens** -- refresh automatically in the background
+- **Scoped to your Slashy account** -- tools respect the same permissions as Slashy itself
+- **Revoke any time** -- disconnect from your Slashy account settings
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Overview & prerequisites" icon="book" href="/how-to-guides/slashy-mcp-overview">
+    What Slashy MCP is and what you need before setup.
+  </Card>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-made prompts for email, calendar, and research.
+  </Card>
+  <Card title="Claude Skills" icon="sparkles" href="/how-to-guides/slashy-mcp-skills">
+    Turn Slashy workflows into one-word triggers.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>

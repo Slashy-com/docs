@@ -1,0 +1,116 @@
+---
+title: "Slashy MCP with Claude Skills"
+description: "Wrap Slashy MCP tools into reusable Claude Skills for one-word workflows."
+seoDescription: "Use Anthropic's Claude Skills feature with Slashy MCP to create reusable, one-trigger workflows for email, calendar, and research."
+---
+
+Claude Skills are reusable prompts that trigger on a keyword. Combine them with Slashy MCP and a full workflow -- meeting prep, inbox triage, follow-up sweeps -- becomes a single word.
+
+## What is a Claude Skill?
+
+A **Skill** is a named instruction block that Claude loads automatically when the user's message matches its trigger. Skills live in `~/.claude/skills/` (Claude Code) or in the Skills section of Claude Desktop / claude.ai. They can reference any connected MCP server -- including Slashy.
+
+Think of it this way:
+- **MCP** gives Claude the tools.
+- **Skill** tells Claude *when* and *how* to use them.
+
+## Why use skills with Slashy MCP?
+
+- **Shorter prompts.** `"prep meetings"` beats pasting the full 20-line workflow each time.
+- **Consistency.** Every run follows the same steps, format, and output.
+- **Shareable.** Check skills into a team repo so everyone triggers the same Slashy workflow.
+
+## Example: Daily meeting prep skill
+
+Create `~/.claude/skills/daily-meeting-prep.md`:
+
+```markdown
+---
+name: daily-meeting-prep
+description: Use when the user asks to prep for today's or tomorrow's meetings. Pulls calendar events and enriches each with customer data from Slashy.
+---
+
+Use Slashy MCP to:
+1. List calendar events for the requested day.
+2. For each external meeting, research the attendees with Slashy (LinkedIn, company news, recent email threads).
+3. Summarize each meeting in this format:
+
+## {Time} -- {Title}
+**Who:** {attendees with titles}
+**Context:** {last 2-3 interactions from email history}
+**News:** {1-2 recent items about the company}
+**Ask:** {suggested question or agenda point}
+
+Skip internal meetings (all attendees on the user's domain).
+```
+
+Trigger it with: *"prep my meetings for tomorrow"* -- Claude loads the skill, calls Slashy tools in order, and returns the briefing.
+
+## Example: Inbox triage skill
+
+```markdown
+---
+name: inbox-triage
+description: Use when the user asks to triage, clear, or review their inbox. Groups unread mail by sender and flags deadlines.
+---
+
+Use Slashy MCP to list unread emails from the last 24 hours.
+Group by sender, flag anything mentioning a deadline or dollar figure,
+and return the top 5 that need a reply today. Do NOT draft replies
+unless the user asks.
+```
+
+Trigger: *"triage my inbox"*.
+
+## Example: Follow-up sweep skill
+
+```markdown
+---
+name: follow-up-sweep
+description: Use when the user asks to check for dropped follow-ups or silent threads.
+---
+
+Use Slashy MCP to find threads where:
+- The user sent the last message
+- More than 5 days have passed with no reply
+- The thread is not internal (all participants on user's domain)
+
+For each, draft a short, friendly follow-up and save as a draft.
+Return a one-line summary per thread.
+```
+
+Trigger: *"check for dropped follow-ups"*.
+
+## Where skills live
+
+<CardGroup cols={2}>
+  <Card title="Claude Code" icon="terminal">
+    `~/.claude/skills/<name>.md` -- loaded automatically on startup.
+  </Card>
+  <Card title="Claude Desktop" icon="desktop">
+    Settings → Skills → Create skill. GUI-managed.
+  </Card>
+  <Card title="Cursor" icon="code">
+    No first-class skills yet -- use Cursor Rules (`.cursorrules`) or project-level prompts with the same content.
+  </Card>
+  <Card title="Codex CLI" icon="square-terminal">
+    Put the instruction in `~/.codex/AGENTS.md` or inline in the session prompt.
+  </Card>
+</CardGroup>
+
+## Pairing skills with the auto-use prompt
+
+If you've already added the [auto-use system prompt](/how-to-guides/slashy-mcp-using#auto-use-prompt), skills work on top of it. The auto-use prompt tells Claude *which toolset to prefer*; the skill tells Claude *which sequence to run*.
+
+<Tip>Start with one skill for your most common workflow (usually meeting prep or inbox triage). Add more only when you catch yourself pasting the same instructions twice.</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-made prompts for email, calendar, and research.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>

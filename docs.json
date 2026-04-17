@@ -93,6 +93,7 @@
               "how-to-guides/slashy-mcp-cursor",
               "how-to-guides/slashy-mcp-codex-cli",
               "how-to-guides/slashy-mcp-using",
+              "how-to-guides/slashy-mcp-skills",
               "how-to-guides/slashy-mcp-troubleshooting"
             ]
           },
@@ -180,6 +181,7 @@
             "group": "Settings & Integrations",
             "pages": [
               "features/settings/theme",
+              "features/integrations/mcp",
               "features/integrations/zoom"
             ]
           }
