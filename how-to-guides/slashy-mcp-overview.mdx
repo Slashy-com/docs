@@ -1,29 +1,25 @@
 ---
 title: "Slashy MCP Overview"
 description: "What Slashy MCP is, why to use it, and what you need before setup."
-seoDescription: "Overview of Slashy MCP: connect Slashy's automation and scraping tools to Claude Code, Claude Desktop, Cursor, and Codex CLI via Model Context Protocol."
+seoDescription: "Overview of Slashy MCP: connect Slashy's email, calendar, and research tools to Claude Code, Claude Desktop, Cursor, and Codex CLI via Model Context Protocol."
 ---
 
-Slashy MCP lets your favorite AI tools -- Claude Code, Claude Desktop, Cursor, and Codex -- use Slashy's automation and scraping tools directly. This section walks you through the basics before you pick a client to set up.
-
-## What is MCP?
-
-**Model Context Protocol (MCP)** is an open standard that connects AI assistants to external tools and data. Think of it as a universal adapter: once a client speaks MCP, it can use any MCP server -- including Slashy.
+Slashy MCP lets your favorite AI tools - Claude Code, Claude Desktop, Cursor, and Codex - use Slashy's email, calendar, and research tools directly. This section walks you through the basics before you pick a client to set up.
 
 ## What does Slashy MCP do?
 
 Slashy MCP gives any MCP-compatible AI assistant access to Slashy's toolset:
 
-- **Web scraping** -- extract structured data from any URL
-- **Email + calendar automation** -- draft, send, schedule, and label through your Slashy account
-- **Contact research** -- enrich leads with LinkedIn, company data, and news
-- **Meeting prep** -- pull attendee profiles and history
-- **Reminders + triggers** -- create scheduled workflows from chat
+- **Email automation** - draft, send, reply, schedule, label, and attach files through your Slashy account
+- **Calendar automation** - create events, check availability, propose meeting times
+- **Contact research** - enrich leads with LinkedIn, company data, and news
+- **Meeting prep** - pull attendee profiles and email history
+- **Reminders + triggers** - create scheduled workflows from chat
 
 ## Why use it?
 
 - **Work where you already work.** Trigger Slashy actions from Claude, Cursor, or Codex without switching apps.
-- **One login.** OAuth 2.1 with PKCE -- no API keys to copy, rotate, or leak.
+- **One login.** OAuth 2.1 with PKCE - no API keys to copy, rotate, or leak.
 - **Always current.** Tools update automatically on Slashy's side; your client picks them up.
 
 ## Prerequisites
@@ -38,7 +34,7 @@ Before you start, make sure you have:
   - Codex CLI
 - A browser available on the same machine (OAuth opens a login window).
 
-<Note>Slashy MCP uses **OAuth 2.1 with PKCE**. You log in through your browser once -- no manual tokens, no config files with secrets.</Note>
+<Note>Slashy MCP uses **OAuth 2.1 with PKCE**. You log in through your browser once - no manual tokens, no config files with secrets.</Note>
 
 ## How to install
 
@@ -63,10 +59,10 @@ Before you start, make sure you have:
   </Step>
 
   <Step title="Install the Slashy skill">
-    Add the Slashy [skill / rules file](/how-to-guides/slashy-mcp-skills) to your client so it always reaches for Slashy MCP when you mention email, calendar, research, or scheduling -- no more repeating "use Slashy" in every prompt.
+    Add the Slashy [skill / rules file](/how-to-guides/slashy-mcp-skills) to your client so it always reaches for Slashy MCP when you mention email, calendar, research, or scheduling - no more repeating "use Slashy" in every prompt.
   </Step>
 
   <Step title="Start using it">
-    Try a [ready-made prompt](/how-to-guides/slashy-mcp-using) -- triage your inbox, draft a reply, prep for tomorrow's meetings, attach a file from Drive, or get Slashy links to open threads in the app.
+    Try a [ready-made prompt](/how-to-guides/slashy-mcp-using) - triage your inbox, draft a reply, prep for tomorrow's meetings, attach a file from Drive, or get Slashy links to open threads in the app.
   </Step>
 </Steps>

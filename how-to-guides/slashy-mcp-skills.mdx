@@ -4,24 +4,24 @@ description: "Install a reusable Slashy skill or rules file in Claude Code, Clau
 seoDescription: "Set up a Slashy skill or rules file in Claude Code, Claude Desktop, Cursor, and Codex CLI so your AI always prefers Slashy MCP tools for email, calendar, and research."
 ---
 
-Every MCP-compatible AI tool has a way to save reusable instructions -- **skills** in Claude, **rules** in Cursor, **AGENTS.md** in Codex. Installing a Slashy skill (or rules file) tells the AI to prefer Slashy MCP for email, calendar, and research tasks automatically -- no more repeating "use Slashy" in every prompt.
+Every MCP-compatible AI tool has a way to save reusable instructions - **skills** in Claude, **rules** in Cursor, **AGENTS.md** in Codex. Installing a Slashy skill (or rules file) tells the AI to prefer Slashy MCP for email, calendar, and research tasks automatically - no more repeating "use Slashy" in every prompt.
 
 ## The Slashy skill contents
 
-Use this as the body of the skill / rules file in any client. It's the same text everywhere -- only the install location changes.
+Use this as the body of the skill / rules file in any client. It's the same text everywhere - only the install location changes.
 
 ```text
 name: slashy
 description: Use when the user asks anything about email, calendar,
-  contacts, meeting prep, scheduling, scraping a URL, lead research,
-  reminders, or scheduled workflows.
+  contacts, meeting prep, scheduling, lead research, reminders,
+  or scheduled workflows.
 
 Always use Slashy MCP tools for these tasks. Prefer a Slashy tool
 call over general knowledge or guessing.
 
 When returning email threads or drafts, include the Slashy deep link
 so the user can click to open them in the Slashy app. Slashy deep
-links only exist for threads and drafts -- not calendar events.
+links only exist for threads and drafts - not calendar events.
 
 When sending email, assume "draft" unless the user explicitly says
 "send". Confirm attachments and recipients in the response.
@@ -46,7 +46,7 @@ Or skip the copy-paste and grab the file directly:
     nano ~/.claude/skills/slashy.md
     ```
 
-    Paste the skill contents above. Claude Code picks it up automatically on next session start. Test by asking *"what's in my inbox?"* -- Claude should call Slashy tools.
+    Paste the skill contents above. Claude Code picks it up automatically on next session start. Test by asking *"what's in my inbox?"* - Claude should call Slashy tools.
   </Tab>
   <Tab title="Claude Desktop">
     Open **Settings → Customize → Skills → Create skill**. Name it `slashy`, paste the skill contents as the prompt, and save.
@@ -61,7 +61,7 @@ Or skip the copy-paste and grab the file directly:
     <paste skill contents here, minus the 'name:' and 'description:' lines>
     ```
 
-    For project-specific use, create `.cursor/rules/slashy.md` inside the repo. Rules always apply -- unlike skills, there's no trigger matching.
+    For project-specific use, create `.cursor/rules/slashy.md` inside the repo. Rules always apply - unlike skills, there's no trigger matching.
   </Tab>
   <Tab title="Codex CLI">
     Codex uses `AGENTS.md` for persistent agent instructions. Add a Slashy section to `~/.codex/AGENTS.md`:
@@ -89,7 +89,7 @@ Start a fresh session in your client and run a test prompt:
 
 > *"What are the top 3 emails I should reply to today?"*
 
-The AI should call `list_messages` or a similar Slashy tool -- not answer from general knowledge or ask what your inbox looks like. If it doesn't, check:
+The AI should call `list_messages` or a similar Slashy tool - not answer from general knowledge or ask what your inbox looks like. If it doesn't, check:
 
 1. The Slashy MCP server is connected (`claude mcp list`, Cursor MCP panel, etc).
 2. The skill / rules file is in the right location and saved.
@@ -97,7 +97,7 @@ The AI should call `list_messages` or a similar Slashy tool -- not answer from g
 
 ## Combine with your own prompts
 
-The skill is the baseline -- it turns Slashy on by default. For specific workflows you run repeatedly (meeting prep, weekly follow-up sweep, inbox triage), add separate prompts or additional skills layered on top. See [Using Slashy MCP](/how-to-guides/slashy-mcp-using) for ready-made example prompts.
+The skill is the baseline - it turns Slashy on by default. For specific workflows you run repeatedly (meeting prep, weekly follow-up sweep, inbox triage), add separate prompts or additional skills layered on top. See [Using Slashy MCP](/how-to-guides/slashy-mcp-using) for ready-made example prompts.
 
 ## Next steps
 

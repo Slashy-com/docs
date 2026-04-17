@@ -1,14 +1,14 @@
 ---
 title: "Slashy MCP"
 description: "Bring Slashy's email, calendar, and research tools into Claude, Cursor, and Codex via Model Context Protocol."
-seoDescription: "Slashy MCP integration: use Slashy's automation and scraping tools inside Claude Code, Claude Desktop, Cursor, and Codex CLI through the Model Context Protocol standard."
+seoDescription: "Slashy MCP integration: use Slashy's email, calendar, and research tools inside Claude Code, Claude Desktop, Cursor, and Codex CLI through the Model Context Protocol standard."
 ---
 
-Slashy MCP is the bridge between Slashy and your AI tools. Once connected, Claude Code, Claude Desktop, Cursor, and Codex CLI can use Slashy's tools directly -- sending email, prepping meetings, scraping pages, enriching contacts -- without switching apps.
+Slashy MCP is the bridge between Slashy and your AI tools. Once connected, Claude Code, Claude Desktop, Cursor, and Codex CLI can use Slashy's tools directly - sending email, prepping meetings, enriching contacts, and scheduling - without switching apps.
 
 ## How it works
 
-**Model Context Protocol (MCP)** is an open standard for connecting AI assistants to external tools. Slashy runs an MCP server; your AI client talks to it over HTTP with OAuth 2.1 + PKCE. You log in once through your browser -- no API keys, no config files with secrets.
+**Model Context Protocol (MCP)** is an open standard for connecting AI assistants to external tools. Slashy runs an MCP server; your AI client talks to it over HTTP with OAuth 2.1 + PKCE. You log in once through your browser - no API keys, no config files with secrets.
 
 ```
 ┌─────────────┐   MCP over HTTP   ┌──────────────┐
@@ -25,12 +25,11 @@ Slashy MCP is the bridge between Slashy and your AI tools. Once connected, Claud
 
 ## What you can do
 
-- **Email** -- draft, send, reply, schedule, label, attach files from Drive
-- **Calendar** -- create events, check availability, propose meeting times
-- **Research** -- enrich contacts with LinkedIn, company news, email history
-- **Meeting prep** -- pull attendee profiles + past thread context
-- **Scraping** -- extract structured data from any URL
-- **Automations** -- create reminders, triggers, scheduled workflows
+- **Email** - draft, send, reply, schedule, label, attach files from Drive
+- **Calendar** - create events, check availability, propose meeting times
+- **Research** - enrich contacts with LinkedIn, company news, email history
+- **Meeting prep** - pull attendee profiles + past thread context
+- **Automations** - create reminders, triggers, scheduled workflows
 
 ## Supported clients
 
@@ -51,10 +50,10 @@ Slashy MCP is the bridge between Slashy and your AI tools. Once connected, Claud
 
 ## Security
 
-- **OAuth 2.1 with PKCE** -- industry standard, no static tokens
-- **Short-lived access tokens** -- refresh automatically in the background
-- **Scoped to your Slashy account** -- tools respect the same permissions as Slashy itself
-- **Revoke any time** -- disconnect from your Slashy account settings
+- **OAuth 2.1 with PKCE** - industry standard, no static tokens
+- **Short-lived access tokens** - refresh automatically in the background
+- **Scoped to your Slashy account** - tools respect the same permissions as Slashy itself
+- **Revoke any time** - disconnect from your Slashy account settings
 
 ## Learn more
 
