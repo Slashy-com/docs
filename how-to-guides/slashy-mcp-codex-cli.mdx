@@ -1,0 +1,71 @@
+---
+title: "Codex CLI Setup"
+description: "Add Slashy MCP to Codex CLI by editing ~/.codex/config.toml."
+seoDescription: "Install the Slashy MCP server in Codex CLI by adding a TOML block to ~/.codex/config.toml and authenticating via OAuth 2.1 PKCE."
+---
+
+Codex CLI reads MCP servers from a TOML config file at `~/.codex/config.toml`.
+
+## Setup
+
+<Steps>
+  <Step title="Open the Codex config file">
+    In your terminal, open the file in your editor:
+
+    ```bash
+    nano ~/.codex/config.toml
+    ```
+
+    If the file does not exist, create it.
+
+    <Frame>
+      <img src="/images/mcp/codex-edit-config.png" alt="Terminal editing ~/.codex/config.toml" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Add the Slashy server">
+    Paste this block at the end of the file:
+
+    ```toml
+    [mcp_servers.slashy]
+    url = "https://slashy.ctrlcenter.ai/mcp"
+    ```
+
+    Save and exit.
+
+    <Frame>
+      <img src="/images/mcp/codex-config.png" alt="Codex config.toml with Slashy block" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Start Codex and approve OAuth">
+    Run `codex` in your terminal. On first launch, it opens your browser to the Slashy login page. Sign in with Google and click **Allow**.
+
+    <Frame>
+      <img src="/images/mcp/codex-oauth.png" alt="Codex CLI launching + OAuth popup" style={{maxWidth: "700px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Verify the connection">
+    Inside Codex, type `/mcp`. You should see **slashy** listed as connected with its tools visible.
+
+    <Frame>
+      <img src="/images/mcp/codex-verify.png" alt="Codex /mcp output showing Slashy connected" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+</Steps>
+
+## What happens after setup
+
+Codex caches the OAuth token in `~/.codex/auth/`. It refreshes automatically on expiry.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-to-use prompts for scraping, leads, and automation.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>

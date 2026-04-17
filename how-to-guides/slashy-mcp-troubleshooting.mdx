@@ -1,0 +1,40 @@
+---
+title: "Slashy MCP Troubleshooting"
+description: "Fix common Slashy MCP setup issues: OAuth, missing tools, wrong account, and server errors."
+seoDescription: "Troubleshoot Slashy MCP setup: OAuth window not opening, tools not appearing, wrong Google account, expired tokens, and server connectivity."
+---
+
+Common issues and fast fixes when connecting Slashy MCP.
+
+<AccordionGroup>
+  <Accordion title="OAuth window didn't open">
+    Fully quit and reopen the client. Some clients only trigger the OAuth flow on a fresh launch. If it still doesn't open, check that your default browser is set and that popups aren't blocked for `slashy.ctrlcenter.ai`.
+  </Accordion>
+
+  <Accordion title="Tools aren't appearing in chat">
+    Disconnect and reconnect the MCP server. In Claude Desktop, toggle the Slashy connector off and on in **Settings → Connectors**. In Claude Code, run `claude mcp remove slashy` then re-add it. In Cursor and Codex, delete the cached auth and restart.
+  </Accordion>
+
+  <Accordion title="Signed in with the wrong account">
+    Sign out of Slashy in your browser, then reconnect from your client. The OAuth flow will ask you to pick a Google account again.
+  </Accordion>
+
+  <Accordion title="MCP server not responding">
+    Confirm the URL is exactly `https://slashy.ctrlcenter.ai/mcp` -- no trailing slash, no typos. Check [status.slashy.com](https://status.slashy.com) for incidents. Try `curl -I https://slashy.ctrlcenter.ai/mcp` to confirm DNS and TLS reach the server.
+  </Accordion>
+
+  <Accordion title="Token expired or permission revoked">
+    Reconnect the MCP server in your client. A new browser OAuth flow will issue a fresh token. No data is lost.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+<CardGroup cols={2}>
+  <Card title="Overview" icon="book" href="/how-to-guides/slashy-mcp-overview">
+    Re-check prerequisites and requirements.
+  </Card>
+  <Card title="Contact support" icon="envelope" href="mailto:support@slashy.com">
+    Email support@slashy.com with your client and error message.
+  </Card>
+</CardGroup>

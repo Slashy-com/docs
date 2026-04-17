@@ -1,0 +1,58 @@
+---
+title: "Slashy MCP Overview"
+description: "What Slashy MCP is, why to use it, and what you need before setup."
+seoDescription: "Overview of Slashy MCP: connect Slashy's automation and scraping tools to Claude Code, Claude Desktop, Cursor, and Codex CLI via Model Context Protocol."
+---
+
+Slashy MCP lets your favorite AI tools -- Claude Code, Claude Desktop, Cursor, and Codex -- use Slashy's automation and scraping tools directly. This section walks you through the basics before you pick a client to set up.
+
+## What is MCP?
+
+**Model Context Protocol (MCP)** is an open standard that connects AI assistants to external tools and data. Think of it as a universal adapter: once a client speaks MCP, it can use any MCP server -- including Slashy.
+
+## What does Slashy MCP do?
+
+Slashy MCP gives any MCP-compatible AI assistant access to Slashy's toolset:
+
+- **Web scraping** -- extract structured data from any URL
+- **Email + calendar automation** -- draft, send, schedule, and label through your Slashy account
+- **Contact research** -- enrich leads with LinkedIn, company data, and news
+- **Meeting prep** -- pull attendee profiles and history
+- **Reminders + triggers** -- create scheduled workflows from chat
+
+## Why use it?
+
+- **Work where you already work.** Trigger Slashy actions from Claude, Cursor, or Codex without switching apps.
+- **One login.** OAuth 2.1 with PKCE -- no API keys to copy, rotate, or leak.
+- **Always current.** Tools update automatically on Slashy's side; your client picks them up.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- A **Slashy account** signed in with Google. [Sign up at slashy.com](https://slashy.com) if you haven't.
+- One of the supported clients installed:
+  - Claude Code
+  - Claude Desktop
+  - Cursor
+  - Codex CLI
+- A browser available on the same machine (OAuth opens a login window).
+
+<Note>Slashy MCP uses **OAuth 2.1 with PKCE**. You log in through your browser once -- no manual tokens, no config files with secrets.</Note>
+
+## Pick your client
+
+<CardGroup cols={2}>
+  <Card title="Claude Code" icon="terminal" href="/how-to-guides/slashy-mcp-claude-code">
+    Terminal-based setup. One command.
+  </Card>
+  <Card title="Claude Desktop" icon="desktop" href="/how-to-guides/slashy-mcp-claude-desktop">
+    Visual settings panel. No config files.
+  </Card>
+  <Card title="Cursor" icon="code" href="/how-to-guides/slashy-mcp-cursor">
+    JSON config. Restart to connect.
+  </Card>
+  <Card title="Codex CLI" icon="square-terminal" href="/how-to-guides/slashy-mcp-codex-cli">
+    TOML config in `~/.codex/config.toml`.
+  </Card>
+</CardGroup>

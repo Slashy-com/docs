@@ -1,0 +1,63 @@
+---
+title: "Claude Desktop Setup"
+description: "Add Slashy MCP to Claude Desktop via Settings → Connectors."
+seoDescription: "Install the Slashy MCP server in Anthropic's Claude Desktop app using Custom Connectors and OAuth 2.1 PKCE authentication."
+---
+
+Claude Desktop uses a visual settings panel -- no config files needed.
+
+## Setup
+
+<Steps>
+  <Step title="Open Settings → Connectors">
+    Click your profile in Claude Desktop, then **Settings → Connectors**.
+
+    <Frame>
+      <img src="/images/mcp/claude-desktop-settings.png" alt="Claude Desktop Connectors settings" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Add the custom connector">
+    Click **Add Custom Connector** and fill in the form:
+
+    - **Name:** `Slashy`
+    - **URL:** `https://slashy.ctrlcenter.ai/mcp`
+
+    Click **Add**.
+
+    <Frame>
+      <img src="/images/mcp/claude-desktop-form.png" alt="Claude Desktop Add Custom Connector form" style={{maxWidth: "600px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Approve OAuth">
+    Claude Desktop opens the Slashy login page. Sign in with Google and click **Allow**.
+
+    <Frame>
+      <img src="/images/mcp/claude-desktop-oauth.png" alt="Slashy OAuth approval in Claude Desktop" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Verify the connection">
+    Back in Connectors, you should see **Slashy** with a green **Connected** badge. Start a new chat and you'll see Slashy tools available in the tool tray.
+
+    <Frame>
+      <img src="/images/mcp/claude-desktop-verify.png" alt="Slashy connector showing connected status" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+</Steps>
+
+## What happens after setup
+
+Claude Desktop manages the OAuth token silently. If you sign out of Slashy or revoke access, Claude Desktop will prompt you to reconnect.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-to-use prompts for scraping, leads, and automation.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>

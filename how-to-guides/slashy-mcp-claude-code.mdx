@@ -1,0 +1,60 @@
+---
+title: "Claude Code Setup"
+description: "Connect Slashy MCP to Claude Code with a single terminal command."
+seoDescription: "Install the Slashy MCP server in Anthropic's Claude Code CLI using claude mcp add and OAuth 2.1 PKCE authentication."
+---
+
+Claude Code is Anthropic's terminal-based coding agent. Adding Slashy is a single command.
+
+## Setup
+
+<Steps>
+  <Step title="Run the add command">
+    In your terminal, run:
+
+    ```bash
+    claude mcp add --transport http slashy https://slashy.ctrlcenter.ai/mcp
+    ```
+
+    <Frame>
+      <img src="/images/mcp/claude-code-terminal.png" alt="Claude Code terminal running the add command" style={{maxWidth: "700px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Approve OAuth in your browser">
+    Claude Code opens your default browser to the Slashy login page. Sign in with Google and click **Allow** to grant access.
+
+    <Frame>
+      <img src="/images/mcp/claude-code-oauth.png" alt="Slashy OAuth approval screen" style={{maxWidth: "500px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Verify the connection">
+    Back in the terminal, run:
+
+    ```bash
+    claude mcp list
+    ```
+
+    You should see `slashy` listed as **connected**.
+
+    <Frame>
+      <img src="/images/mcp/claude-code-verify.png" alt="Claude Code mcp list output" style={{maxWidth: "700px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+</Steps>
+
+## What happens after setup
+
+Claude Code stores a short-lived OAuth token locally. It refreshes automatically. You never see or handle the token.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-to-use prompts for scraping, leads, and automation.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>

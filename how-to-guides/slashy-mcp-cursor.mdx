@@ -1,0 +1,70 @@
+---
+title: "Cursor Setup"
+description: "Add Slashy MCP to Cursor with a small JSON config."
+seoDescription: "Configure the Slashy MCP server in Cursor by editing mcp.json and authenticating via OAuth 2.1 PKCE."
+---
+
+Cursor reads MCP servers from a JSON config file.
+
+## Setup
+
+<Steps>
+  <Step title="Open MCP settings">
+    In Cursor, open **Settings → MCP** (or press `Cmd+Shift+J`, then search for "MCP").
+
+    <Frame>
+      <img src="/images/mcp/cursor-settings.png" alt="Cursor MCP settings panel" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Add Slashy to your config">
+    Paste this into your `mcp.json` (or the MCP section of `settings.json`):
+
+    ```json
+    {
+      "mcpServers": {
+        "slashy": {
+          "url": "https://slashy.ctrlcenter.ai/mcp"
+        }
+      }
+    }
+    ```
+
+    Save the file.
+
+    <Frame>
+      <img src="/images/mcp/cursor-config.png" alt="Cursor mcp.json file with Slashy entry" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Restart Cursor and approve OAuth">
+    Fully quit Cursor (`Cmd+Q`) and reopen it. Cursor will open your browser to the Slashy login page. Sign in and click **Allow**.
+
+    <Frame>
+      <img src="/images/mcp/cursor-oauth.png" alt="Cursor restart + OAuth approval" style={{maxWidth: "500px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+
+  <Step title="Verify the connection">
+    Open the MCP panel in Cursor. **Slashy** should show a green dot. Open a chat and ask *"What Slashy tools are available?"* -- the agent will list them.
+
+    <Frame>
+      <img src="/images/mcp/cursor-verify.png" alt="Cursor MCP panel showing Slashy connected" style={{maxWidth: "800px", margin: "0 auto"}} />
+    </Frame>
+  </Step>
+</Steps>
+
+## What happens after setup
+
+Cursor stores the OAuth token in its secure credential store. The config file holds only the URL -- never a secret.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Ready-to-use prompts for scraping, leads, and automation.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>
