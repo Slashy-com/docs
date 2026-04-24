@@ -1,24 +1,27 @@
 ---
-title: "Claude Desktop Setup"
-description: "Add Slashy MCP to Claude Desktop via Settings → Connectors."
-seoDescription: "Install the Slashy MCP server in Anthropic's Claude Desktop app using Custom Connectors and OAuth 2.1 PKCE authentication."
+title: "Claude App & Web Setup"
+description: "Add Slashy MCP to Claude Desktop or claude.ai via Settings → Connectors."
+seoDescription: "Install the Slashy MCP server in Claude Desktop or on the web (claude.ai) using Custom Connectors and OAuth 2.1 PKCE authentication."
 ---
 
-Claude Desktop uses a visual settings panel - no config files needed.
+Claude Desktop and Claude on the web (claude.ai) share the same Connectors panel - the steps below work in both. No config files, no CLI.
+
+<Note>Custom connectors on claude.ai are available on Pro, Max, Team, and Enterprise plans.</Note>
 
 ## Setup
 
 <Steps>
   <Step title="Open Settings → Connectors">
-    Click your profile in Claude Desktop, then **Settings → Connectors**.
+    - **Claude Desktop:** click your profile, then **Settings → Connectors**.
+    - **Claude on the web:** go to [claude.ai/settings/connectors](https://claude.ai/settings/connectors), or click your profile in the sidebar, then **Settings → Connectors**.
 
     <Frame>
-      <img src="/images/mcp/claude-desktop-settings.png" alt="Claude Desktop Connectors settings" style={{width: "100%", maxWidth: "800px", margin: "0 auto"}} />
+      <img src="/images/mcp/claude-desktop-settings.png" alt="Claude Connectors settings" style={{width: "100%", maxWidth: "800px", margin: "0 auto"}} />
     </Frame>
   </Step>
 
   <Step title="Add the custom connector">
-    Click **Add Custom Connector** and fill in the form:
+    Click **Add Custom Connector** (or **Add custom connector** on the web) and fill in the form:
 
     - **Name:** `Slashy`
     - **URL:** `https://slashy.ctrlcenter.ai/mcp`
@@ -26,15 +29,15 @@ Claude Desktop uses a visual settings panel - no config files needed.
     Click **Add**.
 
     <Frame>
-      <img src="/images/mcp/claude-desktop-form.png" alt="Claude Desktop Add Custom Connector form" style={{width: "100%", maxWidth: "600px", margin: "0 auto"}} />
+      <img src="/images/mcp/claude-desktop-form.png" alt="Add Custom Connector form" style={{width: "100%", maxWidth: "600px", margin: "0 auto"}} />
     </Frame>
   </Step>
 
   <Step title="Approve OAuth">
-    Claude Desktop opens the Slashy login page. Sign in with Google and click **Allow**.
+    Claude opens the Slashy login page. Sign in with Google and click **Allow**.
 
     <Frame>
-      <img src="/images/mcp/claude-desktop-oauth.png" alt="Slashy OAuth approval in Claude Desktop" style={{width: "100%", maxWidth: "800px", margin: "0 auto"}} />
+      <img src="/images/mcp/claude-desktop-oauth.png" alt="Slashy OAuth approval" style={{width: "100%", maxWidth: "800px", margin: "0 auto"}} />
     </Frame>
   </Step>
 
@@ -49,7 +52,7 @@ Claude Desktop uses a visual settings panel - no config files needed.
 
 ## What happens after setup
 
-Claude Desktop manages the OAuth token silently. If you sign out of Slashy or revoke access, Claude Desktop will prompt you to reconnect.
+Claude manages the OAuth token silently and refreshes it automatically. If you sign out of Slashy or revoke access, Claude will prompt you to reconnect.
 
 ## Next steps
 
