@@ -23,6 +23,18 @@ Common issues and fast fixes when connecting Slashy MCP.
     Confirm the URL is exactly `https://slashy.ctrlcenter.ai/mcp` - no trailing slash, no typos. Check [status.slashy.com](https://status.slashy.com) for incidents. Try `curl -I https://slashy.ctrlcenter.ai/mcp` to confirm DNS and TLS reach the server.
   </Accordion>
 
+  <Accordion title="Removed the plugin's marketplace, but Slashy is still there">
+    Removing a marketplace does not uninstall plugins you installed from it, and once the marketplace is gone the plugin can no longer be removed by that name. Re-add the marketplace, remove the plugin, then remove the marketplace - in that order:
+
+    ```bash
+    codex plugin marketplace add Slashy-com/skills
+    codex plugin remove slashy@slashy
+    codex plugin marketplace remove slashy
+    ```
+
+    A leftover `slashy` entry in `codex mcp list` after removing the marketplace is this, not a broken install.
+  </Accordion>
+
   <Accordion title="Token expired or permission revoked">
     Reconnect the MCP server in your client. A new browser OAuth flow will issue a fresh token. No data is lost.
   </Accordion>

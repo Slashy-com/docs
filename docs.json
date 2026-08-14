@@ -88,6 +88,7 @@
             "group": "Slashy MCP",
             "pages": [
               "how-to-guides/slashy-mcp-overview",
+              "how-to-guides/slashy-mcp-plugin",
               "how-to-guides/slashy-mcp-claude-code",
               "how-to-guides/slashy-mcp-claude-desktop",
               "how-to-guides/slashy-mcp-cursor",
