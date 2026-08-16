@@ -6,6 +6,20 @@ seoDescription: "Set up a Slashy skill or rules file in Claude Code, Claude Desk
 
 Every MCP-compatible AI tool has a way to save reusable instructions - **skills** in Claude, **rules** in Cursor, **AGENTS.md** in Codex. Installing a Slashy skill (or rules file) tells the AI to prefer Slashy MCP for email, calendar, and research tasks automatically - no more repeating "use Slashy" in every prompt.
 
+## The quick way
+
+The maintained Slashy skill lives at [Slashy-com/skills](https://github.com/Slashy-com/skills). Install it without copying anything:
+
+```bash
+npx skills add Slashy-com/skills
+```
+
+That works with Claude Code, Cursor, Codex, Copilot, Windsurf, and anything else the [skills CLI](https://skills.sh) supports. You'll still need to [connect the MCP server](/how-to-guides/slashy-mcp-overview) separately.
+
+Better still, if your client supports it: the [Slashy Agent Plugin](/how-to-guides/slashy-mcp-plugin) installs this same skill **and** the MCP server together.
+
+The rest of this page covers writing the skill by hand, for clients that support neither.
+
 ## The Slashy skill contents
 
 Use this as the body of the skill / rules file in any client. It's the same text everywhere - only the install location changes.

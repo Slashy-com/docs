@@ -1,0 +1,98 @@
+---
+title: "Install the Slashy Agent Plugin"
+description: "Install Slashy as an Agent Plugin to set up the MCP server and the Slashy skill in one step, in Codex, Cursor, VS Code, and GitHub Copilot."
+seoDescription: "Install the Slashy Agent Plugin in Codex CLI, Cursor, VS Code, or GitHub Copilot. One install adds the Slashy MCP server and the Slashy skill - no manual MCP config."
+---
+
+Slashy ships as an [Agent Plugin](https://agent-plugins.org), the open packaging standard for agent skills and MCP servers. One install gives your client both halves - the Slashy MCP server **and** the Slashy skill - with no MCP config to paste by hand.
+
+<Note>This is the fastest way to set up Slashy in any client that supports Agent Plugins. If your client isn't listed below - Claude Code, Claude Desktop, and claude.ai among them - use the [per-client setup guides](/how-to-guides/slashy-mcp-overview) instead.</Note>
+
+## What you get
+
+- **The Slashy MCP server**, configured automatically from the plugin - email, calendar, contact research, meeting prep, reminders, and triggers.
+- **The `slashy-mcp` skill**, so the AI reaches for Slashy tools when you mention email, calendar, research, or scheduling, without being told each time.
+
+## Install
+
+<Tabs>
+  <Tab title="Codex CLI">
+    ```bash
+    codex plugin marketplace add Slashy-com/skills
+    codex plugin add slashy@slashy
+    ```
+
+    Confirm it landed with `codex plugin list` - `slashy@slashy` should read `installed, enabled`.
+  </Tab>
+  <Tab title="Cursor">
+    Install from the Cursor Marketplace, or clone the repo into Cursor's local plugin folder:
+
+    ```bash
+    git clone https://github.com/Slashy-com/skills ~/.cursor/plugins/local/slashy
+    ```
+
+    Then restart Cursor, or run **Developer: Reload Window**. The folder you clone into must be the plugin itself - that's why the clone target is `.../local/slashy` and not `.../local`.
+  </Tab>
+  <Tab title="VS Code / GitHub Copilot">
+    Run **Chat: Install Plugin From Source** from the Command Palette and give it:
+
+    ```
+    https://github.com/Slashy-com/skills
+    ```
+  </Tab>
+</Tabs>
+
+## Sign in
+
+The first time the AI uses a Slashy tool, your client opens a browser window to authorize. Sign in with the Google account attached to your Slashy account and approve access.
+
+Authorization is handled by your client, not by the plugin - the plugin never contains tokens, keys, or secrets. Slashy uses OAuth 2.1 with PKCE.
+
+## Verify it works
+
+Start a fresh session and ask:
+
+> *"What are the top 3 emails I should reply to today?"*
+
+The AI should call a Slashy tool such as `list_messages` rather than answering from general knowledge. To check the connection directly in Codex:
+
+```bash
+codex mcp list
+```
+
+`slashy` should appear with `Auth: OAuth`.
+
+## Update or remove
+
+<AccordionGroup>
+  <Accordion title="Update to the latest version">
+    In Codex, refresh the marketplace snapshot and reinstall:
+
+    ```bash
+    codex plugin marketplace upgrade slashy
+    codex plugin add slashy@slashy
+    ```
+  </Accordion>
+
+  <Accordion title="Remove the plugin">
+    Remove the plugin **before** the marketplace, and include the marketplace name:
+
+    ```bash
+    codex plugin remove slashy@slashy
+    codex plugin marketplace remove slashy
+    ```
+
+    Removing the marketplace first leaves the plugin installed, and it can no longer be removed by its marketplace name. See [Troubleshooting](/how-to-guides/slashy-mcp-troubleshooting) if you hit that.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Using Slashy MCP" icon="play" href="/how-to-guides/slashy-mcp-using">
+    Example prompts for email, calendar, attachments, and Slashy links.
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/how-to-guides/slashy-mcp-troubleshooting">
+    Fixes for OAuth, missing tools, and wrong accounts.
+  </Card>
+</CardGroup>
